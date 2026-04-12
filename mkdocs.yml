@@ -1,0 +1,39 @@
+site_name: Baika Saúde - Ecossistema
+site_url: https://itamarpambo751.github.io/schedule-docs/
+theme:
+  name: material
+  language: pt
+  palette:
+    - scheme: default
+      primary: indigo
+      toggle:
+        icon: material/weather-night
+        name: Modo escuro
+    - scheme: slate
+      primary: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Modo claro
+
+nav:
+  - Gestão Hospitalar: hospital.md
+  - Catálogo Clínico:
+      - Guia de Modelagem: catalogo-clinico/index.md
+      - Guia do Desenvolvedor: catalogo-clinico/developer.md
+  - Gestão de Agendamentos:
+      - 1. Introdução ao Sistema: gestao-de-agendas-e-marcação-de-consultas/1-introdução.md
+      - 2. Conceitos-base do Sistema: gestao-de-agendas-e-marcação-de-consultas/2-conceitos-base-do-Sistema.md
+      - 3. Exclusões e Folgas: gestao-de-agendas-e-marcação-de-consultas/3-exclusões-e-folgas.md
+      - 4. Exclusões de Dias e Períodos: gestao-de-agendas-e-marcação-de-consultas/4-exclusões-de-dias-e-períodos.md
+      - 5. Exclusões e Bloqueios Avançados: gestao-de-agendas-e-marcação-de-consultas/5-exclusões-e-bloqueios-avançados.md
+      - 6. Horários de Trabalho (Parte 1): gestao-de-agendas-e-marcação-de-consultas/6-horários-de-trabalho-dos-profissionais.md
+      - 7. Horários de Trabalho (Parte 2): gestao-de-agendas-e-marcação-de-consultas/7-horários-de-trabalho-dos-profissionais.md
+      - 8. Horários de Trabalho (Parte 3): gestao-de-agendas-e-marcação-de-consultas/8-horários-de-trabalho-de-profissionais.md
+      - 9. Slots e Time Boxes: gestao-de-agendas-e-marcação-de-consultas/9-slots-e-time-boxes.md
+      - 10. Marcação de Consultas (Parte 1): gestao-de-agendas-e-marcação-de-consultas/10-marcação-de-consultas.md
+      - 11. Marcação de Consultas (Parte 2): gestao-de-agendas-e-marcação-de-consultas/11-marcação-de-consultas.md
+  - Guias Técnicos e Regras de Negócio:
+      - 1. Guia de Configuração de Agenda: gestao-de-agendas-e-marcação-de-consultas/guias/1-guia-de-configuracao-da-agenda.md
+      - 2. Modelo de Exclusão na Agenda: gestao-de-agendas-e-marcação-de-consultas/guias/2-modelos-de-exclusao-na-agenda.md
+      - 3. Geração de Slots (Horários): gestao-de-agendas-e-marcação-de-consultas/guias/3-guiade-geracao-de-slots-formaA-horarios.md
+      - 4. Geração de Slots (Capacidade): gestao-de-agendas-e-marcação-de-consultas/guias/4-guia-de-geracao-de-slots-formaB-capacidade.md
