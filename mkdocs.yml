@@ -17,6 +17,7 @@ theme:
 
 nav:
   - Gestão Hospitalar: hospital.md
+  - Doadores de sangue: doadores-de-sangue/doadores-de-sangue.md
   - Catálogo Clínico:
       - Guia de Modelagem: catalogo-clinico/index.md
       - Guia do Desenvolvedor: catalogo-clinico/developer.md
