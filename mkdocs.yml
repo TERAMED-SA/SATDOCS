@@ -1,5 +1,5 @@
 site_name: Baika Saúde - Ecossistema
-site_url: https://itamarpambo751.github.io/schedule-docs/
+site_url: https://teramed-sa.github.io/SATDOCS/
 theme:
   name: material
   language: pt
@@ -16,6 +16,7 @@ theme:
         name: Modo claro
 
 nav:
+  - Início: index.md
   - Gestão Hospitalar: hospital.md
   - Doadores de sangue: doadores-de-sangue/doadores-de-sangue.md
   - Catálogo Clínico:
