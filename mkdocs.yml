@@ -17,7 +17,27 @@ theme:
 
 nav:
   - Início: index.md
-  - Gestão Hospitalar: hospital.md
+  - Gestão Hospitalar:
+      - Índice do Módulo: hospital/index.md
+      - Visão Geral dos Casos de Uso: hospital/use-cases/overview.md
+      - Modelos e Enumerações: hospital/use-cases/models-and-enums.md
+      - Hospitais: hospital/use-cases/hospitals.md
+      - Unidades: hospital/use-cases/units.md
+      - Departamentos: hospital/use-cases/departments.md
+      - Estrutura Física: hospital/use-cases/physical-structure.md
+      - Ofertas: hospital/use-cases/offers.md
+      - Contas: hospital/use-cases/accounts.md
+      - Segurança: hospital/use-cases/security.md
+      - Verificações: hospital/use-cases/checks.md
+      - Casos Internos, Eventos e Notas: hospital/use-cases/internal-and-events.md
+  - Prontuário Clínico:
+      - Índice do Módulo: prontuario-clinico/index.md
+      - Visão Geral dos Casos de Uso: prontuario-clinico/use-cases/overview.md
+      - Modelos e Enumerações: prontuario-clinico/use-cases/models-and-enums.md
+      - Prontuários: prontuario-clinico/use-cases/prontuaries.md
+      - Consultas: prontuario-clinico/use-cases/visits.md
+      - Registos Clínicos: prontuario-clinico/use-cases/clinical-records.md
+      - Casos Internos, Eventos e Notas: prontuario-clinico/use-cases/internal-and-events.md
   - Doadores de sangue: doadores-de-sangue/doadores-de-sangue.md
   - Catálogo Clínico:
       - Guia de Modelagem: catalogo-clinico/index.md

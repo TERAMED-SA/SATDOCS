@@ -4,12 +4,13 @@ Documentação funcional e técnica dos módulos do ecossistema Baika Saúde.
 
 ## Módulos
 
-| Módulo | Descrição |
-|---|---|
-| [Gestão Hospitalar](hospital.md) | Estrutura organizacional e física das instituições de saúde |
-| [Doadores de Sangue (v2.0)](doadores-de-sangue-v2.0/index.md) | Dadores, pedidos de sangue, matching, dações, moderação e administração |
-| [Catálogo Clínico (v2.0)](catalogo-clinico-v2.0/index.md) | Especialidades médicas, itens clínicos e regras clínicas com validade temporal |
-| [Gestão de Agendamentos](gestao-de-agendas-e-marcação-de-consultas/1-introdução.md) | Agendas, exclusões, horários de trabalho, slots e marcação de consultas |
+| Módulo                                                                              | Descrição                                                                      |
+| ----------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| [Gestão Hospitalar](hospital/index.md)                                              | Estrutura organizacional e física das instituições de saúde                    |
+| [Prontuário Clínico](prontuario-clinico/index.md)                                    | Prontuários, consultas e registos clínicos dos pacientes                        |
+| [Doadores de Sangue (v2.0)](doadores-de-sangue-v2.0/index.md)                       | Dadores, pedidos de sangue, matching, dações, moderação e administração        |
+| [Catálogo Clínico (v2.0)](catalogo-clinico-v2.0/index.md)                           | Especialidades médicas, itens clínicos e regras clínicas com validade temporal |
+| [Gestão de Agendamentos](gestao-de-agendas-e-marcação-de-consultas/1-introdução.md) | Agendas, exclusões, horários de trabalho, slots e marcação de consultas        |
 
 ## Versões anteriores
 
