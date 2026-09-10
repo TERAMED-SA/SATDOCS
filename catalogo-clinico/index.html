@@ -1,0 +1,4734 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://teramed-sa.github.io/SATDOCS/catalogo-clinico/">
+      
+      
+        <link rel="prev" href="../doadores-de-sangue/doadores-de-sangue/">
+      
+      
+        <link rel="next" href="developer/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Guia de Modelagem - Baika Saúde - Ecossistema</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#guia-completo-de-modelagem-clinica-catalogo-clinico" class="md-skip">
+          Ir para o conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href=".." title="Baika Saúde - Ecossistema" class="md-header__button md-logo" aria-label="Baika Saúde - Ecossistema" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Baika Saúde - Ecossistema
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Guia de Modelagem
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Modo escuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Modo escuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando a pesquisa
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Baika Saúde - Ecossistema" class="md-nav__button md-logo" aria-label="Baika Saúde - Ecossistema" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Baika Saúde - Ecossistema
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Início
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestão Hospitalar
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Gestão Hospitalar
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hospital/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Índice do Módulo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hospital/use-cases/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visão Geral dos Casos de Uso
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hospital/use-cases/models-and-enums/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelos e Enumerações
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hospital/use-cases/hospitals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hospitais
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hospital/use-cases/units/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unidades
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hospital/use-cases/departments/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Departamentos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hospital/use-cases/physical-structure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Estrutura Física
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hospital/use-cases/offers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ofertas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hospital/use-cases/accounts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hospital/use-cases/security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Segurança
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hospital/use-cases/checks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Verificações
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hospital/use-cases/internal-and-events/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Casos Internos, Eventos e Notas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prontuário Clínico
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Prontuário Clínico
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../prontuario-clinico/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Índice do Módulo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../prontuario-clinico/use-cases/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visão Geral dos Casos de Uso
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../prontuario-clinico/use-cases/models-and-enums/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelos e Enumerações
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../prontuario-clinico/use-cases/prontuaries/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prontuários
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../prontuario-clinico/use-cases/visits/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Consultas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../prontuario-clinico/use-cases/clinical-records/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Registos Clínicos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../prontuario-clinico/use-cases/internal-and-events/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Casos Internos, Eventos e Notas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../doadores-de-sangue/doadores-de-sangue/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Doadores de sangue
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Catálogo Clínico
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Catálogo Clínico
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guia de Modelagem
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guia de Modelagem
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introducao-por-que-este-sistema-existe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introdução: Por que este sistema existe?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parte-1-os-4-niveis-fundamentais-a-anatomia-do-catalogo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parte 1: Os 4 Níveis Fundamentais - A Anatomia do Catálogo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parte 1: Os 4 Níveis Fundamentais - A Anatomia do Catálogo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagrama-da-estrutura" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagrama da Estrutura
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parte-2-especialidades-medicas-os-departamentos-do-hospital" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parte 2: Especialidades Médicas - "Os Departamentos do Hospital"
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parte 2: Especialidades Médicas - &#34;Os Departamentos do Hospital&#34;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#o-que-e-uma-especialidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O que é uma especialidade?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemplos-reais-com-codigos-padrao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemplos Reais com Códigos Padrão
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#api-criando-uma-especialidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        API: Criando uma Especialidade
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regras-importantes-para-especialidades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regras Importantes para Especialidades
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemplo-de-verificacao-antes-de-deletar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemplo de Verificação Antes de Deletar
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parte-3-servicos-clinicos-os-tipos-de-atendimento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parte 3: Serviços Clínicos - "Os Tipos de Atendimento"
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parte 3: Serviços Clínicos - &#34;Os Tipos de Atendimento&#34;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#o-que-e-um-servico-clinico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O que é um Serviço Clínico?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#os-4-tipos-de-servico-enum-fixo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Os 4 Tipos de Serviço (ENUM fixo)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemplo-pratico-estruturando-a-cardiologia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemplo Prático: Estruturando a Cardiologia
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#api-criando-um-servico-clinico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        API: Criando um Serviço Clínico
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemplo-de-filtros-e-buscas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemplo de Filtros e Buscas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#batch-request-buscar-multiplos-servicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Batch Request: Buscar Múltiplos Serviços
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parte-4-itens-clinicos-os-procedimentos-concretos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parte 4: Itens Clínicos - "Os Procedimentos Concretos"
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parte 4: Itens Clínicos - &#34;Os Procedimentos Concretos&#34;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#o-que-e-um-item-clinico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O que é um Item Clínico?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemplos-reais-por-tipo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemplos Reais por Tipo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemplo-detalhado-o-hemograma" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemplo Detalhado: O Hemograma
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#api-criando-um-item-clinico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        API: Criando um Item Clínico
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cenario-completo-sistema-de-doacao-de-sangue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cenário Completo: Sistema de Doação de Sangue
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parte-5-regras-clinicas-o-sistema-de-seguranca" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parte 5: Regras Clínicas - "O Sistema de Segurança"
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parte 5: Regras Clínicas - &#34;O Sistema de Segurança&#34;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#o-que-sao-regras-clinicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O que são Regras Clínicas?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#os-4-parametros-de-seguranca" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Os 4 Parâmetros de Segurança
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemplo-real-regra-para-cirurgia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemplo Real: Regra para Cirurgia
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#api-criando-uma-regra-clinica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        API: Criando uma Regra Clínica
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#versionamento-de-regras" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Versionamento de Regras
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemplo-de-auditoria-de-regra" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemplo de Auditoria de Regra
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parte-6-auditoria-de-seguranca-o-diario-de-bordo-medico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parte 6: Auditoria de Segurança - "O Diário de Bordo Médico"
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parte 6: Auditoria de Segurança - &#34;O Diário de Bordo Médico&#34;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#o-que-e-auditoria-de-seguranca" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O que é Auditoria de Segurança?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemplo-de-fluxo-completo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemplo de Fluxo Completo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#api-registrar-auditoria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        API: Registrar Auditoria
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parte-7-integracao-com-outros-sistemas-grpc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parte 7: Integração com Outros Sistemas (gRPC)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parte 7: Integração com Outros Sistemas (gRPC)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#por-que-grpc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Por que gRPC?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemplo-a-agenda-consultando-regras" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemplo: A Agenda Consultando Regras
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chamada-grpc-em-acao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chamada gRPC em Ação
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#endpoints-grpc-disponiveis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Endpoints gRPC Disponíveis
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parte-8-casos-reais-completos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parte 8: Casos Reais Completos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parte 8: Casos Reais Completos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#caso-1-paciente-diabetico-em-cirurgia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Caso 1: Paciente Diabético em Cirurgia
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caso-2-vacinacao-infantil" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Caso 2: Vacinação Infantil
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caso-3-transfusao-de-sangue-urgente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Caso 3: Transfusão de Sangue Urgente
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parte-9-boas-praticas-e-armadilhas-comuns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parte 9: Boas Práticas e Armadilhas Comuns
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parte 9: Boas Práticas e Armadilhas Comuns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#o-que-fazer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O que FAZER
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#o-que-nao-fazer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O que NÃO FAZER
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parte-10-fluxo-de-trabalho-tipico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parte 10: Fluxo de Trabalho Típico
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parte 10: Fluxo de Trabalho Típico">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#passo-a-passo-adicionar-novo-exame" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Passo a Passo: Adicionar Novo Exame
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parte-11-monitoramento-e-metricas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parte 11: Monitoramento e Métricas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parte 11: Monitoramento e Métricas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#metricas-importantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Métricas Importantes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dashboard-recomendado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dashboard Recomendado
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parte-12-solucao-de-problemas-comuns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parte 12: Solução de Problemas Comuns
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parte 12: Solução de Problemas Comuns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problema-item-nao-aparece-na-agenda" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema: "Item não aparece na agenda"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problema-regra-nao-esta-sendo-aplicada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema: "Regra não está sendo aplicada"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problema-codigo-ja-existe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema: "Código já existe"
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parte-13-glossario-tecnico-clinico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parte 13: Glossário Técnico-Clínico
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#suporte-e-contato" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Suporte e Contato
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Suporte e Contato">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#canais-de-suporte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Canais de Suporte
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#escalacao-de-problemas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Escalação de Problemas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conclusão
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checklist-de-implementacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Checklist de Implementação
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="developer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guia do Desenvolvedor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Doadores de Sangue (v2.0)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Doadores de Sangue (v2.0)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../doadores-de-sangue-v2.0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Índice do Módulo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../doadores-de-sangue-v2.0/use-cases/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visão Geral dos Casos de Uso
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../doadores-de-sangue-v2.0/use-cases/models-and-enums/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelos e Enumerações
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../doadores-de-sangue-v2.0/use-cases/donors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dadores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../doadores-de-sangue-v2.0/use-cases/analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Análises Clínicas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../doadores-de-sangue-v2.0/use-cases/requests/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pedidos de Sangue
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../doadores-de-sangue-v2.0/use-cases/matching/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Matching
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../doadores-de-sangue-v2.0/use-cases/donations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dações
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../doadores-de-sangue-v2.0/use-cases/moderation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Moderação
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../doadores-de-sangue-v2.0/use-cases/admin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Administração
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../doadores-de-sangue-v2.0/use-cases/internal-and-events/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Casos Internos, Eventos e Notas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Catálogo Clínico (v2.0)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Catálogo Clínico (v2.0)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../catalogo-clinico-v2.0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Índice do Módulo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../catalogo-clinico-v2.0/use-cases/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visão Geral dos Casos de Uso
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../catalogo-clinico-v2.0/use-cases/models-and-enums/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelos e Enumerações
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../catalogo-clinico-v2.0/use-cases/specialties/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Especialidades
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../catalogo-clinico-v2.0/use-cases/items/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Itens Clínicos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../catalogo-clinico-v2.0/use-cases/rules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Regras Clínicas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../catalogo-clinico-v2.0/use-cases/internal-and-events/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Casos Internos, Eventos e Notas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestão de Agendamentos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Gestão de Agendamentos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestao-de-agendas-e-marca%C3%A7%C3%A3o-de-consultas/1-introdu%C3%A7%C3%A3o/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Introdução ao Sistema
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestao-de-agendas-e-marca%C3%A7%C3%A3o-de-consultas/2-conceitos-base-do-Sistema/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Conceitos-base do Sistema
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestao-de-agendas-e-marca%C3%A7%C3%A3o-de-consultas/3-exclus%C3%B5es-e-folgas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Exclusões e Folgas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestao-de-agendas-e-marca%C3%A7%C3%A3o-de-consultas/4-exclus%C3%B5es-de-dias-e-per%C3%ADodos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Exclusões de Dias e Períodos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestao-de-agendas-e-marca%C3%A7%C3%A3o-de-consultas/5-exclus%C3%B5es-e-bloqueios-avan%C3%A7ados/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Exclusões e Bloqueios Avançados
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestao-de-agendas-e-marca%C3%A7%C3%A3o-de-consultas/6-hor%C3%A1rios-de-trabalho-dos-profissionais/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Horários de Trabalho (Parte 1)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestao-de-agendas-e-marca%C3%A7%C3%A3o-de-consultas/7-hor%C3%A1rios-de-trabalho-dos-profissionais/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Horários de Trabalho (Parte 2)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestao-de-agendas-e-marca%C3%A7%C3%A3o-de-consultas/8-hor%C3%A1rios-de-trabalho-de-profissionais/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. Horários de Trabalho (Parte 3)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestao-de-agendas-e-marca%C3%A7%C3%A3o-de-consultas/9-slots-e-time-boxes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Slots e Time Boxes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestao-de-agendas-e-marca%C3%A7%C3%A3o-de-consultas/10-marca%C3%A7%C3%A3o-de-consultas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. Marcação de Consultas (Parte 1)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestao-de-agendas-e-marca%C3%A7%C3%A3o-de-consultas/11-marca%C3%A7%C3%A3o-de-consultas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11. Marcação de Consultas (Parte 2)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guias Técnicos e Regras de Negócio
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Guias Técnicos e Regras de Negócio
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestao-de-agendas-e-marca%C3%A7%C3%A3o-de-consultas/guias/1-guia-de-configuracao-da-agenda/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Guia de Configuração de Agenda
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestao-de-agendas-e-marca%C3%A7%C3%A3o-de-consultas/guias/2-modelos-de-exclusao-na-agenda/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Modelo de Exclusão na Agenda
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestao-de-agendas-e-marca%C3%A7%C3%A3o-de-consultas/guias/3-guiade-geracao-de-slots-formaA-horarios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Geração de Slots (Horários)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestao-de-agendas-e-marca%C3%A7%C3%A3o-de-consultas/guias/4-guia-de-geracao-de-slots-formaB-capacidade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Geração de Slots (Capacidade)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introducao-por-que-este-sistema-existe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introdução: Por que este sistema existe?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parte-1-os-4-niveis-fundamentais-a-anatomia-do-catalogo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parte 1: Os 4 Níveis Fundamentais - A Anatomia do Catálogo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parte 1: Os 4 Níveis Fundamentais - A Anatomia do Catálogo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagrama-da-estrutura" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagrama da Estrutura
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parte-2-especialidades-medicas-os-departamentos-do-hospital" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parte 2: Especialidades Médicas - "Os Departamentos do Hospital"
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parte 2: Especialidades Médicas - &#34;Os Departamentos do Hospital&#34;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#o-que-e-uma-especialidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O que é uma especialidade?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemplos-reais-com-codigos-padrao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemplos Reais com Códigos Padrão
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#api-criando-uma-especialidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        API: Criando uma Especialidade
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regras-importantes-para-especialidades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regras Importantes para Especialidades
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemplo-de-verificacao-antes-de-deletar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemplo de Verificação Antes de Deletar
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parte-3-servicos-clinicos-os-tipos-de-atendimento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parte 3: Serviços Clínicos - "Os Tipos de Atendimento"
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parte 3: Serviços Clínicos - &#34;Os Tipos de Atendimento&#34;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#o-que-e-um-servico-clinico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O que é um Serviço Clínico?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#os-4-tipos-de-servico-enum-fixo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Os 4 Tipos de Serviço (ENUM fixo)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemplo-pratico-estruturando-a-cardiologia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemplo Prático: Estruturando a Cardiologia
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#api-criando-um-servico-clinico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        API: Criando um Serviço Clínico
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemplo-de-filtros-e-buscas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemplo de Filtros e Buscas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#batch-request-buscar-multiplos-servicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Batch Request: Buscar Múltiplos Serviços
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parte-4-itens-clinicos-os-procedimentos-concretos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parte 4: Itens Clínicos - "Os Procedimentos Concretos"
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parte 4: Itens Clínicos - &#34;Os Procedimentos Concretos&#34;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#o-que-e-um-item-clinico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O que é um Item Clínico?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemplos-reais-por-tipo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemplos Reais por Tipo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemplo-detalhado-o-hemograma" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemplo Detalhado: O Hemograma
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#api-criando-um-item-clinico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        API: Criando um Item Clínico
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cenario-completo-sistema-de-doacao-de-sangue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cenário Completo: Sistema de Doação de Sangue
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parte-5-regras-clinicas-o-sistema-de-seguranca" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parte 5: Regras Clínicas - "O Sistema de Segurança"
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parte 5: Regras Clínicas - &#34;O Sistema de Segurança&#34;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#o-que-sao-regras-clinicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O que são Regras Clínicas?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#os-4-parametros-de-seguranca" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Os 4 Parâmetros de Segurança
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemplo-real-regra-para-cirurgia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemplo Real: Regra para Cirurgia
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#api-criando-uma-regra-clinica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        API: Criando uma Regra Clínica
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#versionamento-de-regras" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Versionamento de Regras
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemplo-de-auditoria-de-regra" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemplo de Auditoria de Regra
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parte-6-auditoria-de-seguranca-o-diario-de-bordo-medico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parte 6: Auditoria de Segurança - "O Diário de Bordo Médico"
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parte 6: Auditoria de Segurança - &#34;O Diário de Bordo Médico&#34;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#o-que-e-auditoria-de-seguranca" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O que é Auditoria de Segurança?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemplo-de-fluxo-completo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemplo de Fluxo Completo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#api-registrar-auditoria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        API: Registrar Auditoria
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parte-7-integracao-com-outros-sistemas-grpc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parte 7: Integração com Outros Sistemas (gRPC)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parte 7: Integração com Outros Sistemas (gRPC)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#por-que-grpc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Por que gRPC?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemplo-a-agenda-consultando-regras" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemplo: A Agenda Consultando Regras
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chamada-grpc-em-acao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chamada gRPC em Ação
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#endpoints-grpc-disponiveis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Endpoints gRPC Disponíveis
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parte-8-casos-reais-completos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parte 8: Casos Reais Completos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parte 8: Casos Reais Completos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#caso-1-paciente-diabetico-em-cirurgia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Caso 1: Paciente Diabético em Cirurgia
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caso-2-vacinacao-infantil" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Caso 2: Vacinação Infantil
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caso-3-transfusao-de-sangue-urgente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Caso 3: Transfusão de Sangue Urgente
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parte-9-boas-praticas-e-armadilhas-comuns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parte 9: Boas Práticas e Armadilhas Comuns
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parte 9: Boas Práticas e Armadilhas Comuns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#o-que-fazer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O que FAZER
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#o-que-nao-fazer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O que NÃO FAZER
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parte-10-fluxo-de-trabalho-tipico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parte 10: Fluxo de Trabalho Típico
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parte 10: Fluxo de Trabalho Típico">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#passo-a-passo-adicionar-novo-exame" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Passo a Passo: Adicionar Novo Exame
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parte-11-monitoramento-e-metricas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parte 11: Monitoramento e Métricas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parte 11: Monitoramento e Métricas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#metricas-importantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Métricas Importantes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dashboard-recomendado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dashboard Recomendado
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parte-12-solucao-de-problemas-comuns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parte 12: Solução de Problemas Comuns
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parte 12: Solução de Problemas Comuns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problema-item-nao-aparece-na-agenda" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema: "Item não aparece na agenda"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problema-regra-nao-esta-sendo-aplicada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema: "Regra não está sendo aplicada"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problema-codigo-ja-existe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema: "Código já existe"
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parte-13-glossario-tecnico-clinico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parte 13: Glossário Técnico-Clínico
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#suporte-e-contato" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Suporte e Contato
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Suporte e Contato">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#canais-de-suporte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Canais de Suporte
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#escalacao-de-problemas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Escalação de Problemas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conclusão
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checklist-de-implementacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Checklist de Implementação
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="guia-completo-de-modelagem-clinica-catalogo-clinico"><strong>Guia Completo de Modelagem Clínica - Catálogo Clínico</strong></h1>
+<h2 id="introducao-por-que-este-sistema-existe"><strong>Introdução: Por que este sistema existe?</strong></h2>
+<p>Imagine que você precisa construir o "dicionário médico" de um hospital. Um lugar onde:</p>
+<ol>
+<li><strong>Todos os procedimentos, exames e consultas</strong> são definidos de forma padronizada</li>
+<li><strong>As regras de segurança</strong> são claras e automaticamente aplicadas</li>
+<li><strong>Não há ambiguidade</strong> sobre o que pode ser feito e quando</li>
+</ol>
+<p><strong>Este é o Catálogo Clínico.</strong> Ele serve como <strong>fonte única da verdade</strong> para:</p>
+<ul>
+<li><strong>Agendamento</strong>: Saber o que pode ser marcado e quando</li>
+<li><strong>Prontuário</strong>: Registrar procedimentos corretamente</li>
+<li><strong>Faturamento</strong>: Cobrar pelo código correto</li>
+<li><strong>Segurança</strong>: Prevenir procedimentos perigosos</li>
+</ul>
+<p><strong>Usuários típicos deste sistema:</strong>
+- <strong>Desenvolvedores</strong>: Que integram com outros sistemas
+- <strong>Administradores</strong>: Que cadastram novos serviços
+- <strong>Gestores hospitalares</strong>: Que precisam de relatórios
+- <strong>Outros microserviços</strong>: Agenda, Prontuário, Faturamento</p>
+<hr />
+<h2 id="parte-1-os-4-niveis-fundamentais-a-anatomia-do-catalogo"><strong>Parte 1: Os 4 Níveis Fundamentais - A Anatomia do Catálogo</strong></h2>
+<h3 id="diagrama-da-estrutura"><strong>Diagrama da Estrutura</strong></h3>
+<pre><code>                    ┌─────────────────────────────────┐
+                    │  1. ESPECIALIDADE               │
+                    │  &quot;Quem faz?&quot;                    │
+                    │  Ex: Cardiologia                │
+                    └──────────┬──────────────────────┘
+                               │
+                    ┌──────────▼──────────────────────┐
+                    │  2. SERVIÇO CLÍNICO             │
+                    │  &quot;Que tipo de atendimento?&quot;     │
+                    │  Ex: Consulta, Exame, Vacina    │
+                    └──────────┬──────────────────────┘
+                               │
+                    ┌──────────▼──────────────────────┐
+                    │  3. ITEM CLÍNICO                │
+                    │  &quot;O que exatamente?&quot;            │
+                    │  Ex: Hemograma, COVID-19 vaccine│
+                    └──────────┬──────────────────────┘
+                               │
+                    ┌──────────▼──────────────────────┐
+                    │  4. REGRA CLÍNICA               │
+                    │  &quot;Quando pode/não pode fazer?&quot;  │
+                    │  Ex: Esperar 30 dias após cirurgia
+                    └─────────────────────────────────┘
+</code></pre>
+<hr />
+<h2 id="parte-2-especialidades-medicas-os-departamentos-do-hospital"><strong>Parte 2: Especialidades Médicas - "Os Departamentos do Hospital"</strong></h2>
+<h3 id="o-que-e-uma-especialidade"><strong>O que é uma especialidade?</strong></h3>
+<p>É como um <strong>departamento médico</strong> dentro do hospital. Não é um procedimento, mas sim <strong>quem</strong> realiza os procedimentos.</p>
+<h3 id="exemplos-reais-com-codigos-padrao"><strong>Exemplos Reais com Códigos Padrão</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Especialidade</th>
+<th>Código</th>
+<th>O que faz</th>
+<th>Exemplo de Item</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cardiologia</td>
+<td>CARD</td>
+<td>Cuida do coração</td>
+<td>Eletrocardiograma</td>
+</tr>
+<tr>
+<td>Hematologia</td>
+<td>HEMO</td>
+<td>Cuida do sangue</td>
+<td>Hemograma completo</td>
+</tr>
+<tr>
+<td>Pediatria</td>
+<td>PED</td>
+<td>Cuida de crianças</td>
+<td>Vacina BCG infantil</td>
+</tr>
+<tr>
+<td>Infectologia</td>
+<td>INF</td>
+<td>Doenças infecciosas</td>
+<td>Teste HIV</td>
+</tr>
+<tr>
+<td>Neurologia</td>
+<td>NEUR</td>
+<td>Sistema nervoso</td>
+<td>Tomografia cerebral</td>
+</tr>
+</tbody>
+</table>
+<h3 id="api-criando-uma-especialidade"><strong>API: Criando uma Especialidade</strong></h3>
+<pre><code class="language-bash"># Endpoint
+POST http://localhost:3000/specialties
+
+# Cabeçalho (para desenvolvimento)
+Content-Type: application/json
+
+# Corpo da requisição
+{
+  &quot;code&quot;: &quot;CARDIOL&quot;,           // Único e em maiúsculas
+  &quot;name&quot;: &quot;Cardiologia&quot;,       // Nome completo
+  &quot;description&quot;: &quot;Especialidade médica responsável pelo diagnóstico e tratamento de doenças do coração e sistema circulatório.&quot;
+}
+
+# Resposta de sucesso (201 Created)
+{
+  &quot;id&quot;: &quot;123e4567-e89b-12d3-a456-426614174000&quot;,
+  &quot;code&quot;: &quot;CARDIOL&quot;,
+  &quot;name&quot;: &quot;Cardiologia&quot;,
+  &quot;description&quot;: &quot;Especialidade médica responsável...&quot;,
+  &quot;isActive&quot;: true,
+  &quot;createdBy&quot;: &quot;sistema&quot;,
+  &quot;updatedBy&quot;: &quot;sistema&quot;,
+  &quot;createdAt&quot;: &quot;2024-01-15T10:30:00.000Z&quot;,
+  &quot;updatedAt&quot;: &quot;2024-01-15T10:30:00.000Z&quot;
+}
+</code></pre>
+<h3 id="regras-importantes-para-especialidades"><strong>Regras Importantes para Especialidades</strong></h3>
+<ol>
+<li><strong>Não pode deletar</strong> se houver serviços associados</li>
+<li><strong>Código único</strong> em todo o sistema</li>
+<li><strong>Código em maiúsculas</strong> (padrão internacional)</li>
+<li><strong>isActive = false</strong> desabilita todos os serviços e itens</li>
+</ol>
+<h3 id="exemplo-de-verificacao-antes-de-deletar"><strong>Exemplo de Verificação Antes de Deletar</strong></h3>
+<pre><code class="language-bash"># Antes de deletar, verifique se pode
+GET http://localhost:3000/specialties/{id}/can-delete
+
+# Resposta
+{
+  &quot;canDelete&quot;: false,           // Atenção!
+  &quot;reason&quot;: &quot;Specialty has 3 associated services&quot;,
+  &quot;serviceCount&quot;: 3             // Tem 3 serviços usando esta especialidade
+}
+</code></pre>
+<hr />
+<h2 id="parte-3-servicos-clinicos-os-tipos-de-atendimento"><strong>Parte 3: Serviços Clínicos - "Os Tipos de Atendimento"</strong></h2>
+<h3 id="o-que-e-um-servico-clinico"><strong>O que é um Serviço Clínico?</strong></h3>
+<p>São as <strong>categorias de atendimento</strong> dentro de uma especialidade. Pense como "o que pode ser feito" em uma determinada área.</p>
+<h3 id="os-4-tipos-de-servico-enum-fixo"><strong>Os 4 Tipos de Serviço (ENUM fixo)</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Tipo</th>
+<th>Código</th>
+<th>Exemplos Reais</th>
+<th>Quando usar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>CONSULTATION</strong></td>
+<td>CONSULTA</td>
+<td>Consulta cardiológica, Retorno pediátrico</td>
+<td>Avaliação médica</td>
+</tr>
+<tr>
+<td><strong>EXAM</strong></td>
+<td>EXAME</td>
+<td>Hemograma, Raio-X, Tomografia</td>
+<td>Coleta/Análise de amostras</td>
+</tr>
+<tr>
+<td><strong>VACCINE</strong></td>
+<td>VACINA</td>
+<td>COVID-19, Gripe, Febre amarela</td>
+<td>Imunização</td>
+</tr>
+<tr>
+<td><strong>PROCEDURE</strong></td>
+<td>PROCEDIMENTO</td>
+<td>Cirurgia, Sutura, Biópsia</td>
+<td>Intervenção física</td>
+</tr>
+</tbody>
+</table>
+<h3 id="exemplo-pratico-estruturando-a-cardiologia"><strong>Exemplo Prático: Estruturando a Cardiologia</strong></h3>
+<pre><code>Cardiologia (Especialidade)
+├── Consultas (Tipo: CONSULTATION)
+│   ├── Primeira consulta
+│   └── Retorno
+├── Exames (Tipo: EXAM)
+│   ├── Eletrocardiograma
+│   └── Ecocardiograma
+└── Procedimentos (Tipo: PROCEDURE)
+    └── Cateterismo
+</code></pre>
+<h3 id="api-criando-um-servico-clinico"><strong>API: Criando um Serviço Clínico</strong></h3>
+<pre><code class="language-bash">POST http://localhost:3000/services
+
+{
+  &quot;code&quot;: &quot;CARD_CONSULT&quot;,              // Único no sistema
+  &quot;name&quot;: &quot;Consulta Cardiológica&quot;,
+  &quot;specialtyId&quot;: &quot;123e4567-e89b...&quot;,   // ID da especialidade Cardiologia
+  &quot;type&quot;: &quot;CONSULTATION&quot;,              // Um dos 4 tipos fixos
+  &quot;description&quot;: &quot;Avaliação inicial com cardiologista&quot;,
+  &quot;isActive&quot;: true                     // Pode ser desativado temporariamente
+}
+
+# Resposta
+{
+  &quot;id&quot;: &quot;456e7890-f12c-34d5-b678-567812345678&quot;,
+  &quot;code&quot;: &quot;CARD_CONSULT&quot;,
+  &quot;name&quot;: &quot;Consulta Cardiológica&quot;,
+  &quot;type&quot;: &quot;CONSULTATION&quot;,
+  &quot;specialtyId&quot;: &quot;123e4567-e89b...&quot;,
+  &quot;description&quot;: &quot;Avaliação inicial...&quot;,
+  &quot;isActive&quot;: true,
+  &quot;createdAt&quot;: &quot;2024-01-15T10:35:00.000Z&quot;,
+  &quot;updatedAt&quot;: &quot;2024-01-15T10:35:00.000Z&quot;,
+  &quot;specialty&quot;: {
+    &quot;id&quot;: &quot;123e4567-e89b...&quot;,
+    &quot;code&quot;: &quot;CARDIOL&quot;,
+    &quot;name&quot;: &quot;Cardiologia&quot;
+  }
+}
+</code></pre>
+<h3 id="exemplo-de-filtros-e-buscas"><strong>Exemplo de Filtros e Buscas</strong></h3>
+<pre><code class="language-bash"># Buscar todos os serviços de uma especialidade
+GET http://localhost:3000/services?specialtyId=123e4567-e89b...
+
+# Buscar apenas consultas ativas
+GET http://localhost:3000/services?type=CONSULTATION&amp;isActive=true
+
+# Buscar por nome ou código
+GET http://localhost:3000/services?search=cardio
+
+# Paginação (50 por página)
+GET http://localhost:3000/services?page=1&amp;limit=50
+</code></pre>
+<h3 id="batch-request-buscar-multiplos-servicos"><strong>Batch Request: Buscar Múltiplos Serviços</strong></h3>
+<pre><code class="language-bash"># Quando a Agenda precisa de vários serviços de uma vez
+GET http://localhost:3000/services/batch?ids=id1,id2,id3
+
+# Ou buscar por especialidade em lote
+GET http://localhost:3000/services/batch?specialtyId=123e4567...
+</code></pre>
+<hr />
+<h2 id="parte-4-itens-clinicos-os-procedimentos-concretos"><strong>Parte 4: Itens Clínicos - "Os Procedimentos Concretos"</strong></h2>
+<h3 id="o-que-e-um-item-clinico"><strong>O que é um Item Clínico?</strong></h3>
+<p>É a <strong>coisa real que será executada</strong>. É o que aparece na agenda, no prontuário e na fatura.</p>
+<h3 id="exemplos-reais-por-tipo"><strong>Exemplos Reais por Tipo</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Tipo</th>
+<th>Item Clínico</th>
+<th>Código</th>
+<th>Para que serve</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>EXAM</strong></td>
+<td>Hemograma Completo</td>
+<td>HEMOGRAM</td>
+<td>Contagem de células sanguíneas</td>
+</tr>
+<tr>
+<td><strong>VACCINE</strong></td>
+<td>Vacina COVID-19</td>
+<td>COVID19VAC</td>
+<td>Imunização contra coronavírus</td>
+</tr>
+<tr>
+<td><strong>PROCEDURE</strong></td>
+<td>Cirurgia de Apendicite</td>
+<td>APENDICEC</td>
+<td>Remoção do apêndice</td>
+</tr>
+<tr>
+<td><strong>CONSULTATION</strong></td>
+<td>Consulta Pré-Operatória</td>
+<td>PREOPCONS</td>
+<td>Avaliação antes de cirurgia</td>
+</tr>
+</tbody>
+</table>
+<h3 id="exemplo-detalhado-o-hemograma"><strong>Exemplo Detalhado: O Hemograma</strong></h3>
+<pre><code class="language-json">{
+  &quot;item&quot;: {
+    &quot;id&quot;: &quot;789a0123-b45c-67d8-e901-234567890123&quot;,
+    &quot;code&quot;: &quot;HEMOGRAM_COMPLETE&quot;,
+    &quot;name&quot;: &quot;Hemograma Completo&quot;,
+    &quot;type&quot;: &quot;EXAM&quot;,
+    &quot;description&quot;: &quot;Exame de sangue que avalia glóbulos vermelhos, brancos e plaquetas&quot;,
+    &quot;clinicalService&quot;: {
+      &quot;id&quot;: &quot;456e7890-f12c-34d5-b678-567812345678&quot;,
+      &quot;name&quot;: &quot;Exames Hematológicos&quot;,
+      &quot;specialty&quot;: {
+        &quot;name&quot;: &quot;Hematologia&quot;,
+        &quot;code&quot;: &quot;HEMO&quot;
+      }
+    },
+    &quot;rules&quot;: [  // Regras de segurança aplicáveis
+      {
+        &quot;minHoursAfterBloodDonation&quot;: 72,
+        &quot;minDaysAfterVaccination&quot;: 7,
+        &quot;contraindicatedAnticoagulants&quot;: true
+      }
+    ]
+  }
+}
+</code></pre>
+<h3 id="api-criando-um-item-clinico"><strong>API: Criando um Item Clínico</strong></h3>
+<pre><code class="language-bash">POST http://localhost:3000/items
+
+{
+  &quot;code&quot;: &quot;COVID19_VACCINE&quot;,
+  &quot;name&quot;: &quot;Vacina COVID-19&quot;,
+  &quot;clinicalServiceId&quot;: &quot;456e7890-f12c...&quot;,  // ID do serviço de vacinação
+  &quot;description&quot;: &quot;Vacina mRNA contra SARS-CoV-2, dose única ou reforço&quot;
+}
+
+# Resposta
+{
+  &quot;id&quot;: &quot;890b1234-c56d-78e9-f012-345678901234&quot;,
+  &quot;code&quot;: &quot;COVID19_VACCINE&quot;,
+  &quot;name&quot;: &quot;Vacina COVID-19&quot;,
+  &quot;clinicalServiceId&quot;: &quot;456e7890-f12c...&quot;,
+  &quot;isActive&quot;: true,
+  &quot;createdAt&quot;: &quot;2024-01-15T10:40:00.000Z&quot;,
+  &quot;clinicalService&quot;: {
+    &quot;id&quot;: &quot;456e7890-f12c...&quot;,
+    &quot;code&quot;: &quot;VACCINATION_SRV&quot;,
+    &quot;name&quot;: &quot;Serviço de Vacinação&quot;,
+    &quot;type&quot;: &quot;VACCINE&quot;,
+    &quot;specialty&quot;: {
+      &quot;name&quot;: &quot;Infectologia&quot;,
+      &quot;code&quot;: &quot;INF&quot;
+    }
+  }
+}
+</code></pre>
+<h3 id="cenario-completo-sistema-de-doacao-de-sangue"><strong>Cenário Completo: Sistema de Doação de Sangue</strong></h3>
+<pre><code class="language-yaml"># Estrutura do exemplo
+Especialidade: Hematologia (HEMO)
+├── Serviço: Doação de Sangue (Tipo: PROCEDURE)
+│   └── Item: Doação de Sangue Completa
+│       └── Regra: &quot;Bloqueia exames por 30 dias&quot;
+│
+└── Serviço: Exames Laboratoriais (Tipo: EXAM)
+    ├── Item: Hemograma
+    ├── Item: Glicemia
+    └── Item: Colesterol
+</code></pre>
+<p><strong>Na prática:</strong> Quando alguém doa sangue, automaticamente não pode fazer exames por 30 dias.</p>
+<hr />
+<h2 id="parte-5-regras-clinicas-o-sistema-de-seguranca"><strong>Parte 5: Regras Clínicas - "O Sistema de Segurança"</strong></h2>
+<h3 id="o-que-sao-regras-clinicas"><strong>O que são Regras Clínicas?</strong></h3>
+<p>São as <strong>restrições médicas</strong> que garantem que procedimentos não coloquem pacientes em risco. Elas são <strong>versionadas</strong> no tempo.</p>
+<h3 id="os-4-parametros-de-seguranca"><strong>Os 4 Parâmetros de Segurança</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Parâmetro</th>
+<th>Unidade</th>
+<th>Exemplo Médico</th>
+<th>Por que existe?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>minHoursAfterBloodDonation</strong></td>
+<td>Horas</td>
+<td>72 horas</td>
+<td>Para evitar anemia após doação</td>
+</tr>
+<tr>
+<td><strong>minDaysAfterVaccination</strong></td>
+<td>Dias</td>
+<td>7 dias</td>
+<td>Evitar reações cruzadas</td>
+</tr>
+<tr>
+<td><strong>minDaysAfterSurgery</strong></td>
+<td>Dias</td>
+<td>30 dias</td>
+<td>Tempo de cicatrização</td>
+</tr>
+<tr>
+<td><strong>contraindicatedAnticoagulants</strong></td>
+<td>Booleano</td>
+<td>true/false</td>
+<td>Risco de sangramento</td>
+</tr>
+</tbody>
+</table>
+<h3 id="exemplo-real-regra-para-cirurgia"><strong>Exemplo Real: Regra para Cirurgia</strong></h3>
+<pre><code class="language-json">{
+  &quot;rule&quot;: {
+    &quot;id&quot;: &quot;901c2345-d67e-89f0-g123-456789012345&quot;,
+    &quot;clinicalItemId&quot;: &quot;APENDICEC&quot;,  // Cirurgia de apêndice
+    &quot;minHoursAfterBloodDonation&quot;: 168,      // 7 dias
+    &quot;minDaysAfterVaccination&quot;: 14,          // 2 semanas
+    &quot;minDaysAfterSurgery&quot;: 90,              // 3 meses
+    &quot;contraindicatedAnticoagulants&quot;: true,  // Perigoso
+    &quot;validFrom&quot;: &quot;2024-01-01T00:00:00.000Z&quot;,
+    &quot;validTo&quot;: null,                        // Válida indefinidamente
+    &quot;createdBy&quot;: &quot;dr.silva@hospital.com&quot;,
+    &quot;explanation&quot;: &quot;Pacientes em anticoagulantes têm risco aumentado de sangramento durante cirurgias&quot;
+  }
+}
+</code></pre>
+<h3 id="api-criando-uma-regra-clinica"><strong>API: Criando uma Regra Clínica</strong></h3>
+<pre><code class="language-bash">POST http://localhost:3000/rules
+
+{
+  &quot;clinicalItemId&quot;: &quot;HEMOGRAM&quot;,  // Item: Hemograma
+  &quot;minHoursAfterBloodDonation&quot;: 72,          // 3 dias
+  &quot;minDaysAfterVaccination&quot;: 7,              // 1 semana
+  &quot;minDaysAfterSurgery&quot;: 0,                  // Pode fazer imediatamente
+  &quot;contraindicatedAnticoagulants&quot;: true,     // CUIDADO!
+  &quot;validFrom&quot;: &quot;2024-01-01T00:00:00.000Z&quot;,   // Data de início
+  &quot;validTo&quot;: &quot;2024-12-31T23:59:59.999Z&quot;,     // Data de fim (opcional)
+  &quot;createdBy&quot;: &quot;lab.manager@hospital.com&quot;    // Quem criou
+}
+
+# Resposta
+{
+  &quot;id&quot;: &quot;012d3456-e78f-90a1-h234-567890123456&quot;,
+  &quot;clinicalItemId&quot;: &quot;HEMOGRAM&quot;,
+  &quot;minHoursAfterBloodDonation&quot;: 72,
+  &quot;minDaysAfterVaccination&quot;: 7,
+  &quot;minDaysAfterSurgery&quot;: 0,
+  &quot;contraindicatedAnticoagulants&quot;: true,
+  &quot;validFrom&quot;: &quot;2024-01-01T00:00:00.000Z&quot;,
+  &quot;validTo&quot;: &quot;2024-12-31T23:59:59.999Z&quot;,
+  &quot;isCurrent&quot;: true,  // Regra atualmente válida
+  &quot;createdBy&quot;: &quot;lab.manager@hospital.com&quot;,
+  &quot;createdAt&quot;: &quot;2024-01-15T10:45:00.000Z&quot;,
+  &quot;clinicalItem&quot;: {
+    &quot;id&quot;: &quot;789a0123-b45c...&quot;,
+    &quot;code&quot;: &quot;HEMOGRAM&quot;,
+    &quot;name&quot;: &quot;Hemograma Completo&quot;
+  }
+}
+</code></pre>
+<h3 id="versionamento-de-regras"><strong>Versionamento de Regras</strong></h3>
+<p>As regras podem mudar com o tempo. O sistema mantém todas as versões:</p>
+<pre><code class="language-bash"># Buscar regras válidas em uma data específica
+GET http://localhost:3000/rules?itemId=HEMOGRAM&amp;validAt=2024-06-15
+
+# Buscar apenas regra atual
+GET http://localhost:3000/rules?itemId=HEMOGRAM&amp;currentOnly=true
+
+# Ver histórico de mudanças
+GET http://localhost:3000/rules/{ruleId}/audit
+</code></pre>
+<h3 id="exemplo-de-auditoria-de-regra"><strong>Exemplo de Auditoria de Regra</strong></h3>
+<pre><code class="language-json">{
+  &quot;auditTrail&quot;: [
+    {
+      &quot;changedAt&quot;: &quot;2024-06-01T14:30:00.000Z&quot;,
+      &quot;changedBy&quot;: &quot;dr.costa@hospital.com&quot;,
+      &quot;change&quot;: &quot;Aumentou minDaysAfterVaccination de 3 para 7&quot;,
+      &quot;oldValue&quot;: 3,
+      &quot;newValue&quot;: 7,
+      &quot;reason&quot;: &quot;Novos estudos mostram maior risco de reação&quot;
+    }
+  ]
+}
+</code></pre>
+<hr />
+<h2 id="parte-6-auditoria-de-seguranca-o-diario-de-bordo-medico"><strong>Parte 6: Auditoria de Segurança - "O Diário de Bordo Médico"</strong></h2>
+<h3 id="o-que-e-auditoria-de-seguranca"><strong>O que é Auditoria de Segurança?</strong></h3>
+<p>Toda vez que o sistema verifica se um procedimento pode ser feito, ele <strong>registra a decisão</strong>. Isso cria um histórico completo para:</p>
+<ol>
+<li><strong>Auditoria regulatória</strong> (ANVISA, CFM)</li>
+<li><strong>Análise de incidentes</strong></li>
+<li><strong>Melhoria de regras</strong></li>
+</ol>
+<h3 id="exemplo-de-fluxo-completo"><strong>Exemplo de Fluxo Completo</strong></h3>
+<pre><code>Paciente João (ID: PAT123) quer fazer Hemograma hoje (2024-01-15)
+
+1. Sistema verifica histórico do paciente:
+   - Doou sangue em: 2024-01-10 (5 dias atrás)
+   - Tomou vacina em: 2024-01-01 (14 dias atrás)
+   - Está usando: Varfarina (anticoagulante)
+
+2. Sistema aplica regras do Hemograma:
+   - minHoursAfterBloodDonation: 72h (3 dias) FALHA
+   - minDaysAfterVaccination: 7d PASSOU
+   - anticoagulantes: contraindicated FALHA
+
+3. Resultado: NÃO PERMITIDO
+   Motivo: &quot;Doação de sangue recente + uso de anticoagulante&quot;
+
+4. Sistema registra auditoria:
+</code></pre>
+<pre><code class="language-json">{
+  &quot;safetyAudit&quot;: {
+    &quot;id&quot;: &quot;345f6789-g01h-23i4-j567-890123456789&quot;,
+    &quot;patientId&quot;: &quot;PAT123&quot;,
+    &quot;clinicalItemId&quot;: &quot;HEMOGRAM&quot;,
+    &quot;desiredDate&quot;: &quot;2024-01-15T09:00:00.000Z&quot;,
+    &quot;wasAllowed&quot;: false,  // Negado!
+    &quot;reason&quot;: &quot;Doação de sangue em 2024-01-10 (necessário aguardar 72h) + paciente em anticoagulante Varfarina&quot;,
+    &quot;clinicalRuleId&quot;: &quot;012d3456-e78f...&quot;,
+    &quot;evaluatedAt&quot;: &quot;2024-01-15T08:30:00.000Z&quot;
+  }
+}
+</code></pre>
+<h3 id="api-registrar-auditoria"><strong>API: Registrar Auditoria</strong></h3>
+<pre><code class="language-bash">POST http://localhost:3000/rules/safety-audits
+
+{
+  &quot;patientId&quot;: &quot;PAT123&quot;,
+  &quot;clinicalItemId&quot;: &quot;HEMOGRAM&quot;,
+  &quot;desiredDate&quot;: &quot;2024-01-15T09:00:00.000Z&quot;,
+  &quot;wasAllowed&quot;: false,
+  &quot;reason&quot;: &quot;Doação de sangue recente + anticoagulante&quot;,
+  &quot;clinicalRuleId&quot;: &quot;012d3456-e78f...&quot;  // Opcional: qual regra foi aplicada
+}
+</code></pre>
+<hr />
+<h2 id="parte-7-integracao-com-outros-sistemas-grpc"><strong>Parte 7: Integração com Outros Sistemas (gRPC)</strong></h2>
+<h3 id="por-que-grpc"><strong>Por que gRPC?</strong></h3>
+<p>Para <strong>alta performance</strong> quando outros sistemas precisam consultar o catálogo frequentemente:</p>
+<ol>
+<li><strong>Agendamento</strong>: Verifica disponibilidade 1000x por minuto</li>
+<li><strong>Prontuário</strong>: Busca informações de procedimentos</li>
+<li><strong>Faturamento</strong>: Obtém códigos TUSS/AMB</li>
+</ol>
+<h3 id="exemplo-a-agenda-consultando-regras"><strong>Exemplo: A Agenda Consultando Regras</strong></h3>
+<pre><code class="language-protobuf">// A agenda pergunta: &quot;João pode fazer Hemograma amanhã?&quot;
+rpc BatchGetCurrentRules(BatchItemRequest) returns (RuleListResponse);
+
+message BatchItemRequest {
+  repeated string ids = 1;  // IDs dos itens a verificar
+}
+
+message RuleListResponse {
+  repeated RuleResponse rules = 1;
+}
+</code></pre>
+<h3 id="chamada-grpc-em-acao"><strong>Chamada gRPC em Ação</strong></h3>
+<pre><code class="language-typescript">// Código do microserviço de Agenda
+const rules = await grpcClient.batchGetCurrentRules({
+  ids: ['HEMOGRAM', 'COVID19_VACCINE', 'ECOCARDIO']
+});
+
+// Resultado
+rules.forEach(rule =&gt; {
+  console.log(`${rule.item_name}:`);
+  console.log(`  Aguardar ${rule.minHoursAfterBloodDonation}h após doação`);
+  console.log(`  Aguardar ${rule.minDaysAfterVaccination}d após vacina`);
+  console.log(`  Anticoagulantes: ${rule.contraindicatedAnticoagulants ? 'PROIBIDO' : 'PERMITIDO'}`);
+});
+</code></pre>
+<h3 id="endpoints-grpc-disponiveis"><strong>Endpoints gRPC Disponíveis</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Método</th>
+<th>Quando usar</th>
+<th>Exemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ListSpecialties</code></td>
+<td>Configurar agenda por especialidade</td>
+<td>Filtrar cardiologistas</td>
+</tr>
+<tr>
+<td><code>ListServicesBySpecialty</code></td>
+<td>Mostrar serviços de uma área</td>
+<td>Cardio → Consultas, Exames</td>
+</tr>
+<tr>
+<td><code>BatchGetItems</code></td>
+<td>Verificar múltiplos itens</td>
+<td>Hemo+Glicemia+Colesterol</td>
+</tr>
+<tr>
+<td><code>GetCurrentRuleByItem</code></td>
+<td>Ver regra ativa de um item</td>
+<td>Regra do Hemograma hoje</td>
+</tr>
+<tr>
+<td><code>BatchGetCurrentRules</code></td>
+<td>Verificar várias regras de uma vez</td>
+<td>Otimização de performance</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="parte-8-casos-reais-completos"><strong>Parte 8: Casos Reais Completos</strong></h2>
+<h3 id="caso-1-paciente-diabetico-em-cirurgia"><strong>Caso 1: Paciente Diabético em Cirurgia</strong></h3>
+<p><strong>Cenário:</strong> Maria, 65 anos, diabética, vai fazer cirurgia de catarata.</p>
+<pre><code class="language-yaml">Paciente: Maria
+Condições: Diabetes tipo 2, usa insulina
+Procedimento desejado: Cirurgia de Catarata (CATARACT_SURGERY)
+
+Verificações do sistema:
+1. Regra da cirurgia: anticoagulantes contraindicated
+   - Maria usa AAS (anticoagulante) PERMITIDO (AAS é permitido)
+
+2. Regra do diabetes: precisa glicemia &lt; 200mg/dL
+   - Glicemia de Maria: 180mg/dL PASSOU
+
+3. Resultado: PERMITIDO com observação
+   - &quot;Monitorar glicemia durante procedimento&quot;
+</code></pre>
+<h3 id="caso-2-vacinacao-infantil"><strong>Caso 2: Vacinação Infantil</strong></h3>
+<p><strong>Cenário:</strong> João, 2 anos, vai tomar múltiplas vacinas.</p>
+<pre><code class="language-yaml">Paciente: João (2 anos)
+Vacinas agendadas:
+- Pentavalente (PENTA_VAC)
+- Pneumocócica (PNEUMO_VAC)
+- Influenza (FLU_VAC)
+
+Regras aplicadas:
+1. Intervalo mínimo entre vacinas: 30 dias
+2. João tomou Pentavalente há 20 dias
+3. Sistema sugere: &quot;Adiar Pneumocócica por 10 dias&quot;
+</code></pre>
+<h3 id="caso-3-transfusao-de-sangue-urgente"><strong>Caso 3: Transfusão de Sangue Urgente</strong></h3>
+<p><strong>Cenário:</strong> Emergência, paciente perdeu muito sangue.</p>
+<pre><code class="language-yaml">Paciente: Emergência traumática
+Necessidade: Transfusão urgente (BLOOD_TRANSFUSION)
+
+Regras normais: Verificar tipo sanguíneo, testes
+Regra de emergência: &quot;Ignorar algumas verificações&quot;
+
+Sistema registra:
+- wasAllowed: true
+- reason: &quot;EMERGÊNCIA - Protocolo de exceção ativado&quot;
+- bypassedRules: [&quot;tipagem_completa&quot;, &quot;teste_cruzado&quot;]
+- authorizedBy: &quot;dr.emergencia@hospital.com&quot;
+</code></pre>
+<hr />
+<h2 id="parte-9-boas-praticas-e-armadilhas-comuns"><strong>Parte 9: Boas Práticas e Armadilhas Comuns</strong></h2>
+<h3 id="o-que-fazer"><strong>O que FAZER</strong></h3>
+<ol>
+<li>
+<p><strong>Use códigos padronizados</strong>
+   <code>json
+   CERTO: {"code": "COVID19_VAC", "name": "Vacina COVID-19"}
+   ERRADO: {"code": "vacina_covid", "name": "vacina"}</code></p>
+</li>
+<li>
+<p><strong>Mantenha histórico de regras</strong>
+   <code>bash
+   # Sempre crie nova regra em vez de editar
+   POST /rules (nova regra com validFrom=amanhã)
+   # Em vez de
+   PATCH /rules/{id} (editar regra existente)</code></p>
+</li>
+<li>
+<p><strong>Documente mudanças</strong>
+   <code>json
+   {
+     "createdBy": "dr.silva@hospital.com",
+     "changeReason": "Baseado em estudo JAMA 2024..."
+   }</code></p>
+</li>
+</ol>
+<h3 id="o-que-nao-fazer"><strong>O que NÃO FAZER</strong></h3>
+<ol>
+<li><strong>Não apague, desative</strong>
+   ```bash
+   # Em vez de deletar
+   DELETE /items/{id}</li>
+</ol>
+<p># Faça
+   PATCH /items/{id}
+   {
+     "isActive": false,
+     "deactivationReason": "Substituído por novo protocolo"
+   }
+   ```</p>
+<ol>
+<li>
+<p><strong>Não misture tipos</strong>
+   <code>json
+   ERRADO: "type": "EXAME"  // Português
+   CERTO: "type": "EXAM"    // Inglês (padrão ENUM)</code></p>
+</li>
+<li>
+<p><strong>Não ignore auditoria</strong>
+   <code>json
+   // Sempre registre decisões
+   {
+     "wasAllowed": true,
+     "reason": "Todas as regras atendidas",
+     "clinicalRuleId": "..."  // Qual regra foi usada
+   }</code></p>
+</li>
+</ol>
+<hr />
+<h2 id="parte-10-fluxo-de-trabalho-tipico"><strong>Parte 10: Fluxo de Trabalho Típico</strong></h2>
+<h3 id="passo-a-passo-adicionar-novo-exame"><strong>Passo a Passo: Adicionar Novo Exame</strong></h3>
+<ol>
+<li>
+<p><strong>Verifique se a especialidade existe</strong>
+   <code>bash
+   GET /specialties?search=Hematologia</code></p>
+</li>
+<li>
+<p><strong>Crie ou use serviço existente</strong>
+   <code>bash
+   POST /services
+   {
+     "specialtyId": "...",
+     "name": "Exames Hematológicos Especiais",
+     "type": "EXAM"
+   }</code></p>
+</li>
+<li>
+<p><strong>Crie o item clínico</strong>
+   <code>bash
+   POST /items
+   {
+     "clinicalServiceId": "...",
+     "code": "FERRO_SERICO",
+     "name": "Dosagem de Ferro Sérico",
+     "description": "Mede quantidade de ferro no sangue"
+   }</code></p>
+</li>
+<li>
+<p><strong>Crie regras de segurança</strong>
+   <code>bash
+   POST /rules
+   {
+     "clinicalItemId": "...",
+     "minHoursAfterBloodDonation": 72,
+     "minDaysAfterVaccination": 7,
+     "contraindicatedAnticoagulants": false,
+     "validFrom": "2024-01-01",
+     "createdBy": "lab.manager@hospital.com"
+   }</code></p>
+</li>
+<li>
+<p><strong>Teste integração</strong>
+   <code>bash
+   # Verifique se a agenda consegue acessar
+   GET /rules?itemId=FERRO_SERICO&amp;currentOnly=true</code></p>
+</li>
+</ol>
+<hr />
+<h2 id="parte-11-monitoramento-e-metricas"><strong>Parte 11: Monitoramento e Métricas</strong></h2>
+<h3 id="metricas-importantes"><strong>Métricas Importantes</strong></h3>
+<ol>
+<li>
+<p><strong>Utilização de itens</strong>
+   <code>sql
+   -- Itens mais usados
+   SELECT item_code, COUNT(*) as usage_count
+   FROM safety_audits
+   GROUP BY item_code
+   ORDER BY usage_count DESC</code></p>
+</li>
+<li>
+<p><strong>Taxa de bloqueios</strong>
+   <code>sql
+   -- Quantos procedimentos foram bloqueados
+   SELECT 
+     SUM(CASE WHEN was_allowed = false THEN 1 ELSE 0 END) as blocked,
+     COUNT(*) as total,
+     (blocked * 100.0 / total) as block_percentage
+   FROM safety_audits</code></p>
+</li>
+<li>
+<p><strong>Regras mais acionadas</strong>
+   <code>sql
+   -- Quais regras mais impedem procedimentos
+   SELECT rule_id, COUNT(*) as trigger_count
+   FROM safety_audits
+   WHERE was_allowed = false
+   GROUP BY rule_id</code></p>
+</li>
+</ol>
+<h3 id="dashboard-recomendado"><strong>Dashboard Recomendado</strong></h3>
+<pre><code class="language-yaml">Dashboard do Catálogo Clínico:
+- Total de especialidades: 25
+- Total de serviços: 150
+- Total de itens: 500
+- Total de regras: 750
+- Auditorias hoje: 1,234
+- Bloqueios hoje: 45 (3.6%)
+- Item mais bloqueado: Hemograma (12x)
+- Regra mais acionada: anticoagulantes (28x)
+</code></pre>
+<hr />
+<h2 id="parte-12-solucao-de-problemas-comuns"><strong>Parte 12: Solução de Problemas Comuns</strong></h2>
+<h3 id="problema-item-nao-aparece-na-agenda"><strong>Problema: "Item não aparece na agenda"</strong></h3>
+<p><strong>Solução passo a passo:</strong></p>
+<ol>
+<li>
+<p>Verifique se está ativo:
+   <code>bash
+   GET /items/{id}
+   # Verifique: "isActive": true</code></p>
+</li>
+<li>
+<p>Verifique o serviço pai:
+   <code>bash
+   GET /services/{serviceId}
+   # Verifique: "isActive": true</code></p>
+</li>
+<li>
+<p>Verifique a especialidade:
+   <code>bash
+   GET /specialties/{specialtyId}
+   # Verifique: "isActive": true</code></p>
+</li>
+</ol>
+<h3 id="problema-regra-nao-esta-sendo-aplicada"><strong>Problema: "Regra não está sendo aplicada"</strong></h3>
+<ol>
+<li>
+<p>Verifique validade:
+   <code>bash
+   GET /rules?itemId=ITEM_ID&amp;validAt=2024-01-15</code></p>
+</li>
+<li>
+<p>Verifique se há regra atual:
+   <code>bash
+   GET /rules?itemId=ITEM_ID&amp;currentOnly=true</code></p>
+</li>
+<li>
+<p>Verifique auditoria:
+   <code>bash
+   GET /rules/safety-audits?itemId=ITEM_ID&amp;startDate=2024-01-01</code></p>
+</li>
+</ol>
+<h3 id="problema-codigo-ja-existe"><strong>Problema: "Código já existe"</strong></h3>
+<pre><code class="language-bash"># Busque o código conflitante
+GET /specialties?search=CODE
+GET /services?search=CODE  
+GET /items?search=CODE
+
+# Use prefixos únicos
+{
+  &quot;code&quot;: &quot;CARDIOL_CONSULT_2024&quot;  // Adicione ano/versão
+}
+</code></pre>
+<hr />
+<h2 id="parte-13-glossario-tecnico-clinico"><strong>Parte 13: Glossário Técnico-Clínico</strong></h2>
+<table>
+<thead>
+<tr>
+<th>Termo</th>
+<th>Significado Técnico</th>
+<th>Exemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Especialidade</strong></td>
+<td>Departamento médico</td>
+<td>Cardiologia</td>
+</tr>
+<tr>
+<td><strong>Serviço Clínico</strong></td>
+<td>Categoria de atendimento</td>
+<td>Consultas, Exames</td>
+</tr>
+<tr>
+<td><strong>Item Clínico</strong></td>
+<td>Procedimento concreto</td>
+<td>Hemograma, Vacina COVID</td>
+</tr>
+<tr>
+<td><strong>Regra Clínica</strong></td>
+<td>Restrição de segurança</td>
+<td>Esperar 30d após cirurgia</td>
+</tr>
+<tr>
+<td><strong>ValidFrom/ValidTo</strong></td>
+<td>Vigência da regra</td>
+<td>2024-01-01 a 2024-12-31</td>
+</tr>
+<tr>
+<td><strong>Safety Audit</strong></td>
+<td>Registro de decisão</td>
+<td>"Permitido porque..."</td>
+</tr>
+<tr>
+<td><strong>Contraindicação</strong></td>
+<td>Razão para não fazer</td>
+<td>Anticoagulantes + cirurgia</td>
+</tr>
+<tr>
+<td><strong>Batch Request</strong></td>
+<td>Múltiplos itens de uma vez</td>
+<td>[Hemo, Glicemia, Colesterol]</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="suporte-e-contato"><strong>Suporte e Contato</strong></h2>
+<h3 id="canais-de-suporte"><strong>Canais de Suporte</strong></h3>
+<ol>
+<li><strong>Documentação online</strong>: <code>https://docs.hospital.com/catalogo</code></li>
+<li><strong>API Playground</strong>: <code>https://api.hospital.com/swagger</code></li>
+<li><strong>Suporte técnico</strong>: <code>suporte-catalogo@hospital.com</code></li>
+<li><strong>Urgências clínicas</strong>: <code>emergencia-regras@hospital.com</code></li>
+</ol>
+<h3 id="escalacao-de-problemas"><strong>Escalação de Problemas</strong></h3>
+<pre><code>Nível 1: Desenvolvedor → Verificar logs e documentação
+Nível 2: Administrador → Verificar configurações
+Nível 3: Clínico → Verificar regras médicas
+Nível 4: Comitê de Segurança → Revisar protocolos
+</code></pre>
+<hr />
+<h2 id="conclusao"><strong>Conclusão</strong></h2>
+<p>Este catálogo clínico é o <strong>sistema nervoso central</strong> da segurança médica do hospital. Ele:</p>
+<p><strong>Padroniza</strong> todos os procedimentos
+<strong>Protege</strong> pacientes com regras automáticas
+<strong>Audita</strong> todas as decisões
+<strong>Integra-se</strong> com todos os outros sistemas</p>
+<p><strong>Lembre-se:</strong> Um catálogo bem mantido previne erros médicos, facilita auditorias e salva vidas.</p>
+<hr />
+<p><em>Documento atualizado em: 15 de janeiro de 2024</em><br />
+<em>Versão: 2.1.0</em><br />
+<em>Próxima revisão: 15 de julho de 2024</em>  </p>
+<hr />
+<h2 id="checklist-de-implementacao"><strong>Checklist de Implementação</strong></h2>
+<ul>
+<li>[ ] Todas especialidades cadastradas com códigos únicos</li>
+<li>[ ] Serviços organizados por tipo (CONSULTATION, EXAM, etc.)</li>
+<li>[ ] Itens clínicos com descrições claras</li>
+<li>[ ] Regras com todas as 4 medidas de segurança</li>
+<li>[ ] Auditoria ativada para todas as decisões</li>
+<li>[ ] Integração gRPC testada com Agenda</li>
+<li>[ ] Backup diário do catálogo</li>
+<li>[ ] Equipe treinada para manutenção</li>
+</ul>
+<hr />
+<p><strong>Próximo capítulo:</strong> <a href="https://docs.hospital.com/agenda-integracao">Como a Agenda usa o Catálogo via gRPC para decisões em tempo real</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

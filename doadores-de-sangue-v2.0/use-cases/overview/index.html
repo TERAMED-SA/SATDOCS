@@ -1,0 +1,3228 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://teramed-sa.github.io/SATDOCS/doadores-de-sangue-v2.0/use-cases/overview/">
+      
+      
+        <link rel="prev" href="../../">
+      
+      
+        <link rel="next" href="../models-and-enums/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Visão Geral dos Casos de Uso - Baika Saúde - Ecossistema</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#visao-geral-dos-casos-de-uso-blooddonation" class="md-skip">
+          Ir para o conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../../.." title="Baika Saúde - Ecossistema" class="md-header__button md-logo" aria-label="Baika Saúde - Ecossistema" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Baika Saúde - Ecossistema
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Visão Geral dos Casos de Uso
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Modo escuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Modo escuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando a pesquisa
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Baika Saúde - Ecossistema" class="md-nav__button md-logo" aria-label="Baika Saúde - Ecossistema" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Baika Saúde - Ecossistema
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Início
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestão Hospitalar
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Gestão Hospitalar
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../hospital/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Índice do Módulo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../hospital/use-cases/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visão Geral dos Casos de Uso
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../hospital/use-cases/models-and-enums/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelos e Enumerações
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../hospital/use-cases/hospitals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hospitais
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../hospital/use-cases/units/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unidades
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../hospital/use-cases/departments/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Departamentos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../hospital/use-cases/physical-structure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Estrutura Física
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../hospital/use-cases/offers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ofertas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../hospital/use-cases/accounts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../hospital/use-cases/security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Segurança
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../hospital/use-cases/checks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Verificações
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../hospital/use-cases/internal-and-events/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Casos Internos, Eventos e Notas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prontuário Clínico
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Prontuário Clínico
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../prontuario-clinico/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Índice do Módulo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../prontuario-clinico/use-cases/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visão Geral dos Casos de Uso
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../prontuario-clinico/use-cases/models-and-enums/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelos e Enumerações
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../prontuario-clinico/use-cases/prontuaries/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prontuários
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../prontuario-clinico/use-cases/visits/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Consultas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../prontuario-clinico/use-cases/clinical-records/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Registos Clínicos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../prontuario-clinico/use-cases/internal-and-events/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Casos Internos, Eventos e Notas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../doadores-de-sangue/doadores-de-sangue/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Doadores de sangue
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Catálogo Clínico
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Catálogo Clínico
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../catalogo-clinico/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guia de Modelagem
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../catalogo-clinico/developer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guia do Desenvolvedor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Doadores de Sangue (v2.0)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Doadores de Sangue (v2.0)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Índice do Módulo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visão Geral dos Casos de Uso
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visão Geral dos Casos de Uso
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#objetivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objetivo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visao-geral-da-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Visão Geral da API
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#indice-rapido-de-endpoints-por-dominio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Índice rápido de endpoints por domínio
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Índice rápido de endpoints por domínio">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dadores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dadores
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analises-clinicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Análises Clínicas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pedidos-de-sangue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pedidos de Sangue
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#matching" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Matching
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dacoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dações
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#moderacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Moderação
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#administracao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Administração
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#headers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Headers
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Headers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rotas-autenticadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rotas autenticadas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rotas-administrativas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rotas administrativas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#padrao-de-resposta-e-erro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Padrão de Resposta e Erro
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Padrão de Resposta e Erro">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sucesso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sucesso
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#envelope-de-erro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Envelope de erro
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#envelope-de-paginacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Envelope de paginação
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#navegacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Navegação
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../models-and-enums/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelos e Enumerações
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../donors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dadores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Análises Clínicas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../requests/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pedidos de Sangue
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../matching/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Matching
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../donations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dações
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../moderation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Moderação
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../admin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Administração
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../internal-and-events/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Casos Internos, Eventos e Notas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Catálogo Clínico (v2.0)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Catálogo Clínico (v2.0)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../catalogo-clinico-v2.0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Índice do Módulo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../catalogo-clinico-v2.0/use-cases/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visão Geral dos Casos de Uso
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../catalogo-clinico-v2.0/use-cases/models-and-enums/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelos e Enumerações
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../catalogo-clinico-v2.0/use-cases/specialties/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Especialidades
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../catalogo-clinico-v2.0/use-cases/items/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Itens Clínicos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../catalogo-clinico-v2.0/use-cases/rules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Regras Clínicas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../catalogo-clinico-v2.0/use-cases/internal-and-events/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Casos Internos, Eventos e Notas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestão de Agendamentos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Gestão de Agendamentos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gestao-de-agendas-e-marca%C3%A7%C3%A3o-de-consultas/1-introdu%C3%A7%C3%A3o/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Introdução ao Sistema
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gestao-de-agendas-e-marca%C3%A7%C3%A3o-de-consultas/2-conceitos-base-do-Sistema/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Conceitos-base do Sistema
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gestao-de-agendas-e-marca%C3%A7%C3%A3o-de-consultas/3-exclus%C3%B5es-e-folgas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Exclusões e Folgas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gestao-de-agendas-e-marca%C3%A7%C3%A3o-de-consultas/4-exclus%C3%B5es-de-dias-e-per%C3%ADodos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Exclusões de Dias e Períodos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gestao-de-agendas-e-marca%C3%A7%C3%A3o-de-consultas/5-exclus%C3%B5es-e-bloqueios-avan%C3%A7ados/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Exclusões e Bloqueios Avançados
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gestao-de-agendas-e-marca%C3%A7%C3%A3o-de-consultas/6-hor%C3%A1rios-de-trabalho-dos-profissionais/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Horários de Trabalho (Parte 1)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gestao-de-agendas-e-marca%C3%A7%C3%A3o-de-consultas/7-hor%C3%A1rios-de-trabalho-dos-profissionais/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Horários de Trabalho (Parte 2)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gestao-de-agendas-e-marca%C3%A7%C3%A3o-de-consultas/8-hor%C3%A1rios-de-trabalho-de-profissionais/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. Horários de Trabalho (Parte 3)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gestao-de-agendas-e-marca%C3%A7%C3%A3o-de-consultas/9-slots-e-time-boxes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Slots e Time Boxes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gestao-de-agendas-e-marca%C3%A7%C3%A3o-de-consultas/10-marca%C3%A7%C3%A3o-de-consultas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. Marcação de Consultas (Parte 1)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gestao-de-agendas-e-marca%C3%A7%C3%A3o-de-consultas/11-marca%C3%A7%C3%A3o-de-consultas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11. Marcação de Consultas (Parte 2)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guias Técnicos e Regras de Negócio
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Guias Técnicos e Regras de Negócio
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gestao-de-agendas-e-marca%C3%A7%C3%A3o-de-consultas/guias/1-guia-de-configuracao-da-agenda/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Guia de Configuração de Agenda
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gestao-de-agendas-e-marca%C3%A7%C3%A3o-de-consultas/guias/2-modelos-de-exclusao-na-agenda/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Modelo de Exclusão na Agenda
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gestao-de-agendas-e-marca%C3%A7%C3%A3o-de-consultas/guias/3-guiade-geracao-de-slots-formaA-horarios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Geração de Slots (Horários)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gestao-de-agendas-e-marca%C3%A7%C3%A3o-de-consultas/guias/4-guia-de-geracao-de-slots-formaB-capacidade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Geração de Slots (Capacidade)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#objetivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objetivo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visao-geral-da-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Visão Geral da API
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#indice-rapido-de-endpoints-por-dominio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Índice rápido de endpoints por domínio
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Índice rápido de endpoints por domínio">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dadores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dadores
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analises-clinicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Análises Clínicas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pedidos-de-sangue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pedidos de Sangue
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#matching" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Matching
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dacoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dações
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#moderacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Moderação
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#administracao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Administração
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#headers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Headers
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Headers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rotas-autenticadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rotas autenticadas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rotas-administrativas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rotas administrativas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#padrao-de-resposta-e-erro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Padrão de Resposta e Erro
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Padrão de Resposta e Erro">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sucesso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sucesso
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#envelope-de-erro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Envelope de erro
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#envelope-de-paginacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Envelope de paginação
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#navegacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Navegação
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="visao-geral-dos-casos-de-uso-blooddonation">Visão Geral dos Casos de Uso — BloodDonation</h1>
+<p><a href="../../">⌂ Módulo BloodDonation</a></p>
+<h2 id="objetivo">Objetivo</h2>
+<p>Esta documentação descreve os casos de uso do módulo de dação de sangue a partir da implementação real em <code>Application/Features</code> e da exposição HTTP em <code>Module/Endpoints</code>.</p>
+<p>O foco não é apenas listar rotas. A ideia é explicar:</p>
+<ul>
+<li>que problema cada caso de uso resolve</li>
+<li>que modelos manipula</li>
+<li>como chamar cada endpoint</li>
+<li>que respostas esperar em sucesso</li>
+<li>que erros de negócio e de acesso podem ocorrer</li>
+<li>que casos de uso não são expostos por HTTP e correm internamente</li>
+</ul>
+<h2 id="visao-geral-da-api">Visão Geral da API</h2>
+<ul>
+<li>Prefixo global: <code>/api/v1</code> (aplicado em <code>ModuleLoader</code>, <code>src/Sat.Bootstrap/Modules/ModuleLoader.cs</code>)</li>
+<li>Prefixo do módulo: <code>/blood-donation</code></li>
+<li>Stack HTTP: ASP.NET Core Minimal APIs + MediatR (<code>ISender</code>)</li>
+<li>Autenticação: JWT Bearer (<code>AddJwtBearer</code>), obrigatória em todos os grupos de rotas do módulo</li>
+<li>Identidade do chamador: claim <code>ClaimTypes.NameIdentifier</code> (<code>sub</code>/<code>nameid</code>), convertida para <code>Guid</code></li>
+<li>Rotas administrativas: exigem adicionalmente a role <code>SystemAdmin</code></li>
+</ul>
+<h2 id="indice-rapido-de-endpoints-por-dominio">Índice rápido de endpoints por domínio</h2>
+<p>Todas as rotas abaixo consideram o prefixo <code>/api/v1</code>.</p>
+<h3 id="dadores">Dadores</h3>
+<table>
+<thead>
+<tr>
+<th>Método</th>
+<th>Rota</th>
+<th>Finalidade</th>
+<th>Acesso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>POST</code></td>
+<td><code>/blood-donation/donors</code></td>
+<td>Registar-se como dador</td>
+<td>Autenticado</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/blood-donation/donors/{id}</code></td>
+<td>Obter perfil de dador por id</td>
+<td>Autenticado</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/blood-donation/donors/me</code></td>
+<td>Obter o meu perfil de dador</td>
+<td>Autenticado</td>
+</tr>
+<tr>
+<td><code>PATCH</code></td>
+<td><code>/blood-donation/donors/me</code></td>
+<td>Atualizar o meu perfil</td>
+<td>Autenticado</td>
+</tr>
+<tr>
+<td><code>PATCH</code></td>
+<td><code>/blood-donation/donors/me/availability</code></td>
+<td>Atualizar disponibilidade</td>
+<td>Autenticado</td>
+</tr>
+<tr>
+<td><code>PATCH</code></td>
+<td><code>/blood-donation/donors/me/blood-type</code></td>
+<td>Corrigir o tipo sanguíneo</td>
+<td>Autenticado</td>
+</tr>
+<tr>
+<td><code>POST</code></td>
+<td><code>/blood-donation/donors/me/reanalysis</code></td>
+<td>Pedir nova análise clínica</td>
+<td>Autenticado</td>
+</tr>
+</tbody>
+</table>
+<p>Ver detalhes em <a href="../donors/">Dadores</a>.</p>
+<h3 id="analises-clinicas">Análises Clínicas</h3>
+<table>
+<thead>
+<tr>
+<th>Método</th>
+<th>Rota</th>
+<th>Finalidade</th>
+<th>Acesso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>GET</code></td>
+<td><code>/blood-donation/analyses/pending</code></td>
+<td>Listar análises pendentes</td>
+<td>Autenticado</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/blood-donation/analyses/donor/{donorId}</code></td>
+<td>Listar análises de um dador</td>
+<td>Autenticado</td>
+</tr>
+<tr>
+<td><code>POST</code></td>
+<td><code>/blood-donation/analyses/{id}/approve</code></td>
+<td>Aprovar análise</td>
+<td>Autenticado</td>
+</tr>
+<tr>
+<td><code>POST</code></td>
+<td><code>/blood-donation/analyses/{id}/reject</code></td>
+<td>Rejeitar análise</td>
+<td>Autenticado</td>
+</tr>
+</tbody>
+</table>
+<p>Ver detalhes em <a href="../analysis/">Análises Clínicas</a>.</p>
+<h3 id="pedidos-de-sangue">Pedidos de Sangue</h3>
+<table>
+<thead>
+<tr>
+<th>Método</th>
+<th>Rota</th>
+<th>Finalidade</th>
+<th>Acesso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>POST</code></td>
+<td><code>/blood-donation/requests</code></td>
+<td>Criar pedido de sangue</td>
+<td>Autenticado</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/blood-donation/requests/my</code></td>
+<td>Listar os meus pedidos</td>
+<td>Autenticado</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/blood-donation/requests/public/search</code></td>
+<td>Procurar pedidos públicos</td>
+<td>Autenticado</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/blood-donation/requests/{id}</code></td>
+<td>Obter detalhes de um pedido</td>
+<td>Autenticado</td>
+</tr>
+<tr>
+<td><code>PATCH</code></td>
+<td><code>/blood-donation/requests/{id}/cancel</code></td>
+<td>Cancelar pedido</td>
+<td>Autenticado (dono)</td>
+</tr>
+</tbody>
+</table>
+<p>Ver detalhes em <a href="../requests/">Pedidos de Sangue</a>.</p>
+<h3 id="matching">Matching</h3>
+<table>
+<thead>
+<tr>
+<th>Método</th>
+<th>Rota</th>
+<th>Finalidade</th>
+<th>Acesso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>POST</code></td>
+<td><code>/blood-donation/requests/{id}/match</code></td>
+<td>Dador propõe match a um pedido</td>
+<td>Autenticado (dador)</td>
+</tr>
+<tr>
+<td><code>POST</code></td>
+<td><code>/blood-donation/matches/{id}/accept</code></td>
+<td>Aceitar match</td>
+<td>Autenticado (requerente)</td>
+</tr>
+<tr>
+<td><code>POST</code></td>
+<td><code>/blood-donation/matches/{id}/reject</code></td>
+<td>Rejeitar match</td>
+<td>Autenticado (requerente ou dador)</td>
+</tr>
+<tr>
+<td><code>POST</code></td>
+<td><code>/blood-donation/matches/{id}/withdraw</code></td>
+<td>Desistir do match</td>
+<td>Autenticado (dador)</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/blood-donation/matches/my</code></td>
+<td>Listar os meus matches</td>
+<td>Autenticado</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/blood-donation/requests/{id}/matches</code></td>
+<td>Listar matches do pedido</td>
+<td>Autenticado (dono do pedido)</td>
+</tr>
+</tbody>
+</table>
+<p>Ver detalhes em <a href="../matching/">Matching</a>.</p>
+<h3 id="dacoes">Dações</h3>
+<table>
+<thead>
+<tr>
+<th>Método</th>
+<th>Rota</th>
+<th>Finalidade</th>
+<th>Acesso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>POST</code></td>
+<td><code>/blood-donation/donations/confirm</code></td>
+<td>Confirmar dação realizada</td>
+<td>Autenticado (requerente)</td>
+</tr>
+<tr>
+<td><code>POST</code></td>
+<td><code>/blood-donation/donations/{id}/hospital-confirmation</code></td>
+<td>Confirmação hospitalar</td>
+<td>Autenticado</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/blood-donation/donations/my-history</code></td>
+<td>Histórico das minhas dações</td>
+<td>Autenticado</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/blood-donation/donations/eligibility/check</code></td>
+<td>Verificar elegibilidade</td>
+<td>Autenticado</td>
+</tr>
+</tbody>
+</table>
+<p>Ver detalhes em <a href="../donations/">Dações</a>.</p>
+<h3 id="moderacao">Moderação</h3>
+<table>
+<thead>
+<tr>
+<th>Método</th>
+<th>Rota</th>
+<th>Finalidade</th>
+<th>Acesso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>POST</code></td>
+<td><code>/blood-donation/moderation/reports</code></td>
+<td>Criar denúncia</td>
+<td>Autenticado</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/blood-donation/moderation/reports/my</code></td>
+<td>Listar as minhas denúncias</td>
+<td>Autenticado</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/blood-donation/moderation/reports/pending</code></td>
+<td>Listar denúncias pendentes</td>
+<td><code>SystemAdmin</code></td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/blood-donation/moderation/reports/{id}</code></td>
+<td>Obter denúncia por id</td>
+<td><code>SystemAdmin</code></td>
+</tr>
+<tr>
+<td><code>PATCH</code></td>
+<td><code>/blood-donation/moderation/reports/{id}</code></td>
+<td>Atualizar denúncia</td>
+<td><code>SystemAdmin</code></td>
+</tr>
+<tr>
+<td><code>POST</code></td>
+<td><code>/blood-donation/moderation/block-donor/{id}</code></td>
+<td>Bloquear dador</td>
+<td><code>SystemAdmin</code></td>
+</tr>
+<tr>
+<td><code>POST</code></td>
+<td><code>/blood-donation/moderation/unblock-donor/{id}</code></td>
+<td>Desbloquear dador</td>
+<td><code>SystemAdmin</code></td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/blood-donation/moderation/stats</code></td>
+<td>Estatísticas de moderação</td>
+<td><code>SystemAdmin</code></td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/blood-donation/moderation/risk-assessment/{donorId}</code></td>
+<td>Avaliação de risco do dador</td>
+<td><code>SystemAdmin</code></td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/blood-donation/moderation/target-reports/{targetType}/{targetId}</code></td>
+<td>Denúncias por alvo</td>
+<td><code>SystemAdmin</code></td>
+</tr>
+</tbody>
+</table>
+<p>Ver detalhes em <a href="../moderation/">Moderação</a>.</p>
+<h3 id="administracao">Administração</h3>
+<table>
+<thead>
+<tr>
+<th>Método</th>
+<th>Rota</th>
+<th>Finalidade</th>
+<th>Acesso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>GET</code></td>
+<td><code>/blood-donation/admin/stats</code></td>
+<td>Estatísticas do módulo</td>
+<td><code>SystemAdmin</code></td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/blood-donation/admin/donors</code></td>
+<td>Listar dadores</td>
+<td><code>SystemAdmin</code></td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/blood-donation/admin/active-requests</code></td>
+<td>Listar pedidos ativos</td>
+<td><code>SystemAdmin</code></td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/blood-donation/admin/recent-activity</code></td>
+<td>Atividade recente</td>
+<td><code>SystemAdmin</code></td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/blood-donation/admin/export/stats</code></td>
+<td>Exportar estatísticas</td>
+<td><code>SystemAdmin</code></td>
+</tr>
+</tbody>
+</table>
+<p>Ver detalhes em <a href="../admin/">Administração</a>.</p>
+<h2 id="headers">Headers</h2>
+<h3 id="rotas-autenticadas">Rotas autenticadas</h3>
+<pre><code class="language-http">Authorization: Bearer &lt;jwt&gt;
+Content-Type: application/json
+</code></pre>
+<p>O token tem de conter a claim <code>NameIdentifier</code> com um <code>Guid</code> válido. Se a claim estiver ausente ou não for um <code>Guid</code>, o endpoint devolve <code>401 Unauthorized</code> — mesmo que o JWT em si seja válido.</p>
+<h3 id="rotas-administrativas">Rotas administrativas</h3>
+<p>O mesmo token, mas com a role <code>SystemAdmin</code>:</p>
+<pre><code class="language-http">Authorization: Bearer &lt;jwt-com-role-SystemAdmin&gt;
+</code></pre>
+<p>Sem a role, o pipeline de autorização devolve <code>403 Forbidden</code>.</p>
+<h2 id="padrao-de-resposta-e-erro">Padrão de Resposta e Erro</h2>
+<h3 id="sucesso">Sucesso</h3>
+<p>Todos os handlers devolvem <code>Result&lt;T&gt;</code> (SharedKernel). Os endpoints traduzem sucesso em <code>Results.Ok(result.Value)</code>, ou seja:</p>
+<ul>
+<li><strong><code>201 Created</code> nas criações.</strong> <code>POST /donors</code>, <code>POST /requests</code> e <code>POST /moderation/reports</code> devolvem <code>Location</code> a apontar para o <code>GET</code> do recurso criado; <code>POST /requests/{id}/match</code>, <code>POST /donations/confirm</code> e <code>POST /donors/me/reanalysis</code> devolvem <code>201</code> sem <code>Location</code>, por não existir rota de leitura individual para esses recursos</li>
+<li><strong><code>200 OK</code></strong> nas restantes operações bem-sucedidas, incluindo os <code>POST</code> que atuam sobre um recurso existente (aprovar, rejeitar, aceitar, retirar, bloquear, desbloquear, confirmação hospitalar)</li>
+<li><code>204 No Content</code> não é usado neste módulo</li>
+</ul>
+<h3 id="envelope-de-erro">Envelope de erro</h3>
+<p>Em falha, o endpoint devolve o objeto <code>Error</code> do SharedKernel diretamente no corpo:</p>
+<pre><code class="language-json">{
+  &quot;code&quot;: &quot;Donor.NotFound&quot;,
+  &quot;message&quot;: &quot;Donor was not found.&quot;
+}
+</code></pre>
+<p>O código HTTP deriva da categoria semântica do erro, atribuída no domínio pela fábrica que o cria (<code>Error.Conflict</code>, <code>Error.NotFound</code>, ...) e traduzida no endpoint por <code>result.ToProblem()</code>:</p>
+<table>
+<thead>
+<tr>
+<th>Categoria (<code>ErrorType</code>)</th>
+<th>Status</th>
+<th>Exemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Validation</code></td>
+<td><code>400 Bad Request</code></td>
+<td><code>BloodRequest.InvalidQuantity</code></td>
+</tr>
+<tr>
+<td><code>NotFound</code></td>
+<td><code>404 Not Found</code></td>
+<td><code>Donor.NotFound</code></td>
+</tr>
+<tr>
+<td><code>Conflict</code></td>
+<td><code>409 Conflict</code></td>
+<td><code>Donor.AlreadyExists</code></td>
+</tr>
+<tr>
+<td><code>Unauthorized</code></td>
+<td><code>401 Unauthorized</code></td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>Forbidden</code></td>
+<td><code>403 Forbidden</code></td>
+<td><code>Auth.Forbidden</code></td>
+</tr>
+</tbody>
+</table>
+<p>O status é sempre coerente com o <code>code</code>, em qualquer endpoint: <code>Donor.NotFound</code> devolve <code>404</code> tanto numa leitura por id como no meio de um comando. O cliente pode usar o status para o tratamento genérico (repetir, re-autenticar, mostrar conflito) e o <code>code</code> para a mensagem específica.</p>
+<p>Independentemente disto, <code>401</code> continua a ser devolvido quando a claim <code>NameIdentifier</code> está ausente ou inválida, e <code>403</code> quando falta a role <code>SystemAdmin</code> numa rota administrativa — nesses casos o corpo é vazio, porque a rejeição acontece antes de existir um <code>Result</code>.</p>
+<h3 id="envelope-de-paginacao">Envelope de paginação</h3>
+<p>As listagens devolvem <code>PagedResult&lt;T&gt;</code>:</p>
+<pre><code class="language-json">{
+  &quot;data&quot;: [],
+  &quot;total&quot;: 0,
+  &quot;page&quot;: 1,
+  &quot;limit&quot;: 20,
+  &quot;totalPages&quot;: 0,
+  &quot;hasNext&quot;: false,
+  &quot;hasPrev&quot;: false
+}
+</code></pre>
+<p>Todas as listagens paginam de facto: <code>page</code> e <code>limit</code> são aplicados como <code>Skip</code>/<code>Take</code> no repositório, e <code>data</code> traz no máximo <code>limit</code> elementos. <code>total</code> conta o conjunto completo de resultados que passam os mesmos filtros — não apenas os da página.</p>
+<p>Os valores recebidos são normalizados antes de serem usados — e os metadados devolvidos refletem sempre os valores normalizados, não os enviados:</p>
+<table>
+<thead>
+<tr>
+<th>Enviado</th>
+<th>Usado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>page &lt; 1</code></td>
+<td><code>1</code></td>
+</tr>
+<tr>
+<td><code>limit &lt; 1</code></td>
+<td><code>20</code> (default)</td>
+</tr>
+<tr>
+<td><code>limit &gt; 200</code></td>
+<td><code>200</code> (máximo)</td>
+</tr>
+</tbody>
+</table>
+<p>A única leitura que não usa este envelope é <code>GET /blood-donation/admin/recent-activity</code>: não é uma listagem, é um agregado de quatro feeds independentes num só payload. Ainda assim o seu <code>limit</code> passa pela mesma normalização, pelo que também está limitado a <code>200</code> por feed.</p>
+<hr />
+<h2 id="navegacao">Navegação</h2>
+<p><a href="../../">Índice do módulo</a> · <a href="../models-and-enums/">Modelos e Enumerações</a> →</p>
+<p><strong>Neste módulo:</strong> <strong>Visão Geral</strong> · <a href="../models-and-enums/">Modelos e Enumerações</a> · <a href="../donors/">Dadores</a> · <a href="../analysis/">Análises Clínicas</a> · <a href="../requests/">Pedidos de Sangue</a> · <a href="../matching/">Matching</a> · <a href="../donations/">Dações</a> · <a href="../moderation/">Moderação</a> · <a href="../admin/">Administração</a> · <a href="../internal-and-events/">Casos Internos, Eventos e Notas</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

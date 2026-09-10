@@ -1,0 +1,6155 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://teramed-sa.github.io/SATDOCS/catalogo-clinico/developer/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../../doadores-de-sangue-v2.0/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Guia do Desenvolvedor - Baika Saúde - Ecossistema</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#catalogo-clinico-guia-de-implementacao-e-integracao" class="md-skip">
+          Ir para o conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../.." title="Baika Saúde - Ecossistema" class="md-header__button md-logo" aria-label="Baika Saúde - Ecossistema" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Baika Saúde - Ecossistema
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Guia do Desenvolvedor
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Modo escuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Modo escuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando a pesquisa
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Baika Saúde - Ecossistema" class="md-nav__button md-logo" aria-label="Baika Saúde - Ecossistema" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Baika Saúde - Ecossistema
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Início
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestão Hospitalar
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Gestão Hospitalar
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hospital/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Índice do Módulo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hospital/use-cases/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visão Geral dos Casos de Uso
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hospital/use-cases/models-and-enums/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelos e Enumerações
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hospital/use-cases/hospitals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hospitais
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hospital/use-cases/units/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unidades
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hospital/use-cases/departments/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Departamentos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hospital/use-cases/physical-structure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Estrutura Física
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hospital/use-cases/offers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ofertas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hospital/use-cases/accounts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hospital/use-cases/security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Segurança
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hospital/use-cases/checks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Verificações
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hospital/use-cases/internal-and-events/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Casos Internos, Eventos e Notas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prontuário Clínico
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Prontuário Clínico
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prontuario-clinico/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Índice do Módulo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prontuario-clinico/use-cases/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visão Geral dos Casos de Uso
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prontuario-clinico/use-cases/models-and-enums/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelos e Enumerações
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prontuario-clinico/use-cases/prontuaries/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prontuários
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prontuario-clinico/use-cases/visits/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Consultas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prontuario-clinico/use-cases/clinical-records/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Registos Clínicos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prontuario-clinico/use-cases/internal-and-events/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Casos Internos, Eventos e Notas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../doadores-de-sangue/doadores-de-sangue/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Doadores de sangue
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Catálogo Clínico
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Catálogo Clínico
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guia de Modelagem
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guia do Desenvolvedor
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guia do Desenvolvedor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sumario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sumário
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introducao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introdução
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Introdução">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#o-problema-que-resolvemos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O Problema que Resolvemos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#o-que-este-documento-cobre" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O que Este Documento Cobre
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arquitetura-do-sistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arquitetura do Sistema
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Arquitetura do Sistema">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#visao-geral" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Visão Geral
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#principios-de-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Princípios de Design
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estrutura-de-dados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estrutura de Dados
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Estrutura de Dados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagrama-entidade-relacionamento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagrama Entidade-Relacionamento
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#descricao-detalhada-das-tabelas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Descrição Detalhada das Tabelas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Descrição Detalhada das Tabelas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-medicalspecialty-especialidades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. MedicalSpecialty (Especialidades)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-clinicalservice-servicos-clinicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. ClinicalService (Serviços Clínicos)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clinicalitem-itens-clinicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. ClinicalItem (Itens Clínicos)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-clinicalrule-regras-clinicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. ClinicalRule (Regras Clínicas)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apis-rest-completas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        APIs REST Completas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="APIs REST Completas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#base-url-e-autenticacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Base URL e Autenticação
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-especialidades-medicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Especialidades Médicas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Especialidades Médicas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-criar-especialidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Criar Especialidade
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-listar-especialidades-com-filtros" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 Listar Especialidades com Filtros
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-verificar-se-pode-deletar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 Verificar se Pode Deletar
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-desativar-especialidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4 Desativar Especialidade
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-servicos-clinicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Serviços Clínicos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Serviços Clínicos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-criar-servico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Criar Serviço
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-buscar-servicos-com-filtros-avancados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Buscar Serviços com Filtros Avançados
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-batch-request-para-multiplos-servicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Batch Request para Múltiplos Serviços
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-itens-clinicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Itens Clínicos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Itens Clínicos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-criar-item-com-validacao-em-tempo-real" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Criar Item com Validação em Tempo Real
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-buscar-itens-com-regras-atuais" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Buscar Itens com Regras Atuais
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-buscar-todos-os-itens-de-um-servico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Buscar Todos os Itens de um Serviço
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-regras-clinicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Regras Clínicas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Regras Clínicas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-criar-regra-com-validacao-de-sobreposicao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Criar Regra com Validação de Sobreposição
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-buscar-regras-com-filtros-temporais" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Buscar Regras com Filtros Temporais
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-atualizar-regra-criando-nova-versao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Atualizar Regra (Criando Nova Versão)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-auditoria-de-regra" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 Auditoria de Regra
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-auditoria-de-seguranca" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Auditoria de Segurança
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Auditoria de Segurança">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-registrar-decisao-de-seguranca" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Registrar Decisão de Segurança
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-consultar-historico-de-decisoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Consultar Histórico de Decisões
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apis-grpc-de-alto-desempenho" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        APIs gRPC de Alto Desempenho
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="APIs gRPC de Alto Desempenho">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuracao-do-servico-grpc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuração do Serviço gRPC
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuracao-do-cliente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuração do Cliente
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cenarios-de-uso-grpc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cenários de Uso gRPC
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cenários de Uso gRPC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cenario-1-agenda-carregando-grade-de-servicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cenário 1: Agenda Carregando Grade de Serviços
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cenario-2-verificacao-em-massa-de-regras" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cenário 2: Verificação em Massa de Regras
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cenario-3-cache-warm-up-no-startup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cenário 3: Cache Warm-up no Startup
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metricas-de-performance-grpc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Métricas de Performance gRPC
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#casos-de-uso-reais" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Casos de Uso Reais
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Casos de Uso Reais">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#caso-1-paciente-com-multiplas-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Caso 1: Paciente com Múltiplas Condições
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caso-2-pre-operatorio-completo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Caso 2: Pré-Operatório Completo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caso-3-vacinacao-em-lote" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Caso 3: Vacinação em Lote
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fluxos-de-integracao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fluxos de Integração
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fluxos de Integração">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fluxo-1-agendamento-de-consulta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fluxo 1: Agendamento de Consulta
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxo-2-bloqueio-automatico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fluxo 2: Bloqueio Automático
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxo-3-auditoria-regulatoria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fluxo 3: Auditoria Regulatória
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#seguranca-e-conformidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Segurança e Conformidade
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Segurança e Conformidade">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#controles-de-acesso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Controles de Acesso
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logs-de-seguranca" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logs de Segurança
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backup-e-recovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backup e Recovery
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#monitoramento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Monitoramento
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Monitoramento">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#metricas-essenciais" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Métricas Essenciais
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dashboard-grafana" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dashboard Grafana
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problema-comum-1-item-nao-aparece-na-agenda" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema Comum 1: "Item não aparece na agenda"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problema-comum-2-regra-nao-esta-sendo-aplicada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema Comum 2: "Regra não está sendo aplicada"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problema-comum-3-performance-lenta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema Comum 3: "Performance lenta"
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faqs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FAQs
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FAQs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#p-posso-editar-uma-regra-existente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        P: Posso editar uma regra existente?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#p-o-que-acontece-quando-desativo-uma-especialidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        P: O que acontece quando desativo uma especialidade?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#p-como-lidar-com-emergencias-que-quebram-regras" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        P: Como lidar com emergências que quebram regras?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#p-posso-importar-dados-em-massa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        P: Posso importar dados em massa?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#p-como-versionar-o-proto-file-grpc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        P: Como versionar o proto file gRPC?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#suporte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Suporte
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Suporte">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#canais-de-suporte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Canais de Suporte
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#escalacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Escalação
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sla-service-level-agreement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SLA (Service Level Agreement)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proximos-passos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Próximos Passos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Próximos Passos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#roadmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Roadmap
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recursos-adicionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recursos Adicionais
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contribuindo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contribuindo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conclusão
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Doadores de Sangue (v2.0)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Doadores de Sangue (v2.0)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../doadores-de-sangue-v2.0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Índice do Módulo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../doadores-de-sangue-v2.0/use-cases/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visão Geral dos Casos de Uso
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../doadores-de-sangue-v2.0/use-cases/models-and-enums/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelos e Enumerações
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../doadores-de-sangue-v2.0/use-cases/donors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dadores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../doadores-de-sangue-v2.0/use-cases/analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Análises Clínicas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../doadores-de-sangue-v2.0/use-cases/requests/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pedidos de Sangue
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../doadores-de-sangue-v2.0/use-cases/matching/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Matching
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../doadores-de-sangue-v2.0/use-cases/donations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dações
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../doadores-de-sangue-v2.0/use-cases/moderation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Moderação
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../doadores-de-sangue-v2.0/use-cases/admin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Administração
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../doadores-de-sangue-v2.0/use-cases/internal-and-events/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Casos Internos, Eventos e Notas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Catálogo Clínico (v2.0)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Catálogo Clínico (v2.0)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../catalogo-clinico-v2.0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Índice do Módulo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../catalogo-clinico-v2.0/use-cases/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visão Geral dos Casos de Uso
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../catalogo-clinico-v2.0/use-cases/models-and-enums/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelos e Enumerações
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../catalogo-clinico-v2.0/use-cases/specialties/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Especialidades
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../catalogo-clinico-v2.0/use-cases/items/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Itens Clínicos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../catalogo-clinico-v2.0/use-cases/rules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Regras Clínicas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../catalogo-clinico-v2.0/use-cases/internal-and-events/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Casos Internos, Eventos e Notas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestão de Agendamentos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Gestão de Agendamentos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gestao-de-agendas-e-marca%C3%A7%C3%A3o-de-consultas/1-introdu%C3%A7%C3%A3o/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Introdução ao Sistema
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gestao-de-agendas-e-marca%C3%A7%C3%A3o-de-consultas/2-conceitos-base-do-Sistema/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Conceitos-base do Sistema
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gestao-de-agendas-e-marca%C3%A7%C3%A3o-de-consultas/3-exclus%C3%B5es-e-folgas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Exclusões e Folgas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gestao-de-agendas-e-marca%C3%A7%C3%A3o-de-consultas/4-exclus%C3%B5es-de-dias-e-per%C3%ADodos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Exclusões de Dias e Períodos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gestao-de-agendas-e-marca%C3%A7%C3%A3o-de-consultas/5-exclus%C3%B5es-e-bloqueios-avan%C3%A7ados/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Exclusões e Bloqueios Avançados
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gestao-de-agendas-e-marca%C3%A7%C3%A3o-de-consultas/6-hor%C3%A1rios-de-trabalho-dos-profissionais/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Horários de Trabalho (Parte 1)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gestao-de-agendas-e-marca%C3%A7%C3%A3o-de-consultas/7-hor%C3%A1rios-de-trabalho-dos-profissionais/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Horários de Trabalho (Parte 2)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gestao-de-agendas-e-marca%C3%A7%C3%A3o-de-consultas/8-hor%C3%A1rios-de-trabalho-de-profissionais/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. Horários de Trabalho (Parte 3)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gestao-de-agendas-e-marca%C3%A7%C3%A3o-de-consultas/9-slots-e-time-boxes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Slots e Time Boxes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gestao-de-agendas-e-marca%C3%A7%C3%A3o-de-consultas/10-marca%C3%A7%C3%A3o-de-consultas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. Marcação de Consultas (Parte 1)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gestao-de-agendas-e-marca%C3%A7%C3%A3o-de-consultas/11-marca%C3%A7%C3%A3o-de-consultas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11. Marcação de Consultas (Parte 2)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guias Técnicos e Regras de Negócio
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Guias Técnicos e Regras de Negócio
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gestao-de-agendas-e-marca%C3%A7%C3%A3o-de-consultas/guias/1-guia-de-configuracao-da-agenda/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Guia de Configuração de Agenda
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gestao-de-agendas-e-marca%C3%A7%C3%A3o-de-consultas/guias/2-modelos-de-exclusao-na-agenda/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Modelo de Exclusão na Agenda
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gestao-de-agendas-e-marca%C3%A7%C3%A3o-de-consultas/guias/3-guiade-geracao-de-slots-formaA-horarios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Geração de Slots (Horários)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gestao-de-agendas-e-marca%C3%A7%C3%A3o-de-consultas/guias/4-guia-de-geracao-de-slots-formaB-capacidade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Geração de Slots (Capacidade)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sumario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sumário
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introducao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introdução
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Introdução">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#o-problema-que-resolvemos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O Problema que Resolvemos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#o-que-este-documento-cobre" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O que Este Documento Cobre
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arquitetura-do-sistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arquitetura do Sistema
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Arquitetura do Sistema">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#visao-geral" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Visão Geral
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#principios-de-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Princípios de Design
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estrutura-de-dados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estrutura de Dados
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Estrutura de Dados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagrama-entidade-relacionamento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagrama Entidade-Relacionamento
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#descricao-detalhada-das-tabelas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Descrição Detalhada das Tabelas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Descrição Detalhada das Tabelas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-medicalspecialty-especialidades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. MedicalSpecialty (Especialidades)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-clinicalservice-servicos-clinicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. ClinicalService (Serviços Clínicos)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clinicalitem-itens-clinicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. ClinicalItem (Itens Clínicos)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-clinicalrule-regras-clinicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. ClinicalRule (Regras Clínicas)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apis-rest-completas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        APIs REST Completas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="APIs REST Completas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#base-url-e-autenticacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Base URL e Autenticação
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-especialidades-medicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Especialidades Médicas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Especialidades Médicas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-criar-especialidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Criar Especialidade
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-listar-especialidades-com-filtros" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 Listar Especialidades com Filtros
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-verificar-se-pode-deletar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 Verificar se Pode Deletar
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-desativar-especialidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4 Desativar Especialidade
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-servicos-clinicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Serviços Clínicos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Serviços Clínicos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-criar-servico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Criar Serviço
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-buscar-servicos-com-filtros-avancados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Buscar Serviços com Filtros Avançados
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-batch-request-para-multiplos-servicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Batch Request para Múltiplos Serviços
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-itens-clinicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Itens Clínicos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Itens Clínicos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-criar-item-com-validacao-em-tempo-real" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Criar Item com Validação em Tempo Real
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-buscar-itens-com-regras-atuais" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Buscar Itens com Regras Atuais
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-buscar-todos-os-itens-de-um-servico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Buscar Todos os Itens de um Serviço
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-regras-clinicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Regras Clínicas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Regras Clínicas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-criar-regra-com-validacao-de-sobreposicao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Criar Regra com Validação de Sobreposição
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-buscar-regras-com-filtros-temporais" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Buscar Regras com Filtros Temporais
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-atualizar-regra-criando-nova-versao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Atualizar Regra (Criando Nova Versão)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-auditoria-de-regra" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 Auditoria de Regra
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-auditoria-de-seguranca" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Auditoria de Segurança
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Auditoria de Segurança">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-registrar-decisao-de-seguranca" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Registrar Decisão de Segurança
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-consultar-historico-de-decisoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Consultar Histórico de Decisões
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apis-grpc-de-alto-desempenho" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        APIs gRPC de Alto Desempenho
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="APIs gRPC de Alto Desempenho">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuracao-do-servico-grpc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuração do Serviço gRPC
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuracao-do-cliente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuração do Cliente
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cenarios-de-uso-grpc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cenários de Uso gRPC
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cenários de Uso gRPC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cenario-1-agenda-carregando-grade-de-servicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cenário 1: Agenda Carregando Grade de Serviços
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cenario-2-verificacao-em-massa-de-regras" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cenário 2: Verificação em Massa de Regras
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cenario-3-cache-warm-up-no-startup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cenário 3: Cache Warm-up no Startup
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metricas-de-performance-grpc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Métricas de Performance gRPC
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#casos-de-uso-reais" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Casos de Uso Reais
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Casos de Uso Reais">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#caso-1-paciente-com-multiplas-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Caso 1: Paciente com Múltiplas Condições
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caso-2-pre-operatorio-completo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Caso 2: Pré-Operatório Completo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caso-3-vacinacao-em-lote" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Caso 3: Vacinação em Lote
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fluxos-de-integracao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fluxos de Integração
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fluxos de Integração">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fluxo-1-agendamento-de-consulta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fluxo 1: Agendamento de Consulta
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxo-2-bloqueio-automatico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fluxo 2: Bloqueio Automático
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxo-3-auditoria-regulatoria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fluxo 3: Auditoria Regulatória
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#seguranca-e-conformidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Segurança e Conformidade
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Segurança e Conformidade">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#controles-de-acesso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Controles de Acesso
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logs-de-seguranca" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logs de Segurança
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backup-e-recovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backup e Recovery
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#monitoramento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Monitoramento
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Monitoramento">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#metricas-essenciais" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Métricas Essenciais
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dashboard-grafana" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dashboard Grafana
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problema-comum-1-item-nao-aparece-na-agenda" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema Comum 1: "Item não aparece na agenda"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problema-comum-2-regra-nao-esta-sendo-aplicada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema Comum 2: "Regra não está sendo aplicada"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problema-comum-3-performance-lenta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema Comum 3: "Performance lenta"
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faqs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FAQs
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FAQs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#p-posso-editar-uma-regra-existente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        P: Posso editar uma regra existente?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#p-o-que-acontece-quando-desativo-uma-especialidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        P: O que acontece quando desativo uma especialidade?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#p-como-lidar-com-emergencias-que-quebram-regras" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        P: Como lidar com emergências que quebram regras?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#p-posso-importar-dados-em-massa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        P: Posso importar dados em massa?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#p-como-versionar-o-proto-file-grpc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        P: Como versionar o proto file gRPC?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#suporte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Suporte
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Suporte">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#canais-de-suporte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Canais de Suporte
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#escalacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Escalação
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sla-service-level-agreement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SLA (Service Level Agreement)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proximos-passos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Próximos Passos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Próximos Passos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#roadmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Roadmap
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recursos-adicionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recursos Adicionais
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contribuindo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contribuindo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conclusão
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="catalogo-clinico-guia-de-implementacao-e-integracao"><strong>Catálogo Clínico: Guia de Implementação e Integração</strong></h1>
+<h2 id="sumario"><strong>Sumário</strong></h2>
+<ul>
+<li><a href="#introducao">Introdução</a></li>
+<li><a href="#arquitetura-do-sistema">Arquitetura do Sistema</a></li>
+<li><a href="#estrutura-de-dados">Estrutura de Dados</a></li>
+<li><a href="#apis-rest-completas">APIs REST Completas</a></li>
+<li><a href="#apis-grpc-de-alto-desempenho">APIs gRPC de Alto Desempenho</a></li>
+<li><a href="#casos-de-uso-reais">Casos de Uso Reais</a></li>
+<li><a href="#fluxos-de-integracao">Fluxos de Integração</a></li>
+<li><a href="#seguranca-e-conformidade">Segurança e Conformidade</a></li>
+<li><a href="#monitoramento">Monitoramento</a></li>
+<li><a href="#troubleshooting">Troubleshooting</a></li>
+<li><a href="#faqs">FAQs</a></li>
+</ul>
+<hr />
+<h2 id="introducao"><strong>Introdução</strong></h2>
+<h3 id="o-problema-que-resolvemos"><strong>O Problema que Resolvemos</strong></h3>
+<p>Em um hospital moderno, múltiplos sistemas precisam saber:
+1. <strong>O que pode ser feito</strong> (procedimentos disponíveis)
+2. <strong>Quando pode ser feito</strong> (restrições temporais)
+3. <strong>Quem pode fazer</strong> (especialidades necessárias)
+4. <strong>O que não pode ser feito juntos</strong> (contraindicações)</p>
+<p><strong>Exemplo Prático:</strong> João, 45 anos, quer marcar:
+- Hemograma (exame de sangue)
+- Consulta cardiológica
+- Vacina da gripe</p>
+<p><strong>Sem o catálogo clínico:</strong>
+- Sistema de agenda não sabe sobre contraindicações
+- Prontuário não sabe códigos corretos
+- Faturamento não sabe valores
+- Risco médico: João pode tomar vacina logo após doar sangue (perigoso!)</p>
+<p><strong>Com o catálogo clínico:</strong></p>
+<pre><code>Sistema verifica automaticamente:
+1. João doou sangue há 2 dias
+   → Hemograma bloqueado (precisa 3 dias)
+2. João tem hipertensão
+   → Consulta cardiológica permitida
+3. João não tem alergias
+   → Vacina da gripe permitida
+
+Resultado: Agenda só mostra o que é SEGURO
+</code></pre>
+<h3 id="o-que-este-documento-cobre"><strong>O que Este Documento Cobre</strong></h3>
+<p>Este guia é para:
+- <strong>Desenvolvedores</strong> que vão integrar com o sistema
+- <strong>Administradores</strong> que vão configurar o catálogo
+- <strong>Analistas</strong> que vão criar regras de negócio
+- <strong>Gestores</strong> que precisam entender capacidades</p>
+<hr />
+<h2 id="arquitetura-do-sistema"><strong>Arquitetura do Sistema</strong></h2>
+<h3 id="visao-geral"><strong>Visão Geral</strong></h3>
+<pre><code>┌─────────────────────────────────────────────────────────┐
+│                    Outros Sistemas                       │
+│  (Agenda, Prontuário, Faturamento, Laboratório)         │
+└───────────────┬─────────────────┬───────────────────────┘
+                │                 │
+          ┌─────▼─────┐     ┌─────▼─────┐
+          │   gRPC    │     │    REST   │
+          │ (Leitura) │     │ (CRUD)    │
+          └─────┬─────┘     └─────┬─────┘
+                │                 │
+        ┌───────▼─────────────────▼───────┐
+        │    Catálogo Clínico (NestJS)    │
+        │ ┌─────────────────────────────┐ │
+        │ │ • Especialidades           │ │
+        │ │ • Serviços Clínicos        │ │
+        │ │ • Itens Clínicos           │ │
+        │ │ • Regras Clínicas          │ │
+        │ │ • Auditoria                │ │
+        │ └─────────────────────────────┘ │
+        └───────┬─────────────────────────┘
+                │
+        ┌───────▼─────────────────────────┐
+        │        PostgreSQL               │
+        │  (com Prisma ORM)              │
+        └─────────────────────────────────┘
+</code></pre>
+<h3 id="principios-de-design"><strong>Princípios de Design</strong></h3>
+<ol>
+<li><strong>Separação de Responsabilidades</strong></li>
+<li>REST para <strong>administração</strong> (CRUD)</li>
+<li>
+<p>gRPC para <strong>consulta</strong> (alta performance)</p>
+</li>
+<li>
+<p><strong>Imutabilidade</strong></p>
+</li>
+<li>Regras nunca são editadas, são versionadas</li>
+<li>
+<p>Histórico completo de mudanças</p>
+</li>
+<li>
+<p><strong>Integridade Referencial</strong>
+   <code>typescript
+   // Não pode deletar se há dependentes
+   Especialidade → Tem serviços? Não deleta
+   Serviço → Tem itens? Não deleta
+   Item → Tem regras? Não deleta</code></p>
+</li>
+<li>
+<p><strong>Auditoria Completa</strong>
+   <code>json
+   {
+     "who": "sistema@hospital.com",
+     "when": "2024-01-15T10:30:00Z",
+     "what": "Consulta regra HEMOGRAM",
+     "result": "BLOQUEADO",
+     "reason": "Doação de sangue recente"
+   }</code></p>
+</li>
+</ol>
+<hr />
+<h2 id="estrutura-de-dados"><strong>Estrutura de Dados</strong></h2>
+<h3 id="diagrama-entidade-relacionamento"><strong>Diagrama Entidade-Relacionamento</strong></h3>
+<pre><code class="language-mermaid">erDiagram
+    MedicalSpecialty ||--o{ ClinicalService : contains
+    ClinicalService }o--o{ ClinicalItem : contains
+    ClinicalItem ||--o{ ClinicalRule : has
+    ClinicalRule ||--o{ ClinicalRuleAudit : audited
+    ClinicalItem ||--o{ ClinicalSafetyAudit : decisions
+    ClinicalRule ||--o{ ClinicalSafetyAudit : applied
+
+    MedicalSpecialty {
+        uuid id PK
+        string code UK
+        string name
+        boolean isActive
+        string createdBy
+        string updatedBy
+        datetime createdAt
+        datetime updatedAt
+    }
+
+    ClinicalService {
+        uuid id PK
+        uuid specialtyId FK
+        enum type
+        string code UK
+        string name
+        string description
+        boolean isActive
+        string createdBy
+        string updatedBy
+        datetime createdAt
+        datetime updatedAt
+    }
+
+    ClinicalItem {
+        uuid id PK
+        uuid clinicalServiceId FK
+        string code UK
+        string name
+        boolean isActive
+        string createdBy
+        string updatedBy
+        datetime createdAt
+        datetime updatedAt
+    }
+
+    ClinicalRule {
+        uuid id PK
+        uuid clinicalItemId FK
+        int minHoursAfterBloodDonation
+        int minDaysAfterVaccination
+        int minDaysAfterSurgery
+        boolean contraindicatedAnticoagulants
+        datetime validFrom
+        datetime validTo
+        string createdBy
+        datetime createdAt
+        datetime updatedAt
+    }
+
+    ClinicalRuleAudit {
+        uuid id PK
+        uuid clinicalRuleId FK
+        string changedBy
+        datetime changedAt
+        json oldData
+        json newData
+    }
+
+    ClinicalSafetyAudit {
+        uuid id PK
+        string patientId
+        uuid clinicalItemId FK
+        datetime desiredDate
+        boolean wasAllowed
+        string reason
+        uuid clinicalRuleId FK
+        datetime evaluatedAt
+    }
+</code></pre>
+<h3 id="descricao-detalhada-das-tabelas"><strong>Descrição Detalhada das Tabelas</strong></h3>
+<h4 id="1-medicalspecialty-especialidades"><strong>1. MedicalSpecialty (Especialidades)</strong></h4>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Descrição</th>
+<th>Exemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>UUID</td>
+<td>Sim</td>
+<td>Identificador único</td>
+<td><code>123e4567-e89b-12d3-a456-426614174000</code></td>
+</tr>
+<tr>
+<td><code>code</code></td>
+<td>String</td>
+<td>Sim</td>
+<td>Código único (3-10 chars)</td>
+<td><code>CARDIOL</code></td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td>String</td>
+<td>Sim</td>
+<td>Nome da especialidade</td>
+<td><code>Cardiologia</code></td>
+</tr>
+<tr>
+<td><code>isActive</code></td>
+<td>Boolean</td>
+<td>Não (default: true)</td>
+<td>Se está ativa</td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td><code>createdBy</code></td>
+<td>String</td>
+<td>Não (default: "system")</td>
+<td>Quem criou</td>
+<td><code>admin@hospital.com</code></td>
+</tr>
+<tr>
+<td><code>updatedBy</code></td>
+<td>String</td>
+<td>Não (default: "system")</td>
+<td>Quem atualizou</td>
+<td><code>admin@hospital.com</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Índices:</strong>
+- <code>code</code> (único)
+- <code>isActive</code> (para filtros)</p>
+<h4 id="2-clinicalservice-servicos-clinicos"><strong>2. ClinicalService (Serviços Clínicos)</strong></h4>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Tipo</th>
+<th>Valores</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>type</code></td>
+<td>Enum</td>
+<td><code>CONSULTATION</code>, <code>EXAM</code>, <code>VACCINE</code>, <code>PROCEDURE</code></td>
+<td>Tipo do serviço</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Exemplo de uso correto:</strong></p>
+<pre><code class="language-json">{
+  &quot;type&quot;: &quot;EXAM&quot;,  // CORRETO
+  &quot;name&quot;: &quot;Exames Laboratoriais&quot;,
+  &quot;description&quot;: &quot;Coleta e análise de amostras&quot;
+}
+
+{
+  &quot;type&quot;: &quot;VACCINE&quot;,  // CORRETO
+  &quot;name&quot;: &quot;Serviço de Vacinação&quot;,
+  &quot;description&quot;: &quot;Aplicação de vacinas&quot;
+}
+
+// ERRADO
+{
+  &quot;type&quot;: &quot;Exame&quot;,  // Português
+  &quot;type&quot;: &quot;vacina&quot;, // Minúsculo
+  &quot;type&quot;: &quot;CONSULTA&quot; // Português
+}
+</code></pre>
+<h4 id="3-clinicalitem-itens-clinicos"><strong>3. ClinicalItem (Itens Clínicos)</strong></h4>
+<p><strong>Exemplos reais com códigos:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Código</th>
+<th>Tipo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hemograma</td>
+<td><code>HEMOGRAM_COMPLETE</code></td>
+<td>EXAM</td>
+<td>Análise sanguínea</td>
+</tr>
+<tr>
+<td>Eletrocardiograma</td>
+<td><code>ECG_12_LEADS</code></td>
+<td>EXAM</td>
+<td>Exame cardíaco</td>
+</tr>
+<tr>
+<td>Vacina COVID-19</td>
+<td><code>COVID19_VAC_MRNA</code></td>
+<td>VACCINE</td>
+<td>Imunização</td>
+</tr>
+<tr>
+<td>Consulta cardiológica</td>
+<td><code>CARDIO_CONSULT_FIRST</code></td>
+<td>CONSULTATION</td>
+<td>Avaliação inicial</td>
+</tr>
+<tr>
+<td>Cirurgia de apêndice</td>
+<td><code>APPENDECTOMY_LAP</code></td>
+<td>PROCEDURE</td>
+<td>Remoção laparoscópica</td>
+</tr>
+</tbody>
+</table>
+<h4 id="4-clinicalrule-regras-clinicas"><strong>4. ClinicalRule (Regras Clínicas)</strong></h4>
+<p><strong>Significado clínico dos campos:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Significado Médico</th>
+<th>Exemplo Clínico</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>minHoursAfterBloodDonation</code></td>
+<td>Tempo mínimo após doação de sangue</td>
+<td>72h = 3 dias (para evitar anemia)</td>
+</tr>
+<tr>
+<td><code>minDaysAfterVaccination</code></td>
+<td>Tempo mínimo após vacinação</td>
+<td>7d = 1 semana (evitar reações)</td>
+</tr>
+<tr>
+<td><code>minDaysAfterSurgery</code></td>
+<td>Tempo mínimo após cirurgia</td>
+<td>30d = 1 mês (cicatrização)</td>
+</tr>
+<tr>
+<td><code>contraindicatedAnticoagulants</code></td>
+<td>Riscos com anticoagulantes</td>
+<td>true = PROIBIDO com varfarina</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Exemplo de regra complexa:</strong></p>
+<pre><code class="language-json">{
+  &quot;clinicalItemId&quot;: &quot;MAJOR_SURGERY&quot;,
+  &quot;minHoursAfterBloodDonation&quot;: 168,  // 7 dias
+  &quot;minDaysAfterVaccination&quot;: 30,      // 1 mês
+  &quot;minDaysAfterSurgery&quot;: 90,          // 3 meses
+  &quot;contraindicatedAnticoagulants&quot;: true,
+  &quot;validFrom&quot;: &quot;2024-01-01T00:00:00Z&quot;,
+  &quot;createdBy&quot;: &quot;comite.seguranca@hospital.com&quot;,
+  &quot;medicalRationale&quot;: &quot;Cirurgias maiores requerem estabilidade hemodinâmica completa. Anticoagulantes aumentam risco de sangramento em 300%.&quot;
+}
+</code></pre>
+<hr />
+<h2 id="apis-rest-completas"><strong>APIs REST Completas</strong></h2>
+<h3 id="base-url-e-autenticacao"><strong>Base URL e Autenticação</strong></h3>
+<pre><code class="language-bash"># Ambiente de Desenvolvimento
+BASE_URL = http://localhost:3000
+
+# Produção  
+BASE_URL = https://api.hospital.com/catalogo
+
+# Headers obrigatórios
+Content-Type: application/json
+Authorization: Bearer &lt;jwt-token&gt;
+X-Hospital-Id: &lt;hospital-id&gt;
+</code></pre>
+<h3 id="1-especialidades-medicas"><strong>1. Especialidades Médicas</strong></h3>
+<h4 id="11-criar-especialidade"><strong>1.1 Criar Especialidade</strong></h4>
+<pre><code class="language-bash">POST /specialties
+</code></pre>
+<p><strong>Payload:</strong></p>
+<pre><code class="language-json">{
+  &quot;code&quot;: &quot;NEUROLOG&quot;,  // Maiúsculas, único
+  &quot;name&quot;: &quot;Neurologia&quot;,
+  &quot;description&quot;: &quot;Especialidade responsável por doenças do sistema nervoso&quot;,
+  &quot;isActive&quot;: true
+}
+</code></pre>
+<p><strong>Resposta (201 Created):</strong></p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;550e8400-e29b-41d4-a716-446655440000&quot;,
+  &quot;code&quot;: &quot;NEUROLOG&quot;,
+  &quot;name&quot;: &quot;Neurologia&quot;,
+  &quot;description&quot;: &quot;Especialidade responsável por doenças do sistema nervoso&quot;,
+  &quot;isActive&quot;: true,
+  &quot;createdBy&quot;: &quot;admin@hospital.com&quot;,
+  &quot;updatedBy&quot;: &quot;admin@hospital.com&quot;,
+  &quot;createdAt&quot;: &quot;2024-01-15T10:30:00.000Z&quot;,
+  &quot;updatedAt&quot;: &quot;2024-01-15T10:30:00.000Z&quot;,
+  &quot;_links&quot;: {
+    &quot;self&quot;: &quot;/specialties/550e8400-e29b-41d4-a716-446655440000&quot;,
+    &quot;services&quot;: &quot;/services?specialtyId=550e8400-e29b-41d4-a716-446655440000&quot;
+  }
+}
+</code></pre>
+<p><strong>Erros Comuns:</strong></p>
+<pre><code class="language-json">// Código já existe
+{
+  &quot;statusCode&quot;: 409,
+  &quot;message&quot;: &quot;Specialty with code 'NEUROLOG' already exists&quot;,
+  &quot;error&quot;: &quot;Conflict&quot;
+}
+
+// Código inválido
+{
+  &quot;statusCode&quot;: 400,
+  &quot;message&quot;: [
+    &quot;code must contain only uppercase letters, numbers and underscores&quot;
+  ]
+}
+</code></pre>
+<h4 id="12-listar-especialidades-com-filtros"><strong>1.2 Listar Especialidades com Filtros</strong></h4>
+<pre><code class="language-bash">GET /specialties?search=cardio&amp;isActive=true&amp;page=1&amp;limit=20
+</code></pre>
+<p><strong>Parâmetros de Query:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parâmetro</th>
+<th>Tipo</th>
+<th>Default</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>search</code></td>
+<td>string</td>
+<td>-</td>
+<td>Busca em <code>code</code> e <code>name</code></td>
+</tr>
+<tr>
+<td><code>isActive</code></td>
+<td>boolean</td>
+<td>-</td>
+<td>Filtra por status</td>
+</tr>
+<tr>
+<td><code>page</code></td>
+<td>number</td>
+<td>1</td>
+<td>Paginação</td>
+</tr>
+<tr>
+<td><code>limit</code></td>
+<td>number</td>
+<td>50</td>
+<td>Itens por página (max: 1000)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Resposta (200 OK):</strong></p>
+<pre><code class="language-json">{
+  &quot;data&quot;: [
+    {
+      &quot;id&quot;: &quot;550e8400-e29b-41d4-a716-446655440000&quot;,
+      &quot;code&quot;: &quot;CARDIOL&quot;,
+      &quot;name&quot;: &quot;Cardiologia&quot;,
+      &quot;isActive&quot;: true,
+      &quot;serviceCount&quot;: 15,
+      &quot;createdAt&quot;: &quot;2024-01-10T08:00:00.000Z&quot;,
+      &quot;updatedAt&quot;: &quot;2024-01-14T14:30:00.000Z&quot;
+    }
+  ],
+  &quot;meta&quot;: {
+    &quot;total&quot;: 25,
+    &quot;page&quot;: 1,
+    &quot;limit&quot;: 20,
+    &quot;totalPages&quot;: 2,
+    &quot;hasNext&quot;: true,
+    &quot;hasPrev&quot;: false
+  }
+}
+</code></pre>
+<h4 id="13-verificar-se-pode-deletar"><strong>1.3 Verificar se Pode Deletar</strong></h4>
+<pre><code class="language-bash">GET /specialties/{id}/can-delete
+</code></pre>
+<p><strong>Resposta:</strong></p>
+<pre><code class="language-json">{
+  &quot;canDelete&quot;: false,
+  &quot;reason&quot;: &quot;Specialty has 3 associated clinical services&quot;,
+  &quot;serviceCount&quot;: 3,
+  &quot;services&quot;: [
+    {
+      &quot;id&quot;: &quot;123e4567-e89b-12d3-a456-426614174000&quot;,
+      &quot;code&quot;: &quot;CARD_CONSULT&quot;,
+      &quot;name&quot;: &quot;Consultas Cardiológicas&quot;
+    }
+  ],
+  &quot;recommendation&quot;: &quot;Desative a especialidade (isActive=false) em vez de deletar&quot;
+}
+</code></pre>
+<h4 id="14-desativar-especialidade"><strong>1.4 Desativar Especialidade</strong></h4>
+<pre><code class="language-bash">PATCH /specialties/{id}
+</code></pre>
+<pre><code class="language-json">{
+  &quot;isActive&quot;: false,
+  &quot;deactivationReason&quot;: &quot;Fusão com departamento de Medicina Interna&quot;,
+  &quot;deactivatedBy&quot;: &quot;diretor.medico@hospital.com&quot;,
+  &quot;deactivatedAt&quot;: &quot;2024-06-01T00:00:00.000Z&quot;
+}
+</code></pre>
+<p><strong>Efeito em cascata:</strong>
+- Todos serviços desta especialidade são desativados
+- Todos itens destes serviços são desativados
+- Regras continuam válidas para histórico</p>
+<h3 id="2-servicos-clinicos"><strong>2. Serviços Clínicos</strong></h3>
+<h4 id="21-criar-servico"><strong>2.1 Criar Serviço</strong></h4>
+<pre><code class="language-bash">POST /services
+</code></pre>
+<p><strong>Payload:</strong></p>
+<pre><code class="language-json">{
+  &quot;code&quot;: &quot;NEURO_EXAMS&quot;,  // Único no sistema
+  &quot;name&quot;: &quot;Exames Neurológicos&quot;,
+  &quot;specialtyId&quot;: &quot;550e8400-e29b-41d4-a716-446655440000&quot;,
+  &quot;type&quot;: &quot;EXAM&quot;,  // Um dos: CONSULTATION, EXAM, VACCINE, PROCEDURE
+  &quot;description&quot;: &quot;Exames de imagem e funcionais do sistema nervoso&quot;,
+  &quot;isActive&quot;: true,
+  &quot;metadata&quot;: {
+    &quot;averageDuration&quot;: 45,  // minutos
+    &quot;requiresFasting&quot;: true,
+    &quot;roomType&quot;: &quot;imaging&quot;,
+    &quot;equipment&quot;: [&quot;MRI&quot;, &quot;EEG&quot;, &quot;EMG&quot;]
+  }
+}
+</code></pre>
+<p><strong>Validações:</strong>
+1. <code>specialtyId</code> deve existir e estar ativa
+2. <code>code</code> deve ser único
+3. <code>type</code> deve ser um dos 4 valores permitidos</p>
+<h4 id="22-buscar-servicos-com-filtros-avancados"><strong>2.2 Buscar Serviços com Filtros Avançados</strong></h4>
+<pre><code class="language-bash"># Busca complexa com múltiplos filtros
+GET /services?specialtyId=550e8400-e29b-41d4-a716-446655440000&amp;type=EXAM&amp;isActive=true&amp;search=neuro&amp;page=1&amp;limit=10
+</code></pre>
+<p><strong>Resposta com Dados Enriquecidos:</strong></p>
+<pre><code class="language-json">{
+  &quot;data&quot;: [
+    {
+      &quot;id&quot;: &quot;123e4567-e89b-12d3-a456-426614174000&quot;,
+      &quot;code&quot;: &quot;NEURO_EXAMS&quot;,
+      &quot;name&quot;: &quot;Exames Neurológicos&quot;,
+      &quot;type&quot;: &quot;EXAM&quot;,
+      &quot;description&quot;: &quot;Exames de imagem e funcionais do sistema nervoso&quot;,
+      &quot;isActive&quot;: true,
+      &quot;specialty&quot;: {
+        &quot;id&quot;: &quot;550e8400-e29b-41d4-a716-446655440000&quot;,
+        &quot;code&quot;: &quot;NEUROLOG&quot;,
+        &quot;name&quot;: &quot;Neurologia&quot;
+      },
+      &quot;itemCount&quot;: 8,
+      &quot;createdAt&quot;: &quot;2024-01-15T11:00:00.000Z&quot;,
+      &quot;metadata&quot;: {
+        &quot;averageDuration&quot;: 45,
+        &quot;requiresFasting&quot;: true
+      }
+    }
+  ],
+  &quot;meta&quot;: {
+    &quot;total&quot;: 8,
+    &quot;page&quot;: 1,
+    &quot;limit&quot;: 10
+  }
+}
+</code></pre>
+<h4 id="23-batch-request-para-multiplos-servicos"><strong>2.3 Batch Request para Múltiplos Serviços</strong></h4>
+<pre><code class="language-bash"># Quando a agenda precisa de vários serviços de uma vez
+GET /services/batch?ids=id1,id2,id3,id4,id5
+
+# Ou por especialidade
+GET /services/batch?specialtyId=550e8400-e29b-41d4-a716-446655440000&amp;isActive=true
+</code></pre>
+<p><strong>Cenário de uso:</strong> A agenda carrega todos serviços de uma especialidade para montar a grade</p>
+<h3 id="3-itens-clinicos"><strong>3. Itens Clínicos</strong></h3>
+<h4 id="31-criar-item-com-validacao-em-tempo-real"><strong>3.1 Criar Item com Validação em Tempo Real</strong></h4>
+<pre><code class="language-bash">POST /items
+</code></pre>
+<p><strong>Exemplo 1: Criando um Exame</strong></p>
+<pre><code class="language-json">{
+  &quot;code&quot;: &quot;MRI_BRAIN_W_CONTRAST&quot;,
+  &quot;name&quot;: &quot;Ressonância Magnética Cerebral com Contraste&quot;,
+  &quot;clinicalServiceId&quot;: &quot;123e4567-e89b-12d3-a456-426614174000&quot;,
+  &quot;description&quot;: &quot;Exame de imagem para avaliar cérebro com contraste gadolínio&quot;,
+  &quot;metadata&quot;: {
+    &quot;cptCode&quot;: &quot;70553&quot;,
+    &quot;tussCode&quot;: &quot;31001079&quot;,
+    &quot;duration&quot;: 60,
+    &quot;preparation&quot;: [
+      &quot;Jejum de 4 horas&quot;,
+      &quot;Suspender metformina 48h antes&quot;,
+      &quot;Trazer exames anteriores&quot;
+    ],
+    &quot;contraindications&quot;: [
+      &quot;Gestantes&quot;,
+      &quot;Insuficiência renal&quot;,
+      &quot;Alergia a gadolínio&quot;
+    ]
+  }
+}
+</code></pre>
+<p><strong>Exemplo 2: Criando uma Vacina</strong></p>
+<pre><code class="language-json">{
+  &quot;code&quot;: &quot;INFLUENZA_VAC_2024&quot;,
+  &quot;name&quot;: &quot;Vacina Influenza 2024 (Gripe)&quot;,
+  &quot;clinicalServiceId&quot;: &quot;456e7890-f12c-34d5-b678-567812345678&quot;,
+  &quot;description&quot;: &quot;Vacina tetravalente contra influenza para temporada 2024&quot;,
+  &quot;metadata&quot;: {
+    &quot;manufacturer&quot;: &quot;Sanofi&quot;,
+    &quot;lotNumber&quot;: &quot;FLU2024-001&quot;,
+    &quot;administrationRoute&quot;: &quot;intramuscular&quot;,
+    &quot;ageRange&quot;: &quot;&gt;6 meses&quot;,
+    &quot;storage&quot;: &quot;2-8°C&quot;,
+    &quot;validity&quot;: &quot;2024-12-31&quot;
+  }
+}
+</code></pre>
+<h4 id="32-buscar-itens-com-regras-atuais"><strong>3.2 Buscar Itens com Regras Atuais</strong></h4>
+<pre><code class="language-bash">GET /items/{id}?includeRules=true
+</code></pre>
+<p><strong>Resposta Completa:</strong></p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;789a0123-b45c-67d8-e901-234567890123&quot;,
+  &quot;code&quot;: &quot;MRI_BRAIN_W_CONTRAST&quot;,
+  &quot;name&quot;: &quot;Ressonância Magnética Cerebral com Contraste&quot;,
+  &quot;isActive&quot;: true,
+  &quot;clinicalService&quot;: {
+    &quot;id&quot;: &quot;123e4567-e89b-12d3-a456-426614174000&quot;,
+    &quot;code&quot;: &quot;NEURO_EXAMS&quot;,
+    &quot;name&quot;: &quot;Exames Neurológicos&quot;,
+    &quot;type&quot;: &quot;EXAM&quot;,
+    &quot;specialty&quot;: {
+      &quot;id&quot;: &quot;550e8400-e29b-41d4-a716-446655440000&quot;,
+      &quot;code&quot;: &quot;NEUROLOG&quot;,
+      &quot;name&quot;: &quot;Neurologia&quot;
+    }
+  },
+  &quot;currentRule&quot;: {
+    &quot;id&quot;: &quot;901c2345-d67e-89f0-g123-456789012345&quot;,
+    &quot;minHoursAfterBloodDonation&quot;: 72,
+    &quot;minDaysAfterVaccination&quot;: 7,
+    &quot;minDaysAfterSurgery&quot;: 30,
+    &quot;contraindicatedAnticoagulants&quot;: true,
+    &quot;validFrom&quot;: &quot;2024-01-01T00:00:00.000Z&quot;,
+    &quot;isCurrent&quot;: true,
+    &quot;medicalRationale&quot;: &quot;Contraste pode causar nefropatia em pacientes com função renal comprometida&quot;
+  },
+  &quot;ruleHistory&quot;: [
+    {
+      &quot;validFrom&quot;: &quot;2023-01-01&quot;,
+      &quot;validTo&quot;: &quot;2023-12-31&quot;,
+      &quot;minDaysAfterSurgery&quot;: 14
+    }
+  ],
+  &quot;safetyStats&quot;: {
+    &quot;totalEvaluations&quot;: 1245,
+    &quot;blockedCount&quot;: 23,
+    &quot;blockRate&quot;: &quot;1.85%&quot;,
+    &quot;commonReasons&quot;: [
+      &quot;Função renal reduzida&quot;,
+      &quot;Alergia a contraste&quot;
+    ]
+  }
+}
+</code></pre>
+<h4 id="33-buscar-todos-os-itens-de-um-servico"><strong>3.3 Buscar Todos os Itens de um Serviço</strong></h4>
+<pre><code class="language-bash">GET /items?serviceId=123e4567-e89b-12d3-a456-426614174000&amp;includeCurrentRules=true
+</code></pre>
+<p><strong>Cenário:</strong> Laboratório quer todos exames disponíveis com suas regras</p>
+<h3 id="4-regras-clinicas"><strong>4. Regras Clínicas</strong></h3>
+<h4 id="41-criar-regra-com-validacao-de-sobreposicao"><strong>4.1 Criar Regra com Validação de Sobreposição</strong></h4>
+<pre><code class="language-bash">POST /rules
+</code></pre>
+<p><strong>Payload Completo:</strong></p>
+<pre><code class="language-json">{
+  &quot;clinicalItemId&quot;: &quot;MRI_BRAIN_W_CONTRAST&quot;,
+  &quot;minHoursAfterBloodDonation&quot;: 72,
+  &quot;minDaysAfterVaccination&quot;: 7,
+  &quot;minDaysAfterSurgery&quot;: 30,
+  &quot;contraindicatedAnticoagulants&quot;: true,
+  &quot;validFrom&quot;: &quot;2024-06-01T00:00:00.000Z&quot;,
+  &quot;validTo&quot;: &quot;2024-12-31T23:59:59.999Z&quot;,
+  &quot;createdBy&quot;: &quot;comite.radiologia@hospital.com&quot;,
+  &quot;approval&quot;: {
+    &quot;approvedBy&quot;: &quot;dr.silva@hospital.com&quot;,
+    &quot;approvalDate&quot;: &quot;2024-05-15T14:30:00.000Z&quot;,
+    &quot;protocolNumber&quot;: &quot;PROT-2024-045&quot;
+  },
+  &quot;references&quot;: [
+    {
+      &quot;type&quot;: &quot;guideline&quot;,
+      &quot;title&quot;: &quot;ACR Manual on Contrast Media&quot;,
+      &quot;version&quot;: &quot;2024&quot;,
+      &quot;section&quot;: &quot;5.2.1&quot;
+    }
+  ],
+  &quot;exceptions&quot;: [
+    {
+      &quot;condition&quot;: &quot;Emergência neurológica&quot;,
+      &quot;action&quot;: &quot;Proceder com monitoramento renal&quot;
+    }
+  ]
+}
+</code></pre>
+<p><strong>Validações Automáticas:</strong>
+1. Item clínico existe e está ativo
+2. <code>validFrom</code> &lt; <code>validTo</code> (se <code>validTo</code> fornecido)
+3. Não sobrepõe regra existente no mesmo período
+4. Todos campos numéricos &gt;= 0</p>
+<h4 id="42-buscar-regras-com-filtros-temporais"><strong>4.2 Buscar Regras com Filtros Temporais</strong></h4>
+<pre><code class="language-bash"># Buscar regras atuais de um item
+GET /rules?itemId=MRI_BRAIN_W_CONTRAST&amp;currentOnly=true
+
+# Buscar regras válidas em uma data específica
+GET /rules?itemId=MRI_BRAIN_W_CONTRAST&amp;validAt=2024-07-15
+
+# Buscar todas regras (histórico)
+GET /rules?itemId=MRI_BRAIN_W_CONTRAST&amp;page=1&amp;limit=50
+</code></pre>
+<p><strong>Resposta com Timeline:</strong></p>
+<pre><code class="language-json">{
+  &quot;data&quot;: [
+    {
+      &quot;id&quot;: &quot;rule-2024&quot;,
+      &quot;validFrom&quot;: &quot;2024-01-01T00:00:00.000Z&quot;,
+      &quot;validTo&quot;: null,
+      &quot;isCurrent&quot;: true,
+      &quot;createdBy&quot;: &quot;comite.2024@hospital.com&quot;,
+      &quot;summary&quot;: &quot;minDaysAfterSurgery: 30, anticoagulantes: contraindicado&quot;
+    },
+    {
+      &quot;id&quot;: &quot;rule-2023&quot;, 
+      &quot;validFrom&quot;: &quot;2023-01-01T00:00:00.000Z&quot;,
+      &quot;validTo&quot;: &quot;2023-12-31T23:59:59.999Z&quot;,
+      &quot;isCurrent&quot;: false,
+      &quot;createdBy&quot;: &quot;comite.2023@hospital.com&quot;,
+      &quot;summary&quot;: &quot;minDaysAfterSurgery: 14, anticoagulantes: requer avaliação&quot;
+    }
+  ],
+  &quot;timeline&quot;: [
+    {
+      &quot;period&quot;: &quot;2023&quot;,
+      &quot;rule&quot;: &quot;rule-2023&quot;,
+      &quot;minDaysAfterSurgery&quot;: 14
+    },
+    {
+      &quot;period&quot;: &quot;2024→&quot;,
+      &quot;rule&quot;: &quot;rule-2024&quot;, 
+      &quot;minDaysAfterSurgery&quot;: 30,
+      &quot;change&quot;: &quot;Aumentado para 30 dias baseado em estudo recente&quot;
+    }
+  ]
+}
+</code></pre>
+<h4 id="43-atualizar-regra-criando-nova-versao"><strong>4.3 Atualizar Regra (Criando Nova Versão)</strong></h4>
+<pre><code class="language-bash"># NUNCA use PATCH em regra existente
+# SEMPRE crie nova versão
+
+POST /rules
+{
+  &quot;clinicalItemId&quot;: &quot;MRI_BRAIN_W_CONTRAST&quot;,
+  &quot;minHoursAfterBloodDonation&quot;: 96,  // Mudou de 72 para 96
+  // ... outros campos
+  &quot;validFrom&quot;: &quot;2024-07-01T00:00:00.000Z&quot;,  // Nova data de início
+  &quot;changeReason&quot;: &quot;Novo estudo mostra necessidade de 96h após doação&quot;
+}
+</code></pre>
+<p><strong>Processo de Versionamento:</strong>
+1. Regra antiga: <code>validTo = 2024-06-30T23:59:59.999Z</code>
+2. Regra nova: <code>validFrom = 2024-07-01T00:00:00.000Z</code>
+3. Sistema mantém ambas para auditoria</p>
+<h4 id="44-auditoria-de-regra"><strong>4.4 Auditoria de Regra</strong></h4>
+<pre><code class="language-bash">GET /rules/{ruleId}/audit?page=1&amp;limit=20
+</code></pre>
+<p><strong>Resposta de Auditoria:</strong></p>
+<pre><code class="language-json">{
+  &quot;rule&quot;: {
+    &quot;id&quot;: &quot;rule-2024&quot;,
+    &quot;item&quot;: &quot;MRI_BRAIN_W_CONTRAST&quot;,
+    &quot;currentValues&quot;: {
+      &quot;minDaysAfterSurgery&quot;: 30
+    }
+  },
+  &quot;auditTrail&quot;: [
+    {
+      &quot;id&quot;: &quot;audit-001&quot;,
+      &quot;changedAt&quot;: &quot;2024-05-15T14:30:00.000Z&quot;,
+      &quot;changedBy&quot;: &quot;dr.silva@hospital.com&quot;,
+      &quot;changeType&quot;: &quot;RULE_CREATION&quot;,
+      &quot;details&quot;: &quot;Regra criada conforme protocolo PROT-2024-045&quot;,
+      &quot;before&quot;: null,
+      &quot;after&quot;: {
+        &quot;minDaysAfterSurgery&quot;: 30
+      }
+    },
+    {
+      &quot;id&quot;: &quot;audit-002&quot;, 
+      &quot;changedAt&quot;: &quot;2024-06-01T09:15:00.000Z&quot;,
+      &quot;changedBy&quot;: &quot;system&quot;,
+      &quot;changeType&quot;: &quot;RULE_APPLIED&quot;,
+      &quot;details&quot;: &quot;Aplicada para paciente PAT-12345&quot;,
+      &quot;patientId&quot;: &quot;PAT-12345&quot;,
+      &quot;wasAllowed&quot;: false,
+      &quot;reason&quot;: &quot;Cirurgia recente (15 dias)&quot;
+    }
+  ],
+  &quot;statistics&quot;: {
+    &quot;totalChanges&quot;: 15,
+    &quot;totalApplications&quot;: 1245,
+    &quot;blockRate&quot;: &quot;2.3%&quot;
+  }
+}
+</code></pre>
+<h3 id="5-auditoria-de-seguranca"><strong>5. Auditoria de Segurança</strong></h3>
+<h4 id="51-registrar-decisao-de-seguranca"><strong>5.1 Registrar Decisão de Segurança</strong></h4>
+<pre><code class="language-bash">POST /rules/safety-audits
+</code></pre>
+<p><strong>Cenário:</strong> Sistema de agenda consultou se pode marcar um exame</p>
+<pre><code class="language-json">{
+  &quot;patientId&quot;: &quot;PAT-67890&quot;,
+  &quot;clinicalItemId&quot;: &quot;MRI_BRAIN_W_CONTRAST&quot;,
+  &quot;desiredDate&quot;: &quot;2024-06-15T14:00:00.000Z&quot;,
+  &quot;wasAllowed&quot;: false,
+  &quot;reason&quot;: &quot;Paciente realizou cirurgia em 2024-05-20 (25 dias atrás). Regra requer 30 dias.&quot;,
+  &quot;clinicalRuleId&quot;: &quot;rule-2024&quot;,
+  &quot;context&quot;: {
+    &quot;requestedBy&quot;: &quot;agenda@hospital.com&quot;,
+    &quot;requestId&quot;: &quot;REQ-2024-001234&quot;,
+    &quot;patientContext&quot;: {
+      &quot;age&quot;: 65,
+      &quot;conditions&quot;: [&quot;hipertensao&quot;, &quot;diabetes&quot;],
+      &quot;currentMeds&quot;: [&quot;varfarina&quot;, &quot;metformina&quot;]
+    }
+  }
+}
+</code></pre>
+<h4 id="52-consultar-historico-de-decisoes"><strong>5.2 Consultar Histórico de Decisões</strong></h4>
+<pre><code class="language-bash">GET /rules/safety-audits?patientId=PAT-67890&amp;startDate=2024-01-01&amp;endDate=2024-06-30
+</code></pre>
+<p><strong>Resposta Analítica:</strong></p>
+<pre><code class="language-json">{
+  &quot;patientId&quot;: &quot;PAT-67890&quot;,
+  &quot;period&quot;: &quot;2024-01-01 to 2024-06-30&quot;,
+  &quot;summary&quot;: {
+    &quot;totalRequests&quot;: 45,
+    &quot;allowed&quot;: 38,
+    &quot;blocked&quot;: 7,
+    &quot;blockRate&quot;: &quot;15.6%&quot;
+  },
+  &quot;decisions&quot;: [
+    {
+      &quot;date&quot;: &quot;2024-06-15&quot;,
+      &quot;item&quot;: &quot;MRI_BRAIN_W_CONTRAST&quot;,
+      &quot;wasAllowed&quot;: false,
+      &quot;reason&quot;: &quot;Cirurgia recente&quot;,
+      &quot;ruleApplied&quot;: &quot;rule-2024&quot;
+    },
+    {
+      &quot;date&quot;: &quot;2024-06-10&quot;,
+      &quot;item&quot;: &quot;HEMOGRAM_COMPLETE&quot;,
+      &quot;wasAllowed&quot;: true,
+      &quot;ruleApplied&quot;: &quot;rule-hemogram-2024&quot;
+    }
+  ],
+  &quot;patterns&quot;: {
+    &quot;commonBlockReasons&quot;: [
+      &quot;Cirurgia recente (4x)&quot;,
+      &quot;Uso de anticoagulantes (3x)&quot;
+    ],
+    &quot;suggestions&quot;: [
+      &quot;Considerar ajuste medicação antes de procedimentos&quot;
+    ]
+  }
+}
+</code></pre>
+<hr />
+<h2 id="apis-grpc-de-alto-desempenho"><strong>APIs gRPC de Alto Desempenho</strong></h2>
+<h3 id="configuracao-do-servico-grpc"><strong>Configuração do Serviço gRPC</strong></h3>
+<pre><code class="language-protobuf">syntax = &quot;proto3&quot;;
+
+package clinical.catalog;
+
+service ClinicalCatalogService {
+  // ============ ESPECIALIDADES ============
+  rpc ListSpecialties (SpecialtyFilter) returns (SpecialtyListResponse);
+  rpc GetSpecialty (SpecialtyIdRequest) returns (SpecialtyResponse);
+
+  // ============ SERVIÇOS ============
+  rpc ListServices (ServiceFilter) returns (ServiceListResponse);
+  rpc GetService (ServiceIdRequest) returns (ServiceResponse);
+  rpc ListServicesBySpecialty (SpecialtyIdRequest) returns (ServiceListResponse);
+  rpc BatchGetServices (BatchServiceRequest) returns (ServiceListResponse);
+
+  // ============ ITENS ============
+  rpc ListItems (ItemFilter) returns (ItemListResponse);
+  rpc GetItem (ItemIdRequest) returns (ItemResponse);
+  rpc ListItemsByService (ServiceIdRequest) returns (ItemListResponse);
+  rpc BatchGetItems (BatchItemRequest) returns (ItemListResponse);
+
+  // ============ REGRAS ============
+  rpc ListRules (RuleFilter) returns (RuleListResponse);
+  rpc GetRule (RuleIdRequest) returns (RuleResponse);
+  rpc ListRulesByItem (ItemIdRequest) returns (RuleListResponse);
+  rpc ListRulesByItems (BatchItemRequest) returns (RuleListResponse);
+  rpc GetCurrentRuleByItem (ItemIdRequest) returns (RuleResponse);
+  rpc BatchGetCurrentRules (BatchItemRequest) returns (RuleListResponse);
+}
+</code></pre>
+<h3 id="configuracao-do-cliente"><strong>Configuração do Cliente</strong></h3>
+<pre><code class="language-typescript">// Configuração no microserviço de Agenda
+import { ClientGrpc, ClientsModule } from '@nestjs/microservices';
+
+@Module({
+  imports: [
+    ClientsModule.register([
+      {
+        name: 'CATALOG_CLIENT',
+        transport: Transport.GRPC,
+        options: {
+          package: 'clinical.catalog',
+          protoPath: join(__dirname, 'clinical-catalog.proto'),
+          url: 'catalog-service:50051',  // Service name no Kubernetes
+        },
+      },
+    ]),
+  ],
+})
+export class AgendaModule {}
+
+// Injeção no serviço
+@Injectable()
+export class AgendaService {
+  private catalogClient: ClientGrpc;
+
+  constructor(@Inject('CATALOG_CLIENT') private client: ClientGrpc) {
+    this.catalogClient = client.getService&lt;ClinicalCatalogService&gt;('ClinicalCatalogService');
+  }
+}
+</code></pre>
+<h3 id="cenarios-de-uso-grpc"><strong>Cenários de Uso gRPC</strong></h3>
+<h4 id="cenario-1-agenda-carregando-grade-de-servicos"><strong>Cenário 1: Agenda Carregando Grade de Serviços</strong></h4>
+<pre><code class="language-typescript">// Quando usuário seleciona &quot;Cardiologia&quot; na agenda
+async function loadSpecialtyServices(specialtyId: string) {
+  const response = await this.catalogClient.listServicesBySpecialty({
+    id: specialtyId
+  }).toPromise();
+
+  // Transforma para interface da agenda
+  return response.services.map(service =&gt; ({
+    id: service.id,
+    name: service.name,
+    type: service.type,
+    duration: service.metadata?.averageDuration || 30,
+    color: this.getColorByType(service.type)
+  }));
+}
+
+// Performance: 1000 serviços em &lt; 50ms
+</code></pre>
+<h4 id="cenario-2-verificacao-em-massa-de-regras"><strong>Cenário 2: Verificação em Massa de Regras</strong></h4>
+<pre><code class="language-typescript">// Antes de mostrar disponibilidade na agenda
+async function checkMultipleItems(items: string[], patientId: string) {
+  // Busca todas regras atuais de uma vez
+  const rulesResponse = await this.catalogClient.batchGetCurrentRules({
+    ids: items
+  }).toPromise();
+
+  // Aplica regras para o paciente específico
+  const patientHistory = await this.getPatientHistory(patientId);
+
+  return rulesResponse.rules.map(rule =&gt; {
+    const canProceed = this.evaluateRule(rule, patientHistory);
+    return {
+      itemId: rule.clinical_item_id,
+      itemName: rule.item_name,
+      canProceed,
+      restrictions: canProceed ? [] : this.getRestrictions(rule, patientHistory),
+      nextAvailableDate: this.calculateNextAvailable(rule, patientHistory)
+    };
+  });
+}
+
+// Exemplo de resposta
+[
+  {
+    &quot;itemId&quot;: &quot;HEMOGRAM_COMPLETE&quot;,
+    &quot;itemName&quot;: &quot;Hemograma Completo&quot;,
+    &quot;canProceed&quot;: false,
+    &quot;restrictions&quot;: [&quot;Doação de sangue em 2024-06-10&quot;],
+    &quot;nextAvailableDate&quot;: &quot;2024-06-13T00:00:00.000Z&quot;
+  }
+]
+</code></pre>
+<h4 id="cenario-3-cache-warm-up-no-startup"><strong>Cenário 3: Cache Warm-up no Startup</strong></h4>
+<pre><code class="language-typescript">// Quando a agenda inicia, pré-carrega dados frequentes
+async function warmUpCache() {
+  // Carrega especialidades ativas
+  const specialties = await this.catalogClient.listSpecialties({
+    is_active: true,
+    limit: 100
+  }).toPromise();
+
+  // Para cada especialidade, carrega serviços
+  for (const specialty of specialties.specialties) {
+    const services = await this.catalogClient.listServicesBySpecialty({
+      id: specialty.id
+    }).toPromise();
+
+    this.cache.set(`specialty:${specialty.id}:services`, services, 3600);
+  }
+
+  // Carrega itens mais comuns
+  const commonItems = ['HEMOGRAM', 'ECG', 'COVID_VAC'];
+  const items = await this.catalogClient.batchGetItems({
+    ids: commonItems
+  }).toPromise();
+
+  this.cache.set('common:items', items, 1800);
+}
+</code></pre>
+<h3 id="metricas-de-performance-grpc"><strong>Métricas de Performance gRPC</strong></h3>
+<pre><code class="language-typescript">// Middleware para medir performance
+@Injectable()
+export class CatalogMetricsInterceptor implements ClientInterceptor {
+  intercept(
+    call: ClientUnaryCall&lt;any, any&gt;,
+    metadata: Metadata,
+    next: CallHandler&lt;any&gt;
+  ): Observable&lt;any&gt; {
+    const startTime = Date.now();
+    const method = call.getMethod();
+
+    return next.handle().pipe(
+      tap({
+        next: () =&gt; {
+          const duration = Date.now() - startTime;
+          metrics.observeGrpcCall(method, duration, 'success');
+        },
+        error: (err) =&gt; {
+          const duration = Date.now() - startTime;
+          metrics.observeGrpcCall(method, duration, 'error');
+        }
+      })
+    );
+  }
+}
+
+// Métricas típicas esperadas
+const expectedMetrics = {
+  'GetSpecialty': { p95: '10ms', rps: 1000 },
+  'ListServicesBySpecialty': { p95: '20ms', rps: 500 },
+  'BatchGetCurrentRules': { p95: '50ms', rps: 200 }
+};
+</code></pre>
+<hr />
+<h2 id="casos-de-uso-reais"><strong>Casos de Uso Reais</strong></h2>
+<h3 id="caso-1-paciente-com-multiplas-condicoes"><strong>Caso 1: Paciente com Múltiplas Condições</strong></h3>
+<p><strong>Paciente:</strong> Maria, 68 anos
+<strong>Condições:</strong> Diabetes, Hipertensão, Uso de Varfarina
+<strong>Deseja:</strong> Hemograma + Consulta cardiológica</p>
+<pre><code class="language-typescript">// 1. Sistema agenda consulta regras
+const rules = await catalogClient.batchGetCurrentRules({
+  ids: ['HEMOGRAM_COMPLETE', 'CARDIO_CONSULT']
+});
+
+// 2. Avalia contra histórico
+const evaluation = evaluatePatient(rules, {
+  conditions: ['diabetes', 'hypertension'],
+  medications: ['warfarin'],
+  lastProcedures: [
+    { type: 'blood_donation', date: '2024-06-01' },
+    { type: 'vaccination', date: '2024-05-15' }
+  ]
+});
+
+// 3. Resultado
+const result = {
+  hemogram: {
+    allowed: false,
+    reasons: [
+      'Doação de sangue em 01/06/2024 (necessário 72h)',
+      'Uso de varfarina (anticoagulante contraindicado)'
+    ],
+    alternatives: [
+      'Aguardar até 04/06/2024',
+      'Consultar hematologista para ajuste medicação'
+    ]
+  },
+  cardioConsult: {
+    allowed: true,
+    warnings: [
+      'Informar cardiologista sobre uso de varfarina',
+      'Trazer último INR'
+    ]
+  }
+};
+</code></pre>
+<h3 id="caso-2-pre-operatorio-completo"><strong>Caso 2: Pré-Operatório Completo</strong></h3>
+<p><strong>Paciente:</strong> João, 45 anos
+<strong>Cirurgia Agendada:</strong> Apendicectomia (15/06/2024)
+<strong>Pré-Operatório Necessário:</strong> ECG + Hemograma + Avaliação clínica</p>
+<pre><code class="language-typescript">// Sistema agenda verifica janela ideal
+async function schedulePreOp(patientId: string, surgeryDate: Date) {
+  const preOpItems = ['ECG_12_LEADS', 'HEMOGRAM_COMPLETE', 'CLINIC_EVAL'];
+
+  // Busca regras de todos itens
+  const rules = await catalogClient.batchGetCurrentRules({
+    ids: preOpItems
+  });
+
+  // Calcula janelas ideais
+  const windows = calculateWindows(rules, surgeryDate);
+
+  return {
+    idealSchedule: {
+      'ECG': {
+        date: addDays(surgeryDate, -7),
+        reason: 'Necessário até 7 dias antes da cirurgia'
+      },
+      'Hemograma': {
+        date: addDays(surgeryDate, -3),
+        reason: 'Válido por 72h, necessário antes de suspender anticoagulantes'
+      },
+      'Avaliação Clínica': {
+        date: addDays(surgeryDate, -1),
+        reason: 'Última avaliação antes da cirurgia'
+      }
+    },
+    contraindications: checkContraindications(rules, patientId),
+    checklist: generatePreOpChecklist(rules)
+  };
+}
+</code></pre>
+<h3 id="caso-3-vacinacao-em-lote"><strong>Caso 3: Vacinação em Lote</strong></h3>
+<p><strong>Cenário:</strong> Campanha de vacinação contra influenza
+<strong>Pacientes:</strong> 500 funcionários do hospital
+<strong>Logística:</strong> Agendar em lotes considerando contraindicações</p>
+<pre><code class="language-typescript">async function batchVaccinationScheduling(patientIds: string[]) {
+  const results = [];
+
+  // Processa em lotes de 50
+  for (let i = 0; i &lt; patientIds.length; i += 50) {
+    const batch = patientIds.slice(i, i + 50);
+
+    // Para cada paciente, verifica regras da vacina
+    const batchResults = await Promise.all(
+      batch.map(async (patientId) =&gt; {
+        const patient = await getPatient(patientId);
+        const rule = await catalogClient.getCurrentRuleByItem({
+          id: 'INFLUENZA_VAC_2024'
+        });
+
+        const canVaccinate = evaluateVaccinationRule(rule, patient);
+
+        return {
+          patientId,
+          canVaccinate,
+          reason: canVaccinate ? 'Apto' : getRestrictionReason(rule, patient),
+          priority: calculatePriority(patient)
+        };
+      })
+    );
+
+    results.push(...batchResults);
+  }
+
+  // Agrupa resultados
+  return {
+    eligible: results.filter(r =&gt; r.canVaccinate),
+    ineligible: results.filter(r =&gt; !r.canVaccinate),
+    statistics: {
+      total: results.length,
+      eligibleCount: results.filter(r =&gt; r.canVaccinate).length,
+      eligibilityRate: (results.filter(r =&gt; r.canVaccinate).length / results.length * 100).toFixed(1) + '%'
+    }
+  };
+}
+</code></pre>
+<hr />
+<h2 id="fluxos-de-integracao"><strong>Fluxos de Integração</strong></h2>
+<h3 id="fluxo-1-agendamento-de-consulta"><strong>Fluxo 1: Agendamento de Consulta</strong></h3>
+<pre><code class="language-mermaid">sequenceDiagram
+    participant Paciente
+    participant Agenda
+    participant Catálogo
+    participant Prontuário
+
+    Paciente-&gt;&gt;Agenda: Quero marcar cardiologista
+    Agenda-&gt;&gt;Catálogo: ListServicesBySpecialty(&quot;CARDIOL&quot;)
+    Catálogo--&gt;&gt;Agenda: [Consultas, Exames, Procedimentos]
+    Agenda-&gt;&gt;Paciente: Escolha tipo: Consulta
+
+    Paciente-&gt;&gt;Agenda: Escolhe &quot;Consulta Cardiológica&quot;
+    Agenda-&gt;&gt;Catálogo: GetItem(&quot;CARDIO_CONSULT&quot;)
+    Catálogo--&gt;&gt;Agenda: Item + Regras atuais
+
+    Agenda-&gt;&gt;Prontuário: GetPatientHistory(PAT-123)
+    Prontuário--&gt;&gt;Agenda: Histórico completo
+
+    Agenda-&gt;&gt;Agenda: Avalia regras vs histórico
+    Note over Agenda: Hemograma recente: OK&lt;br/&gt;Vacinação: OK&lt;br/&gt;Cirurgia: Nenhuma
+
+    Agenda-&gt;&gt;Paciente: Disponível! Horários...
+
+    Paciente-&gt;&gt;Agenda: Escolhe 15/06 14:00
+    Agenda-&gt;&gt;Catálogo: POST /safety-audits
+    Catálogo--&gt;&gt;Agenda: Audit registered
+
+    Agenda-&gt;&gt;Paciente: Confirmado! Lembretes enviados
+</code></pre>
+<h3 id="fluxo-2-bloqueio-automatico"><strong>Fluxo 2: Bloqueio Automático</strong></h3>
+<pre><code class="language-typescript">// Quando paciente realiza um procedimento
+async function recordProcedure(patientId: string, itemId: string, date: Date) {
+  // 1. Registra no prontuário
+  await prontuarioService.recordProcedure(patientId, itemId, date);
+
+  // 2. Busca regras do procedimento realizado
+  const rule = await catalogClient.getCurrentRuleByItem({ id: itemId });
+
+  // 3. Identifica itens que serão bloqueados
+  const blockedItems = await identifyBlockedItems(rule);
+
+  // 4. Cria bloqueios na agenda
+  for (const blockedItem of blockedItems) {
+    await agendaService.createBlock(
+      patientId,
+      blockedItem.id,
+      date,
+      calculateBlockEndDate(date, rule, blockedItem)
+    );
+  }
+
+  // 5. Notifica paciente
+  await notifyPatient(patientId, {
+    procedure: itemId,
+    blockedItems: blockedItems.map(b =&gt; b.name),
+    blockUntil: calculateBlockEndDate(date, rule, blockedItems[0])
+  });
+
+  return {
+    procedureRecorded: true,
+    blocksCreated: blockedItems.length,
+    notificationSent: true
+  };
+}
+
+// Exemplo: Doação de sangue bloqueia exames
+const result = await recordProcedure(
+  'PAT-123', 
+  'BLOOD_DONATION', 
+  new Date('2024-06-10')
+);
+
+console.log(result);
+// {
+//   procedureRecorded: true,
+//   blocksCreated: 15,  // 15 tipos de exames bloqueados
+//   notificationSent: true
+// }
+</code></pre>
+<h3 id="fluxo-3-auditoria-regulatoria"><strong>Fluxo 3: Auditoria Regulatória</strong></h3>
+<pre><code class="language-typescript">// Para auditoria da ANVISA/CFM
+async function generateRegulatoryReport(startDate: Date, endDate: Date) {
+  // 1. Coleta todas decisões do período
+  const audits = await catalogService.getSafetyAudits({
+    startDate: startDate.toISOString(),
+    endDate: endDate.toISOString(),
+    limit: 10000
+  });
+
+  // 2. Agrupa por item e resultado
+  const byItem = groupBy(audits.data, 'clinicalItemId');
+
+  // 3. Gera estatísticas
+  const report = {
+    period: `${startDate.toISOString().split('T')[0]} to ${endDate.toISOString().split('T')[0]}`,
+    totalDecisions: audits.meta.total,
+    summary: {
+      allowed: audits.data.filter(a =&gt; a.wasAllowed).length,
+      blocked: audits.data.filter(a =&gt; !a.wasAllowed).length,
+      blockRate: (audits.data.filter(a =&gt; !a.wasAllowed).length / audits.data.length * 100).toFixed(2) + '%'
+    },
+    items: Object.entries(byItem).map(([itemId, decisions]) =&gt; ({
+      itemId,
+      itemName: decisions[0].clinicalItem?.name || itemId,
+      total: decisions.length,
+      allowed: decisions.filter(d =&gt; d.wasAllowed).length,
+      blocked: decisions.filter(d =&gt; !d.wasAllowed).length,
+      commonReasons: getCommonReasons(decisions.filter(d =&gt; !d.wasAllowed))
+    })),
+    compliance: {
+      rulesVersioned: await checkRulesVersioning(),
+      auditTrailComplete: await checkAuditCompleteness(),
+      responseTimes: await calculateResponseTimes()
+    }
+  };
+
+  // 4. Gera PDF para auditoria
+  const pdf = await generatePdfReport(report);
+
+  return {
+    report,
+    pdf,
+    generatedAt: new Date().toISOString(),
+    generatedBy: 'audit.system@hospital.com'
+  };
+}
+</code></pre>
+<hr />
+<h2 id="seguranca-e-conformidade"><strong>Segurança e Conformidade</strong></h2>
+<h3 id="controles-de-acesso"><strong>Controles de Acesso</strong></h3>
+<pre><code class="language-typescript">// RBAC (Role-Based Access Control)
+const roles = {
+  ADMIN: {
+    permissions: ['*'],
+    description: 'Acesso completo ao catálogo'
+  },
+  CLINICAL_DIRECTOR: {
+    permissions: [
+      'specialties:read',
+      'services:read',
+      'items:read',
+      'rules:create',
+      'rules:update',
+      'audit:read'
+    ],
+    description: 'Pode criar e modificar regras clínicas'
+  },
+  SCHEDULER: {
+    permissions: [
+      'specialties:read',
+      'services:read', 
+      'items:read',
+      'rules:read',
+      'safety-audits:create'
+    ],
+    description: 'Pode consultar catálogo e registrar decisões'
+  },
+  AUDITOR: {
+    permissions: [
+      'specialties:read',
+      'services:read',
+      'items:read',
+      'rules:read',
+      'audit:read',
+      'safety-audits:read'
+    ],
+    description: 'Acesso somente leitura para auditoria'
+  }
+};
+</code></pre>
+<h3 id="logs-de-seguranca"><strong>Logs de Segurança</strong></h3>
+<pre><code class="language-json">{
+  &quot;timestamp&quot;: &quot;2024-06-15T14:30:15.123Z&quot;,
+  &quot;level&quot;: &quot;INFO&quot;,
+  &quot;service&quot;: &quot;clinical-catalog&quot;,
+  &quot;event&quot;: &quot;RULE_MODIFICATION&quot;,
+  &quot;user&quot;: {
+    &quot;id&quot;: &quot;usr-12345&quot;,
+    &quot;email&quot;: &quot;dr.silva@hospital.com&quot;,
+    &quot;role&quot;: &quot;CLINICAL_DIRECTOR&quot;,
+    &quot;department&quot;: &quot;Cardiologia&quot;
+  },
+  &quot;action&quot;: {
+    &quot;type&quot;: &quot;RULE_CREATE&quot;,
+    &quot;target&quot;: {
+      &quot;itemId&quot;: &quot;MRI_BRAIN_W_CONTRAST&quot;,
+      &quot;itemName&quot;: &quot;Ressonância Cerebral com Contraste&quot;
+    },
+    &quot;changes&quot;: {
+      &quot;minDaysAfterSurgery&quot;: {
+        &quot;from&quot;: 14,
+        &quot;to&quot;: 30
+      }
+    },
+    &quot;reason&quot;: &quot;Baseado em estudo JAMA 2024 sobre risco pós-cirúrgico&quot;,
+    &quot;approval&quot;: {
+      &quot;protocol&quot;: &quot;PROT-2024-045&quot;,
+      &quot;approvedBy&quot;: &quot;comite.etica@hospital.com&quot;
+    }
+  },
+  &quot;context&quot;: {
+    &quot;ip&quot;: &quot;192.168.1.100&quot;,
+    &quot;userAgent&quot;: &quot;Mozilla/5.0...&quot;,
+    &quot;requestId&quot;: &quot;req-67890&quot;
+  },
+  &quot;compliance&quot;: {
+    &quot;hipaaCompliant&quot;: true,
+    &quot;gdprCompliant&quot;: true,
+    &quot;retentionPeriod&quot;: &quot;10 years&quot;
+  }
+}
+</code></pre>
+<h3 id="backup-e-recovery"><strong>Backup e Recovery</strong></h3>
+<pre><code class="language-yaml"># docker-compose.backup.yml
+version: '3.8'
+services:
+  catalog-backup:
+    image: postgres:15-alpine
+    environment:
+      PGHOST: catalog-db
+      PGDATABASE: clinical_catalog
+      PGUSER: backup_user
+      PGPASSWORD: ${BACKUP_PASSWORD}
+    volumes:
+      - ./backups:/backups
+    command: |
+      sh -c '
+        # Backup diário completo
+        pg_dumpall -h $${PGHOST} -U $${PGUSER} &gt; /backups/full-$(date +%Y%m%d).sql
+
+        # Backup incremental de auditoria
+        pg_dump -h $${PGHOST} -U $${PGUSER} -t clinical_safety_audits \
+          --data-only --where=&quot;evaluated_at &gt; NOW() - INTERVAL 1 DAY&quot; \
+          &gt; /backups/audit-$(date +%Y%m%d).sql
+
+        # Compacta e envia para S3
+        tar -czf /backups/$(date +%Y%m%d).tar.gz /backups/*.sql
+        aws s3 cp /backups/$(date +%Y%m%d).tar.gz s3://hospital-backups/catalog/
+
+        # Mantém últimos 7 dias local
+        find /backups -name &quot;*.sql&quot; -mtime +7 -delete
+      '
+    networks:
+      - catalog-network
+    depends_on:
+      - catalog-db
+
+# Restore procedure
+restore_procedure:
+  1. Stop catalog service
+  2. Restore last full backup: psql -f /backups/full-20240615.sql
+  3. Apply incremental audits: psql -f /backups/audit-*.sql
+  4. Verify data integrity
+  5. Start catalog service
+</code></pre>
+<hr />
+<h2 id="monitoramento"><strong>Monitoramento</strong></h2>
+<h3 id="metricas-essenciais"><strong>Métricas Essenciais</strong></h3>
+<pre><code class="language-typescript">// Prometheus metrics
+const metrics = {
+  // Performance
+  http_requests_total: 'Contador de requests REST',
+  http_request_duration_seconds: 'Duração dos requests',
+  grpc_calls_total: 'Contador de chamadas gRPC',
+  grpc_call_duration_seconds: 'Duração chamadas gRPC',
+
+  // Business
+  specialties_total: 'Total de especialidades',
+  services_total: 'Total de serviços',
+  items_total: 'Total de itens',
+  rules_total: 'Total de regras',
+  rules_active: 'Regras atualmente válidas',
+
+  // Safety
+  safety_decisions_total: 'Total de decisões de segurança',
+  safety_decisions_allowed: 'Decisões permitidas',
+  safety_decisions_blocked: 'Decisões bloqueadas',
+  safety_block_rate: 'Taxa de bloqueio (%)',
+
+  // Errors
+  errors_total: 'Total de erros',
+  errors_by_type: 'Erros por tipo',
+  validation_errors: 'Erros de validação',
+  integration_errors: 'Erros de integração'
+};
+
+// Alertas configurados
+const alerts = {
+  high_block_rate: {
+    condition: 'safety_block_rate &gt; 10%',
+    severity: 'warning',
+    message: 'Taxa de bloqueio alta pode indicar regras muito restritivas'
+  },
+  no_recent_audits: {
+    condition: 'safety_decisions_total[1h] == 0',
+    severity: 'critical',
+    message: 'Nenhuma decisão registrada na última hora - sistema pode estar offline'
+  },
+  rule_expiring_soon: {
+    condition: 'rules_active - rules_expiring_7d &gt; 0',
+    severity: 'info',
+    message: 'Regras vencendo em 7 dias necessitam revisão'
+  }
+};
+</code></pre>
+<h3 id="dashboard-grafana"><strong>Dashboard Grafana</strong></h3>
+<pre><code>Catálogo Clínico - Dashboard Principal
+├── Visão Geral
+│   ├── Uptime: 99.99%
+│   ├── Requests/min: 1,234
+│   └── Latência p95: 45ms
+│
+├── Métricas de Negócio
+│   ├── Especialidades: 25
+│   ├── Serviços: 150  
+│   ├── Itens: 500
+│   └── Regras: 750
+│
+├── Segurança
+│   ├── Decisões hoje: 1,234
+│   ├── Permitidas: 1,189 (96.4%)
+│   ├── Bloqueadas: 45 (3.6%)
+│   └── Taxa de bloqueio: 3.6%
+│
+├── Top Itens Bloqueados
+│   ├── Hemograma: 12 bloqueios
+│   ├── Ressonância: 8 bloqueios
+│   └── Cirurgia: 5 bloqueios
+│
+└── Performance gRPC
+    ├── Chamadas/min: 450
+    ├── Latência: 25ms p95
+    └── Error rate: 0.02%
+</code></pre>
+<hr />
+<h2 id="troubleshooting"><strong>Troubleshooting</strong></h2>
+<h3 id="problema-comum-1-item-nao-aparece-na-agenda"><strong>Problema Comum 1: "Item não aparece na agenda"</strong></h3>
+<p><strong>Checklist de diagnóstico:</strong></p>
+<pre><code class="language-bash"># 1. Verifique status do item
+GET /items/{itemId}
+# Esperado: &quot;isActive&quot;: true
+
+# 2. Verifique serviço pai
+GET /services/{serviceId}
+# Esperado: &quot;isActive&quot;: true
+
+# 3. Verifique especialidade
+GET /specialties/{specialtyId}  
+# Esperado: &quot;isActive&quot;: true
+
+# 4. Verifique regras atuais
+GET /rules?itemId={itemId}&amp;currentOnly=true
+# Esperado: Regra com &quot;isCurrent&quot;: true
+
+# 5. Verifique cache (se aplicável)
+GET /health/cache
+# Esperado: Cache funcionando
+</code></pre>
+<p><strong>Solução típica:</strong></p>
+<pre><code class="language-bash"># Reativar cadeia completa
+PATCH /specialties/{id} { &quot;isActive&quot;: true }
+# → Serviços são reativados automaticamente
+# → Itens são reativados automaticamente
+</code></pre>
+<h3 id="problema-comum-2-regra-nao-esta-sendo-aplicada"><strong>Problema Comum 2: "Regra não está sendo aplicada"</strong></h3>
+<p><strong>Diagnóstico:</strong></p>
+<pre><code class="language-typescript">async function diagnoseRule(ruleId: string, itemId: string) {
+  // 1. Verifique validade
+  const rule = await catalogClient.getRule({ id: ruleId });
+
+  const now = new Date();
+  const isValid = new Date(rule.valid_from) &lt;= now &amp;&amp; 
+                   (!rule.valid_to || new Date(rule.valid_to) &gt; now);
+
+  if (!isValid) {
+    return { issue: 'REGRA_EXPIRADA', solution: 'Criar nova versão' };
+  }
+
+  // 2. Verifique se é a regra atual
+  const currentRule = await catalogClient.getCurrentRuleByItem({ id: itemId });
+
+  if (currentRule.id !== ruleId) {
+    return { 
+      issue: 'NAO_EH_REGRA_ATUAL', 
+      currentRuleId: currentRule.id,
+      solution: 'Usar regra atual ou ajustar validFrom'
+    };
+  }
+
+  // 3. Verifique auditoria
+  const audits = await catalogService.getRuleAudit(ruleId);
+
+  if (audits.data.length === 0) {
+    return { issue: 'NUNCA_APLICADA', solution: 'Testar com paciente' };
+  }
+
+  return { issue: 'REGRA_OK', lastApplied: audits.data[0].changedAt };
+}
+</code></pre>
+<h3 id="problema-comum-3-performance-lenta"><strong>Problema Comum 3: "Performance lenta"</strong></h3>
+<p><strong>Otimizações:</strong></p>
+<pre><code class="language-typescript">// 1. Implementar cache
+@Injectable()
+export class CatalogCache {
+  private cache = new Map();
+
+  async getWithCache&lt;T&gt;(key: string, ttl: number, fetchFn: () =&gt; Promise&lt;T&gt;): Promise&lt;T&gt; {
+    const cached = this.cache.get(key);
+
+    if (cached &amp;&amp; Date.now() - cached.timestamp &lt; ttl * 1000) {
+      return cached.data;
+    }
+
+    const data = await fetchFn();
+    this.cache.set(key, { data, timestamp: Date.now() });
+
+    return data;
+  }
+}
+
+// Uso:
+const specialties = await cache.getWithCache(
+  'specialties:active',
+  300, // 5 minutos
+  () =&gt; catalogClient.listSpecialties({ is_active: true })
+);
+
+// 2. Otimizar queries com índices
+@Index(['clinicalItemId', 'validFrom', 'validTo'])
+@Index(['validFrom'])
+@Index(['validTo'])
+@Entity()
+export class ClinicalRule {
+  // ...
+}
+
+// 3. Batch requests
+// RUIM: 100 chamadas individuais
+for (const itemId of itemIds) {
+  await catalogClient.getCurrentRuleByItem({ id: itemId });
+}
+
+// BOM: 1 chamada batch
+await catalogClient.batchGetCurrentRules({ ids: itemIds });
+</code></pre>
+<hr />
+<h2 id="faqs"><strong>FAQs</strong></h2>
+<h3 id="p-posso-editar-uma-regra-existente"><strong>P: Posso editar uma regra existente?</strong></h3>
+<p><strong>R: NÃO.</strong> Regras são imutáveis por design. Para modificar:
+1. Crie nova regra com <code>validFrom</code> = data de início desejada
+2. A regra anterior automaticamente recebe <code>validTo</code> = <code>validFrom - 1ms</code>
+3. Todas versões são mantidas para auditoria</p>
+<h3 id="p-o-que-acontece-quando-desativo-uma-especialidade"><strong>P: O que acontece quando desativo uma especialidade?</strong></h3>
+<p><strong>R:</strong> Cascata automática:
+1. Todos serviços da especialidade são desativados
+2. Todos itens desses serviços são desativados
+3. Regras permanecem (para histórico)
+4. Agenda não mostra mais esses itens
+5. Prontuário mantém registros anteriores</p>
+<h3 id="p-como-lidar-com-emergencias-que-quebram-regras"><strong>P: Como lidar com emergências que quebram regras?</strong></h3>
+<p><strong>R:</strong> Use o campo <code>context</code> na auditoria:</p>
+<pre><code class="language-json">{
+  &quot;wasAllowed&quot;: true,
+  &quot;reason&quot;: &quot;EMERGÊNCIA - Protocolo de exceção ativado&quot;,
+  &quot;context&quot;: {
+    &quot;emergency&quot;: true,
+    &quot;protocol&quot;: &quot;EMER-001&quot;,
+    &quot;authorizedBy&quot;: &quot;dr.emergencia@hospital.com&quot;,
+    &quot;justification&quot;: &quot;Paciente em risco iminente de vida&quot;
+  }
+}
+</code></pre>
+<h3 id="p-posso-importar-dados-em-massa"><strong>P: Posso importar dados em massa?</strong></h3>
+<p><strong>R:</strong> Sim, mas com validação:</p>
+<pre><code class="language-bash">POST /bulk/import
+Content-Type: multipart/form-data
+
+{
+  &quot;type&quot;: &quot;items&quot;,
+  &quot;file&quot;: &quot;items.csv&quot;,
+  &quot;validateOnly&quot;: false,
+  &quot;onError&quot;: &quot;stop&quot; // ou &quot;continue&quot;
+}
+</code></pre>
+<p>Formato CSV:</p>
+<pre><code class="language-csv">code,name,clinicalServiceId,description
+HEMOGRAM,Hemograma Completo,service-123,Exame sanguíneo
+ECG_12,Eletrocardiograma,service-456,Exame cardíaco
+</code></pre>
+<h3 id="p-como-versionar-o-proto-file-grpc"><strong>P: Como versionar o proto file gRPC?</strong></h3>
+<p><strong>R:</strong> Use versionamento semântico no package:</p>
+<pre><code class="language-protobuf">// v1 - versão inicial
+package clinical.catalog.v1;
+
+// v2 - breaking changes  
+package clinical.catalog.v2;
+
+// Manter compatibilidade com clientes antigos
+service ClinicalCatalogServiceV1 {
+  rpc GetItem(ItemIdRequest) returns (ItemResponseV1);
+}
+
+service ClinicalCatalogServiceV2 {
+  rpc GetItem(ItemIdRequest) returns (ItemResponseV2);
+}
+</code></pre>
+<hr />
+<h2 id="suporte"><strong>Suporte</strong></h2>
+<h3 id="canais-de-suporte"><strong>Canais de Suporte</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Canal</th>
+<th>Para</th>
+<th>Response Time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Slack:</strong> <code>#catalogo-suporte</code></td>
+<td>Desenvolvedores</td>
+<td>&lt; 1 hora</td>
+</tr>
+<tr>
+<td><strong>Email:</strong> <code>suporte-catalogo@hospital.com</code></td>
+<td>Administradores</td>
+<td>&lt; 4 horas</td>
+</tr>
+<tr>
+<td><strong>Telefone:</strong> <code>(11) 99999-9999</code></td>
+<td>Emergências produção</td>
+<td>24/7</td>
+</tr>
+<tr>
+<td><strong>Portal:</strong> <code>https://suporte.hospital.com</code></td>
+<td>Todos</td>
+<td>&lt; 8 horas</td>
+</tr>
+</tbody>
+</table>
+<h3 id="escalacao"><strong>Escalação</strong></h3>
+<pre><code>Nível 1: Equipe de suporte → Erros comuns, dúvidas
+Nível 2: Desenvolvedores → Bugs, performance
+Nível 3: Administradores → Configuração, dados
+Nível 4: Comitê clínico → Regras médicas
+Nível 5: Diretoria → Decisões estratégicas
+</code></pre>
+<h3 id="sla-service-level-agreement"><strong>SLA (Service Level Agreement)</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Métrica</th>
+<th>Objetivo</th>
+<th>Consequência se falhar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Disponibilidade</td>
+<td>99.95%</td>
+<td>Crédito de serviço</td>
+</tr>
+<tr>
+<td>Latência REST p95</td>
+<td>&lt; 100ms</td>
+<td>Otimização prioritária</td>
+</tr>
+<tr>
+<td>Latência gRPC p95</td>
+<td>&lt; 50ms</td>
+<td>Otimização crítica</td>
+</tr>
+<tr>
+<td>Tempo de resposta suporte</td>
+<td>&lt; 4h</td>
+<td>Escalonamento automático</td>
+</tr>
+<tr>
+<td>Backup recovery</td>
+<td>&lt; 2h</td>
+<td>Processo de incidente</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="proximos-passos"><strong>Próximos Passos</strong></h2>
+<h3 id="roadmap"><strong>Roadmap</strong></h3>
+<pre><code class="language-mermaid">timeline
+    title Roadmap Catálogo Clínico 2024
+    section Q2 2024
+        Cache distribuído : Redis cluster
+        API GraphQL : Para consultas complexas
+    section Q3 2024  
+        Machine Learning : Sugestão de regras
+        Integração AI : ChatGPT para descrições
+    section Q4 2024
+        Multi-tenant : Suporte a múltiplos hospitais
+        Marketplace : Compartilhamento entre instituições
+</code></pre>
+<h3 id="recursos-adicionais"><strong>Recursos Adicionais</strong></h3>
+<ol>
+<li><strong>Repositório de Código:</strong> <code>https://github.com/hospital/catalogo-clinico</code></li>
+<li><strong>API Documentation:</strong> <code>https://api.hospital.com/catalogo/docs</code></li>
+<li><strong>Playground:</strong> <code>https://playground.hospital.com/catalogo</code></li>
+<li><strong>Training Videos:</strong> <code>https://training.hospital.com/catalogo</code></li>
+<li><strong>Community Forum:</strong> <code>https://community.hospital.com/catalogo</code></li>
+</ol>
+<h3 id="contribuindo"><strong>Contribuindo</strong></h3>
+<pre><code class="language-bash"># 1. Clone o repositório
+git clone https://github.com/hospital/catalogo-clinico
+
+# 2. Instale dependências
+npm install
+
+# 3. Configure ambiente
+cp .env.example .env
+
+# 4. Execute testes
+npm test
+
+# 5. Submeta PR
+git checkout -b feature/nova-funcionalidade
+git commit -m &quot;feat: adiciona funcionalidade X&quot;
+git push origin feature/nova-funcionalidade
+</code></pre>
+<hr />
+<h2 id="conclusao"><strong>Conclusão</strong></h2>
+<p>O Catálogo Clínico é o <strong>cérebro central</strong> da segurança médica digital. Ele:</p>
+<p><strong>Padroniza</strong> todos procedimentos médicos
+<strong>Protege</strong> pacientes com regras automáticas
+<strong>Audita</strong> cada decisão para conformidade
+<strong>Integra-se</strong> perfeitamente com outros sistemas
+<strong>Escala</strong> para hospitais de qualquer tamanho</p>
+<p><strong>Lembre-se:</strong> Um catálogo bem mantido não é apenas um sistema técnico - é uma ferramenta que <strong>salva vidas</strong> prevenindo erros médicos.</p>
+<hr />
+<p><em>Documento atualizado em: 15 de junho de 2024</em><br />
+<em>Versão do sistema: 3.0.0</em><br />
+<em>Próxima revisão: 15 de dezembro de 2024</em>  </p>
+<p><strong>Manutenido por:</strong> Equipe de Arquitetura Hospitalar<br />
+<strong>Contato:</strong> arquitetura@hospital.com<br />
+<strong>Status:</strong> <strong>Produção - Estável</strong></p>
+<hr />
+<blockquote>
+<p>"A tecnologia mais avançada do mundo não vale nada se não proteger o paciente. Nosso catálogo clínico é nossa primeira linha de defesa."<br />
+<em>— Dr. Silva, Diretor Médico</em></p>
+</blockquote>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
