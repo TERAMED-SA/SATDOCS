@@ -21,6 +21,26 @@ nav:
   - Catálogo Clínico:
       - Guia de Modelagem: catalogo-clinico/index.md
       - Guia do Desenvolvedor: catalogo-clinico/developer.md
+  - Doadores de Sangue (v2.0):
+      - Índice do Módulo: doadores-de-sangue-v2.0/index.md
+      - Visão Geral dos Casos de Uso: doadores-de-sangue-v2.0/use-cases/overview.md
+      - Modelos e Enumerações: doadores-de-sangue-v2.0/use-cases/models-and-enums.md
+      - Dadores: doadores-de-sangue-v2.0/use-cases/donors.md
+      - Análises Clínicas: doadores-de-sangue-v2.0/use-cases/analysis.md
+      - Pedidos de Sangue: doadores-de-sangue-v2.0/use-cases/requests.md
+      - Matching: doadores-de-sangue-v2.0/use-cases/matching.md
+      - Dações: doadores-de-sangue-v2.0/use-cases/donations.md
+      - Moderação: doadores-de-sangue-v2.0/use-cases/moderation.md
+      - Administração: doadores-de-sangue-v2.0/use-cases/admin.md
+      - Casos Internos, Eventos e Notas: doadores-de-sangue-v2.0/use-cases/internal-and-events.md
+  - Catálogo Clínico (v2.0):
+      - Índice do Módulo: catalogo-clinico-v2.0/index.md
+      - Visão Geral dos Casos de Uso: catalogo-clinico-v2.0/use-cases/overview.md
+      - Modelos e Enumerações: catalogo-clinico-v2.0/use-cases/models-and-enums.md
+      - Especialidades: catalogo-clinico-v2.0/use-cases/specialties.md
+      - Itens Clínicos: catalogo-clinico-v2.0/use-cases/items.md
+      - Regras Clínicas: catalogo-clinico-v2.0/use-cases/rules.md
+      - Casos Internos, Eventos e Notas: catalogo-clinico-v2.0/use-cases/internal-and-events.md
   - Gestão de Agendamentos:
       - 1. Introdução ao Sistema: gestao-de-agendas-e-marcação-de-consultas/1-introdução.md
       - 2. Conceitos-base do Sistema: gestao-de-agendas-e-marcação-de-consultas/2-conceitos-base-do-Sistema.md
