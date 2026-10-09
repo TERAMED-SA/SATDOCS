@@ -62,20 +62,16 @@ nav:
       - Itens Clínicos: catalogo-clinico-v2.0/use-cases/items.md
       - Regras Clínicas: catalogo-clinico-v2.0/use-cases/rules.md
       - Casos Internos, Eventos e Notas: catalogo-clinico-v2.0/use-cases/internal-and-events.md
-  - Gestão de Agendamentos:
-      - 1. Introdução ao Sistema: gestao-de-agendas-e-marcação-de-consultas/1-introdução.md
-      - 2. Conceitos-base do Sistema: gestao-de-agendas-e-marcação-de-consultas/2-conceitos-base-do-Sistema.md
-      - 3. Exclusões e Folgas: gestao-de-agendas-e-marcação-de-consultas/3-exclusões-e-folgas.md
-      - 4. Exclusões de Dias e Períodos: gestao-de-agendas-e-marcação-de-consultas/4-exclusões-de-dias-e-períodos.md
-      - 5. Exclusões e Bloqueios Avançados: gestao-de-agendas-e-marcação-de-consultas/5-exclusões-e-bloqueios-avançados.md
-      - 6. Horários de Trabalho (Parte 1): gestao-de-agendas-e-marcação-de-consultas/6-horários-de-trabalho-dos-profissionais.md
-      - 7. Horários de Trabalho (Parte 2): gestao-de-agendas-e-marcação-de-consultas/7-horários-de-trabalho-dos-profissionais.md
-      - 8. Horários de Trabalho (Parte 3): gestao-de-agendas-e-marcação-de-consultas/8-horários-de-trabalho-de-profissionais.md
-      - 9. Slots e Time Boxes: gestao-de-agendas-e-marcação-de-consultas/9-slots-e-time-boxes.md
-      - 10. Marcação de Consultas (Parte 1): gestao-de-agendas-e-marcação-de-consultas/10-marcação-de-consultas.md
-      - 11. Marcação de Consultas (Parte 2): gestao-de-agendas-e-marcação-de-consultas/11-marcação-de-consultas.md
-  - Guias Técnicos e Regras de Negócio:
-      - 1. Guia de Configuração de Agenda: gestao-de-agendas-e-marcação-de-consultas/guias/1-guia-de-configuracao-da-agenda.md
-      - 2. Modelo de Exclusão na Agenda: gestao-de-agendas-e-marcação-de-consultas/guias/2-modelos-de-exclusao-na-agenda.md
-      - 3. Geração de Slots (Horários): gestao-de-agendas-e-marcação-de-consultas/guias/3-guiade-geracao-de-slots-formaA-horarios.md
-      - 4. Geração de Slots (Capacidade): gestao-de-agendas-e-marcação-de-consultas/guias/4-guia-de-geracao-de-slots-formaB-capacidade.md
+  - Gestão de Agendamentos (v2.0):
+      - Índice do Módulo: gestao-de-agendas-v2.0/index.md
+      - Visão Geral dos Casos de Uso: gestao-de-agendas-v2.0/use-cases/overview.md
+      - Modelos e Enumerações: gestao-de-agendas-v2.0/use-cases/models-and-enums.md
+      - Agendas: gestao-de-agendas-v2.0/use-cases/schedules.md
+      - Slots: gestao-de-agendas-v2.0/use-cases/slots.md
+      - Marcações: gestao-de-agendas-v2.0/use-cases/appointments.md
+      - Reagendamentos: gestao-de-agendas-v2.0/use-cases/reschedules.md
+      - Encaminhamentos: gestao-de-agendas-v2.0/use-cases/forwardings.md
+      - Exclusões: gestao-de-agendas-v2.0/use-cases/exclusions.md
+      - Horários de Trabalho: gestao-de-agendas-v2.0/use-cases/working-hours.md
+      - Utilitários: gestao-de-agendas-v2.0/use-cases/utilities.md
+      - Casos Internos, Eventos e Notas: gestao-de-agendas-v2.0/use-cases/internal-and-events.md
