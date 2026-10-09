@@ -1,0 +1,3381 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://teramed-sa.github.io/SATDOCS/gestao-de-agendas-v2.0/use-cases/slots/">
+      
+      
+        <link rel="prev" href="../schedules/">
+      
+      
+        <link rel="next" href="../appointments/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Slots - Baika Saúde - Ecossistema</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#casos-de-uso-de-slots" class="md-skip">
+          Ir para o conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../../.." title="Baika Saúde - Ecossistema" class="md-header__button md-logo" aria-label="Baika Saúde - Ecossistema" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Baika Saúde - Ecossistema
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Slots
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Modo escuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Modo escuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando a pesquisa
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Baika Saúde - Ecossistema" class="md-nav__button md-logo" aria-label="Baika Saúde - Ecossistema" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Baika Saúde - Ecossistema
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Início
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestão Hospitalar
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Gestão Hospitalar
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../hospital/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Índice do Módulo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../hospital/use-cases/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visão Geral dos Casos de Uso
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../hospital/use-cases/models-and-enums/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelos e Enumerações
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../hospital/use-cases/hospitals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hospitais
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../hospital/use-cases/units/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unidades
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../hospital/use-cases/departments/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Departamentos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../hospital/use-cases/physical-structure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Estrutura Física
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../hospital/use-cases/offers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ofertas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../hospital/use-cases/accounts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../hospital/use-cases/security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Segurança
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../hospital/use-cases/checks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Verificações
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../hospital/use-cases/internal-and-events/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Casos Internos, Eventos e Notas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prontuário Clínico
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Prontuário Clínico
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../prontuario-clinico/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Índice do Módulo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../prontuario-clinico/use-cases/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visão Geral dos Casos de Uso
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../prontuario-clinico/use-cases/models-and-enums/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelos e Enumerações
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../prontuario-clinico/use-cases/prontuaries/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prontuários
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../prontuario-clinico/use-cases/visits/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Consultas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../prontuario-clinico/use-cases/clinical-records/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Registos Clínicos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../prontuario-clinico/use-cases/internal-and-events/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Casos Internos, Eventos e Notas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../doadores-de-sangue/doadores-de-sangue/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Doadores de sangue
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Catálogo Clínico
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Catálogo Clínico
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../catalogo-clinico/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guia de Modelagem
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../catalogo-clinico/developer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guia do Desenvolvedor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Doadores de Sangue (v2.0)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Doadores de Sangue (v2.0)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../doadores-de-sangue-v2.0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Índice do Módulo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../doadores-de-sangue-v2.0/use-cases/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visão Geral dos Casos de Uso
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../doadores-de-sangue-v2.0/use-cases/models-and-enums/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelos e Enumerações
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../doadores-de-sangue-v2.0/use-cases/donors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dadores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../doadores-de-sangue-v2.0/use-cases/analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Análises Clínicas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../doadores-de-sangue-v2.0/use-cases/requests/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pedidos de Sangue
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../doadores-de-sangue-v2.0/use-cases/matching/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Matching
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../doadores-de-sangue-v2.0/use-cases/donations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dações
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../doadores-de-sangue-v2.0/use-cases/moderation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Moderação
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../doadores-de-sangue-v2.0/use-cases/admin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Administração
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../doadores-de-sangue-v2.0/use-cases/internal-and-events/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Casos Internos, Eventos e Notas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Catálogo Clínico (v2.0)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Catálogo Clínico (v2.0)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../catalogo-clinico-v2.0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Índice do Módulo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../catalogo-clinico-v2.0/use-cases/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visão Geral dos Casos de Uso
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../catalogo-clinico-v2.0/use-cases/models-and-enums/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelos e Enumerações
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../catalogo-clinico-v2.0/use-cases/specialties/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Especialidades
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../catalogo-clinico-v2.0/use-cases/items/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Itens Clínicos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../catalogo-clinico-v2.0/use-cases/rules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Regras Clínicas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../catalogo-clinico-v2.0/use-cases/internal-and-events/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Casos Internos, Eventos e Notas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestão de Agendamentos (v2.0)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Gestão de Agendamentos (v2.0)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Índice do Módulo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visão Geral dos Casos de Uso
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../models-and-enums/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelos e Enumerações
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../schedules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agendas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Slots
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Slots
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#21-gerar-slots" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Gerar slots
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1 Gerar slots">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#regras-de-negocio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regras de negócio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sucesso-esperado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sucesso esperado
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#erros-esperados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Erros esperados
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22-listar-slots" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Listar slots
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2 Listar slots">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#query-params" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Query params
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemplo-de-chamada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemplo de chamada
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sucesso-esperado_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sucesso esperado
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#23-obter-slot-por-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Obter slot por id
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.3 Obter slot por id">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sucesso-esperado_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sucesso esperado
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#erros-esperados_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Erros esperados
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#24-obter-grelha-horaria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 Obter grelha horária
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.4 Obter grelha horária">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sucesso-esperado_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sucesso esperado
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#erros-esperados_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Erros esperados
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#25-profissionais-do-slot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5 Profissionais do slot
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.5 Profissionais do slot">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#body" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Body
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regras-de-negocio_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regras de negócio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sucesso-esperado_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sucesso esperado
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#erros-esperados_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Erros esperados
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#26-alterar-capacidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6 Alterar capacidade
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.6 Alterar capacidade">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#body_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Body
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regras-de-negocio_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regras de negócio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sucesso-esperado_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sucesso esperado
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#erros-esperados_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Erros esperados
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#27-abrir-e-fechar-slot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.7 Abrir e fechar slot
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.7 Abrir e fechar slot">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#regras-de-negocio_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regras de negócio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sucesso-esperado_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sucesso esperado
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#28-apagar-os-slots-de-uma-agenda" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.8 Apagar os slots de uma agenda
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.8 Apagar os slots de uma agenda">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#regras-de-negocio_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regras de negócio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sucesso-esperado_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sucesso esperado
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#navegacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Navegação
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../appointments/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Marcações
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reschedules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reagendamentos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../forwardings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Encaminhamentos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../exclusions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exclusões
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../working-hours/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Horários de Trabalho
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../utilities/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Utilitários
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../internal-and-events/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Casos Internos, Eventos e Notas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#21-gerar-slots" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Gerar slots
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1 Gerar slots">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#regras-de-negocio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regras de negócio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sucesso-esperado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sucesso esperado
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#erros-esperados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Erros esperados
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22-listar-slots" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Listar slots
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2 Listar slots">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#query-params" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Query params
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemplo-de-chamada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemplo de chamada
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sucesso-esperado_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sucesso esperado
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#23-obter-slot-por-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Obter slot por id
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.3 Obter slot por id">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sucesso-esperado_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sucesso esperado
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#erros-esperados_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Erros esperados
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#24-obter-grelha-horaria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 Obter grelha horária
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.4 Obter grelha horária">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sucesso-esperado_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sucesso esperado
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#erros-esperados_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Erros esperados
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#25-profissionais-do-slot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5 Profissionais do slot
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.5 Profissionais do slot">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#body" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Body
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regras-de-negocio_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regras de negócio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sucesso-esperado_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sucesso esperado
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#erros-esperados_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Erros esperados
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#26-alterar-capacidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6 Alterar capacidade
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.6 Alterar capacidade">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#body_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Body
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regras-de-negocio_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regras de negócio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sucesso-esperado_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sucesso esperado
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#erros-esperados_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Erros esperados
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#27-abrir-e-fechar-slot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.7 Abrir e fechar slot
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.7 Abrir e fechar slot">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#regras-de-negocio_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regras de negócio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sucesso-esperado_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sucesso esperado
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#28-apagar-os-slots-de-uma-agenda" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.8 Apagar os slots de uma agenda
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.8 Apagar os slots de uma agenda">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#regras-de-negocio_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regras de negócio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sucesso-esperado_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sucesso esperado
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#navegacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Navegação
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="casos-de-uso-de-slots">Casos de Uso de Slots</h1>
+<p><a href="../../">⌂ Módulo Scheduling</a> · <a href="../overview/">Visão Geral</a></p>
+<p>Grupo de rotas: <code>/api/v1/scheduling/slots</code> (e <code>/api/v1/scheduling/schedules/{scheduleId}/slots</code>) · Requer autenticação (sem role específica).</p>
+<p>Um slot é um dia de atendimento de uma agenda. Opera num de dois modos, decidido na geração:</p>
+<table>
+<thead>
+<tr>
+<th>Modo</th>
+<th>Quando</th>
+<th>Vagas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>TIMED</code></td>
+<td>a agenda tem <code>startTime</code>, <code>endTime</code> e <code>appointmentDurationInMinutes</code></td>
+<td>grelha <code>Hours[]</code>: um <code>TimeBox</code> por intervalo de <code>appointmentDurationInMinutes</code>, cada um com <code>capacityPerInterval</code> vagas; <code>markingLimit</code> do slot = soma das vagas</td>
+</tr>
+<tr>
+<td><code>CAPACITY</code></td>
+<td>caso contrário</td>
+<td><code>markingLimit</code> = <code>maxAppointmentsPerSlot</code> vagas no dia, sem hora</td>
+</tr>
+</tbody>
+</table>
+<p><code>markingLimit</code> representa sempre as <strong>vagas restantes</strong>: desce a cada marcação, sobe a cada cancelamento. O slot fecha sozinho quando chega a zero.</p>
+<h2 id="21-gerar-slots">2.1 Gerar slots</h2>
+<ul>
+<li>Casos de uso: <code>GenerateSlotsCommand</code> (síncrono), <code>GenerateSlotsAsyncCommand</code> (enfileira <code>TriggerNowSlotGenerationJob</code>)</li>
+<li>Endpoints:</li>
+<li><code>POST /api/v1/scheduling/slots/schedules/{scheduleId}/slots/generate-sync</code></li>
+<li><code>POST /api/v1/scheduling/slots/schedules/{scheduleId}/slots/generate-async</code></li>
+</ul>
+<p>Sem body. Cada chamada gera <strong>o próximo período</strong> da agenda.</p>
+<h3 id="regras-de-negocio">Regras de negócio</h3>
+<ol>
+<li>a agenda existe e não está apagada (<code>ScheduleNotFound</code>) e tem configurações (<code>ScheduleDoesNotHaveConfigurations</code>)</li>
+<li>o período a gerar é o ciclo número <code>timesItGenerated</code> a contar de <code>startDate</code>: uma semana em <code>WEEKLY</code>, um mês em <code>MONTHLY</code>, três em <code>QUARTERLY</code>, seis em <code>SEMIANNUALLY</code>, um ano em <code>ANNUALLY</code></li>
+<li>para cada dia do período, <strong>não</strong> é gerado slot se:</li>
+<li>o dia da semana não está em <code>weekDays</code></li>
+<li>o dia está fora de <code>startDate</code>–<code>endDate</code></li>
+<li>uma exclusão de dia <strong>associada à agenda</strong> o exclui (data, dia da semana ou RRULE)</li>
+<li>em <code>TIMED</code>, os horários abrangidos por um intervalo excluído <strong>associado à agenda</strong> são retirados da grelha</li>
+<li>com <code>slotInheritProfessionals</code>, o slot recebe os profissionais da agenda que têm horário de trabalho ativo e válido nesse dia, para o hospital e a especialidade (<code>categoryCode</code>) da agenda</li>
+<li>o slot nasce <code>PUBLISHED</code> com <code>autoPublishSlots</code>, senão <code>DRAFT</code></li>
+<li>se já existir slot para esse dia, é <strong>atualizado</strong>: os horários com marcações (não <code>AVAILABLE</code>) mantêm-se, os restantes são substituídos, e <code>markingLimit</code> é reposto pelo valor recalculado</li>
+<li>no fim, <code>timesItGenerated</code> aumenta 1</li>
+</ol>
+<p>Gerações concorrentes da mesma agenda (jobs, <code>generate-sync</code> e <code>generate-async</code> ao mesmo tempo) são serializadas por um advisory lock no PostgreSQL: a segunda espera que a primeira termine e gera o período seguinte.</p>
+<p>Só as exclusões <strong>associadas</strong> à agenda afetam a geração; as exclusões de âmbito (<code>SYSTEM</code>, <code>HEALTH_UNIT</code>, <code>SPECIALITY</code>) só contam nas validações de disponibilidade e publicação — ver <a href="../exclusions/#âmbito-de-uma-exclusão">Exclusões</a>.</p>
+<h3 id="sucesso-esperado">Sucesso esperado</h3>
+<ul>
+<li><code>202 Accepted</code> em ambos, sem corpo</li>
+<li>no síncrono, os slots já existem quando a resposta chega; no assíncrono, são criados pelo job</li>
+</ul>
+<h3 id="erros-esperados">Erros esperados</h3>
+<table>
+<thead>
+<tr>
+<th>HTTP</th>
+<th>Code</th>
+<th>Situação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>404</code></td>
+<td><code>ScheduleNotFound</code></td>
+<td>agenda inexistente ou apagada</td>
+</tr>
+<tr>
+<td><code>404</code></td>
+<td><code>ScheduleDoesNotHaveConfigurations</code></td>
+<td>agenda sem configurações (só no síncrono)</td>
+</tr>
+<tr>
+<td><code>422</code></td>
+<td><code>EndDateBeforeMinimumRecurrence</code></td>
+<td>período calculado inválido (só no síncrono)</td>
+</tr>
+<tr>
+<td><code>500</code></td>
+<td>—</td>
+<td>agenda com <code>typeOfRecurrence = NONE</code> — ver <a href="../internal-and-events/#limitações-conhecidas">Casos Internos</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="22-listar-slots">2.2 Listar slots</h2>
+<ul>
+<li>Caso de uso: <code>ListSlotsQuery</code></li>
+<li>Endpoints:</li>
+<li><code>GET /api/v1/scheduling/slots</code></li>
+<li><code>GET /api/v1/scheduling/slots/available</code> — fixa <code>isClosed=false</code> e <code>hasAvailableHours=true</code></li>
+<li><code>GET /api/v1/scheduling/slots/date/{date}</code> — fixa <code>dateFrom</code> = <code>dateTo</code> = <code>date</code></li>
+<li><code>GET /api/v1/scheduling/slots/professional/{professionalTaxId}</code> — fixa <code>professionalTaxId</code></li>
+<li><code>GET /api/v1/scheduling/schedules/{scheduleId}/slots</code> — fixa <code>scheduleId</code></li>
+</ul>
+<p>Todas aceitam os mesmos filtros.</p>
+<h3 id="query-params">Query params</h3>
+<table>
+<thead>
+<tr>
+<th>Grupo</th>
+<th>Parâmetros</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data</td>
+<td><code>scheduleId</code>, <code>scheduleIds</code>, <code>date</code>, <code>dateFrom</code>, <code>dateTo</code>, <code>weekDay</code>, <code>today</code>, <code>tomorrow</code>, <code>thisWeek</code>, <code>nextWeek</code>, <code>weekend</code></td>
+</tr>
+<tr>
+<td>Estado</td>
+<td><code>isClosed</code>, <code>mode</code>, <code>isActive</code>, <code>includeDeleted</code>, <code>onlyDeleted</code></td>
+</tr>
+<tr>
+<td>Horários</td>
+<td><code>hasHours</code>, <code>hoursCountMin</code>, <code>hoursCountMax</code>, <code>hasAvailableHours</code>, <code>hasBookedHours</code>, <code>hasBlockedHours</code>, <code>hourAvailable</code> (texto igual ao gravado na grelha, ex.: <code>08:30:00</code>)</td>
+</tr>
+<tr>
+<td>Capacidade</td>
+<td><code>markingLimit</code>, <code>markingLimitMin</code>, <code>markingLimitMax</code>, <code>availableCapacityMin</code>, <code>availableCapacityMax</code>, <code>isFull</code>, <code>hasAvailableCapacity</code>, <code>occupancyRateMin</code>, <code>occupancyRateMax</code></td>
+</tr>
+<tr>
+<td>Profissionais</td>
+<td><code>professionalTaxId</code>, <code>availableProfessionalTaxIds</code>, <code>hasProfessionals</code>, <code>professionalsCountMin</code>, <code>professionalsCountMax</code>, <code>inheritAllProfessionals</code></td>
+</tr>
+<tr>
+<td>Agenda</td>
+<td><code>healthUnitTaxId</code>, <code>specialityId</code> (= <code>categoryCode</code>), <code>typeOfService</code>, <code>typeOfSchedule</code>, <code>scheduleTypeOfRecurrence</code>, <code>automaticallyGenerated</code></td>
+</tr>
+<tr>
+<td>Marcações</td>
+<td><code>hasAppointments</code>, <code>appointmentsCountMin</code>, <code>appointmentsCountMax</code>, <code>appointmentStatus</code> (marcações canceladas não contam)</td>
+</tr>
+<tr>
+<td>Registo</td>
+<td><code>createdAtFrom</code>, <code>createdAtTo</code>, <code>updatedAtFrom</code>, <code>updatedAtTo</code></td>
+</tr>
+<tr>
+<td>Ordenação</td>
+<td><code>sortBy</code>: <code>date</code> (omissão), <code>createdAt</code>, <code>updatedAt</code>, <code>markingLimit</code>, <code>weekDay</code>, <code>availableCapacity</code> · <code>sortOrder</code>: <code>asc</code> (omissão) | <code>desc</code></td>
+</tr>
+<tr>
+<td>Paginação e âmbito</td>
+<td><code>page</code>, <code>limit</code>, <code>unitIds</code>, <code>departmentIds</code>, <code>sectorIds</code></td>
+</tr>
+</tbody>
+</table>
+<p>Os filtros <code>today</code>/<code>tomorrow</code>/<code>thisWeek</code>/<code>nextWeek</code>/<code>weekend</code> usam a data do servidor da API e só têm efeito com <code>true</code> (<code>false</code> é ignorado); a semana começa à segunda-feira.</p>
+<p><code>dateRange</code>, <code>timeRangeAvailable</code>, <code>updatedRecently</code>, <code>fields</code> e <code>include</code> existem na query mas <strong>não têm efeito</strong>.</p>
+<h3 id="exemplo-de-chamada">Exemplo de chamada</h3>
+<pre><code class="language-bash">curl 'http://localhost:5000/api/v1/scheduling/slots/available?healthUnitTaxId=3f2b6c1e-8a4d-4f5e-9b7c-1d2e3f4a5b6c&amp;dateFrom=2026-11-01&amp;dateTo=2026-11-30' \
+  -H 'Authorization: Bearer &lt;jwt&gt;'
+</code></pre>
+<h3 id="sucesso-esperado_1">Sucesso esperado</h3>
+<ul>
+<li><code>200 OK</code> com <code>PaginatedList&lt;SlotSummaryDto&gt;</code></li>
+</ul>
+<pre><code class="language-json">{
+  &quot;data&quot;: [
+    {
+      &quot;id&quot;: &quot;c1d2e3f4-a5b6-4c7d-8e9f-0a1b2c3d4e5f&quot;,
+      &quot;scheduleId&quot;: &quot;7d8e9f0a-1b2c-4d3e-8f4a-5b6c7d8e9f0a&quot;,
+      &quot;date&quot;: &quot;2026-11-02&quot;,
+      &quot;weekDay&quot;: &quot;MONDAY&quot;,
+      &quot;mode&quot;: &quot;TIMED&quot;,
+      &quot;markingLimit&quot;: 7,
+      &quot;isClosed&quot;: false,
+      &quot;visibility&quot;: &quot;PUBLISHED&quot;,
+      &quot;availableProfessionalTaxIds&quot;: [&quot;5a6b7c8d-9e0f-4a1b-8c2d-3e4f5a6b7c8d&quot;],
+      &quot;hours&quot;: [
+        { &quot;timeFrom&quot;: &quot;08:00:00&quot;, &quot;timeTo&quot;: &quot;08:30:00&quot;, &quot;markingLimit&quot;: 0, &quot;status&quot;: &quot;UNAVAILABLE&quot; },
+        { &quot;timeFrom&quot;: &quot;08:30:00&quot;, &quot;timeTo&quot;: &quot;09:00:00&quot;, &quot;markingLimit&quot;: 1, &quot;status&quot;: &quot;AVAILABLE&quot; }
+      ],
+      &quot;reviewedByTaxId&quot;: null,
+      &quot;reviewedAt&quot;: null,
+      &quot;publishAt&quot;: null,
+      &quot;reviewNotes&quot;: null,
+      &quot;publishNotBefore&quot;: null,
+      &quot;publishExpiresAt&quot;: null,
+      &quot;unitId&quot;: null,
+      &quot;departmentId&quot;: null,
+      &quot;sectorId&quot;: null,
+      &quot;createdAt&quot;: &quot;2026-10-09T10:00:00Z&quot;,
+      &quot;updatedAt&quot;: &quot;2026-10-09T11:20:00Z&quot;,
+      &quot;bookedAppointments&quot;: 1,
+      &quot;totalHours&quot;: 8,
+      &quot;availableHours&quot;: 7,
+      &quot;healthUnitTaxId&quot;: &quot;3f2b6c1e-8a4d-4f5e-9b7c-1d2e3f4a5b6c&quot;,
+      &quot;clinicalItemId&quot;: &quot;b2c3d4e5-f6a7-4b8c-9d0e-1f2a3b4c5d6e&quot;,
+      &quot;category&quot;: &quot;SPECIALITY&quot;,
+      &quot;categoryCode&quot;: &quot;CARD&quot;,
+      &quot;typeOfService&quot;: &quot;IN_PERSON&quot;,
+      &quot;typeOfSchedule&quot;: &quot;INITIAL&quot;,
+      &quot;typeOfRecurrence&quot;: &quot;MONTHLY&quot;
+    }
+  ],
+  &quot;pagination&quot;: { &quot;page&quot;: 1, &quot;limit&quot;: 20, &quot;totalItems&quot;: 1, &quot;totalPages&quot;: 1, &quot;hasNext&quot;: false, &quot;hasPrev&quot;: false },
+  &quot;filters&quot;: { &quot;applied&quot;: {}, &quot;available&quot;: {} }
+}
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Campo calculado</th>
+<th>Significado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>bookedAppointments</code></td>
+<td>marcações não canceladas no slot</td>
+</tr>
+<tr>
+<td><code>totalHours</code></td>
+<td>número de horários da grelha (<code>0</code> em <code>CAPACITY</code>)</td>
+</tr>
+<tr>
+<td><code>availableHours</code></td>
+<td>horários <code>AVAILABLE</code> com vagas</td>
+</tr>
+<tr>
+<td><code>healthUnitTaxId</code> … <code>typeOfRecurrence</code></td>
+<td>resumo da agenda do slot</td>
+</tr>
+</tbody>
+</table>
+<h2 id="23-obter-slot-por-id">2.3 Obter slot por id</h2>
+<ul>
+<li>Caso de uso: <code>GetSlotByIdQuery</code></li>
+<li>Endpoint: <code>GET /api/v1/scheduling/slots/{id}</code></li>
+</ul>
+<h3 id="sucesso-esperado_2">Sucesso esperado</h3>
+<ul>
+<li><code>200 OK</code> com a forma resumida <code>SlotMinimalDto</code>:</li>
+</ul>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;c1d2e3f4-a5b6-4c7d-8e9f-0a1b2c3d4e5f&quot;,
+  &quot;date&quot;: &quot;2026-11-02&quot;,
+  &quot;mode&quot;: &quot;TIMED&quot;,
+  &quot;weekDay&quot;: &quot;MONDAY&quot;,
+  &quot;markingLimit&quot;: 7
+}
+</code></pre>
+<p>Para a informação completa (grelha, profissionais, agenda), use a listagem com <code>?scheduleId=</code> ou <code>GET /slots/hours/{id}</code>.</p>
+<h3 id="erros-esperados_1">Erros esperados</h3>
+<table>
+<thead>
+<tr>
+<th>HTTP</th>
+<th>Code</th>
+<th>Situação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>404</code></td>
+<td><code>SlotNotFound</code></td>
+<td>slot inexistente ou apagado</td>
+</tr>
+</tbody>
+</table>
+<h2 id="24-obter-grelha-horaria">2.4 Obter grelha horária</h2>
+<ul>
+<li>Caso de uso: <code>GetSlotHoursQuery</code></li>
+<li>Endpoint: <code>GET /api/v1/scheduling/slots/hours/{id}</code></li>
+</ul>
+<h3 id="sucesso-esperado_3">Sucesso esperado</h3>
+<ul>
+<li><code>200 OK</code></li>
+</ul>
+<pre><code class="language-json">{
+  &quot;totalHours&quot;: 8,
+  &quot;totalVacancies&quot;: 7,
+  &quot;mode&quot;: &quot;TIMED&quot;,
+  &quot;hours&quot;: [
+    { &quot;status&quot;: &quot;UNAVAILABLE&quot;, &quot;timeFrom&quot;: &quot;08:00:00&quot;, &quot;timeTo&quot;: &quot;08:30:00&quot;, &quot;markingLimit&quot;: 0 },
+    { &quot;status&quot;: &quot;AVAILABLE&quot;, &quot;timeFrom&quot;: &quot;08:30:00&quot;, &quot;timeTo&quot;: &quot;09:00:00&quot;, &quot;markingLimit&quot;: 1 }
+  ]
+}
+</code></pre>
+<h3 id="erros-esperados_2">Erros esperados</h3>
+<table>
+<thead>
+<tr>
+<th>HTTP</th>
+<th>Code</th>
+<th>Situação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>404</code></td>
+<td><code>SlotUnavailable</code></td>
+<td>slot inexistente ou apagado</td>
+</tr>
+<tr>
+<td><code>422</code></td>
+<td><code>SlotOperationModeIsNotTimed</code></td>
+<td>slot <code>CAPACITY</code> (sem grelha)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="25-profissionais-do-slot">2.5 Profissionais do slot</h2>
+<ul>
+<li>Casos de uso: <code>AssignProfessionalCommand</code>, <code>RemoveProfessionalCommand</code></li>
+<li>Endpoints: <code>POST</code> / <code>DELETE /api/v1/scheduling/slots/{id}/professionals</code></li>
+</ul>
+<h3 id="body">Body</h3>
+<pre><code class="language-json">{ &quot;professionalTaxIds&quot;: [&quot;5a6b7c8d-9e0f-4a1b-8c2d-3e4f5a6b7c8d&quot;] }
+</code></pre>
+<h3 id="regras-de-negocio_1">Regras de negócio</h3>
+<ul>
+<li><strong>associar:</strong> lista não vazia, elementos não vazios e com no máximo 50 caracteres (<code>400 ValidationFailed</code>); os já associados são ignorados</li>
+<li><strong>remover:</strong> remove os indicados; os que não estão associados são ignorados</li>
+<li>a lista do slot define quem pode receber marcações nele — ver <a href="../appointments/#31-criar-marcação">Marcações 3.1</a></li>
+</ul>
+<h3 id="sucesso-esperado_4">Sucesso esperado</h3>
+<ul>
+<li><code>204 No Content</code></li>
+</ul>
+<h3 id="erros-esperados_3">Erros esperados</h3>
+<table>
+<thead>
+<tr>
+<th>HTTP</th>
+<th>Code</th>
+<th>Situação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>404</code></td>
+<td><code>SlotUnavailable</code></td>
+<td>slot inexistente</td>
+</tr>
+</tbody>
+</table>
+<h2 id="26-alterar-capacidade">2.6 Alterar capacidade</h2>
+<ul>
+<li>Caso de uso: <code>UpdateSlotCapacityCommand</code></li>
+<li>Endpoint: <code>PATCH /api/v1/scheduling/slots/{id}/capacity</code></li>
+</ul>
+<h3 id="body_1">Body</h3>
+<pre><code class="language-json">{ &quot;capacity&quot;: 15 }
+</code></pre>
+<h3 id="regras-de-negocio_2">Regras de negócio</h3>
+<ol>
+<li><code>capacity ≥ 0</code> (<code>400 ValidationFailed</code>)</li>
+<li>o slot existe (<code>404 SlotUnavailable</code>)</li>
+<li>só slots <code>CAPACITY</code>: num slot <code>TIMED</code> a capacidade é a soma da grelha e não pode ser escrita diretamente (<code>422 TimedSlotMarkingLimitViolation</code>)</li>
+<li><code>capacity</code> substitui as <strong>vagas restantes</strong> (<code>markingLimit</code>), não a capacidade total</li>
+</ol>
+<h3 id="sucesso-esperado_5">Sucesso esperado</h3>
+<ul>
+<li><code>204 No Content</code></li>
+</ul>
+<h3 id="erros-esperados_4">Erros esperados</h3>
+<table>
+<thead>
+<tr>
+<th>HTTP</th>
+<th>Code</th>
+<th>Situação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>400</code></td>
+<td><code>ValidationFailed</code></td>
+<td>capacidade negativa</td>
+</tr>
+<tr>
+<td><code>404</code></td>
+<td><code>SlotUnavailable</code></td>
+<td>slot inexistente</td>
+</tr>
+<tr>
+<td><code>422</code></td>
+<td><code>TimedSlotMarkingLimitViolation</code></td>
+<td>slot <code>TIMED</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="27-abrir-e-fechar-slot">2.7 Abrir e fechar slot</h2>
+<ul>
+<li>Casos de uso: <code>OpenSlotCommand</code>, <code>CloseSlotCommand</code></li>
+<li>Endpoints: <code>PATCH /api/v1/scheduling/slots/{id}/open</code> · <code>PATCH /api/v1/scheduling/slots/{id}/close</code></li>
+</ul>
+<h3 id="regras-de-negocio_3">Regras de negócio</h3>
+<ul>
+<li>fechar impede novas marcações (<code>SlotUnavailable</code> em <a href="../appointments/#31-criar-marcação">3.1</a>); é sempre permitido</li>
+<li>abrir só é permitido se o slot ainda tiver vagas (<code>422 SlotCapacityReached</code>)</li>
+</ul>
+<h3 id="sucesso-esperado_6">Sucesso esperado</h3>
+<ul>
+<li><code>204 No Content</code></li>
+</ul>
+<h2 id="28-apagar-os-slots-de-uma-agenda">2.8 Apagar os slots de uma agenda</h2>
+<ul>
+<li>Caso de uso: <code>HardDeleteScheduleSlotsCommand</code></li>
+<li>Endpoint: <code>DELETE /api/v1/scheduling/slots/hard-delete/schedules/{scheduleId}/slots</code></li>
+</ul>
+<h3 id="regras-de-negocio_4">Regras de negócio</h3>
+<ul>
+<li>a agenda existe e não está apagada (<code>404 ScheduleNotFound</code>)</li>
+<li>se algum slot tiver marcações, <strong>nada é apagado</strong> e a resposta continua a ser <code>204</code></li>
+<li>caso contrário, todos os slots da agenda são removidos fisicamente</li>
+<li><code>timesItGenerated</code> <strong>não</strong> é reposto: a próxima geração continua no período seguinte</li>
+</ul>
+<h3 id="sucesso-esperado_7">Sucesso esperado</h3>
+<ul>
+<li><code>204 No Content</code></li>
+</ul>
+<hr />
+<h2 id="navegacao">Navegação</h2>
+<p>← <a href="../schedules/">Agendas</a> · <a href="../../">Índice do módulo</a> · <a href="../appointments/">Marcações</a> →</p>
+<p><strong>Neste módulo:</strong> <a href="../overview/">Visão Geral</a> · <a href="../models-and-enums/">Modelos e Enumerações</a> · <a href="../schedules/">Agendas</a> · <strong>Slots</strong> · <a href="../appointments/">Marcações</a> · <a href="../reschedules/">Reagendamentos</a> · <a href="../forwardings/">Encaminhamentos</a> · <a href="../exclusions/">Exclusões</a> · <a href="../working-hours/">Horários de Trabalho</a> · <a href="../utilities/">Utilitários</a> · <a href="../internal-and-events/">Casos Internos, Eventos e Notas</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
